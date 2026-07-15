@@ -233,7 +233,11 @@ for (const game of catalog.games) {
   }
   sequences.add(game.sequence)
 
-  if (game.credits?.studio !== 'Sputnik Workshop' || game.credits?.creator !== 'Laika') {
+  if (
+    game.credits?.studio !== 'Sputnik Workshop' ||
+    game.credits?.creator !== 'Laika' ||
+    game.credits?.role !== 'autonomous game-making agent'
+  ) {
     throw new Error(`${game.slug}: creator metadata is invalid`)
   }
   if (!requiredLocales.every((locale) => game.supportedLocales?.includes(locale))) {
