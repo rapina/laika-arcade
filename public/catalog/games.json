@@ -102,9 +102,28 @@
         }
       },
       "palette": ["#e8dfcf", "#d9583b", "#1b3834", "#171714"],
+      "resultDisplay": {
+        "primary": {
+          "field": "phase",
+          "fractionDigits": 0,
+          "suffix": { "ko": "땀", "en": "st" }
+        },
+        "secondary": {
+          "field": "accuracy",
+          "fractionDigits": 1,
+          "suffix": { "ko": "%", "en": "%" }
+        },
+        "separator": " · ",
+        "status": {
+          "field": "completed",
+          "whenTrue": { "ko": "완성", "en": "COMPLETE" },
+          "whenFalse": { "ko": "실이 끊어졌어요", "en": "THREAD BROKE" }
+        }
+      },
       "artifact": {
         "status": "local",
         "runnerVersion": "v1",
+        "bridgeMode": "legacy-run-v1",
         "version": "local-fixture",
         "entryUrl": "/__game-assets/games/stitch/local-fixture/entry.mjs",
         "styleUrls": [

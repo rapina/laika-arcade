@@ -22,7 +22,20 @@ let sourceGame = null;
 let noticeKeys = { title: "player.noticeTitle", copy: "player.noticeCopy" };
 let connectionKey = "player.connecting";
 let connectionLabel = null;
+let scoreResult = null;
 let lastResult = null;
+let runEnded = false;
+
+function setRunState(state, eventSequence = null) {
+  document.body.dataset.runState = state;
+  if (Number.isSafeInteger(eventSequence) && eventSequence > 0) {
+    document.body.dataset.runSequence = String(eventSequence);
+  } else if (state !== "ended") {
+    delete document.body.dataset.runSequence;
+  }
+}
+
+setRunState("connecting");
 
 function showNotice(title, copy, keys = null) {
   noticeTitle.textContent = title;
@@ -38,12 +51,63 @@ function showTranslatedNotice(titleKey, copyKey) {
 function setConnection(key, label = null) {
   connectionKey = key;
   connectionLabel = label;
-  connectionStatus.textContent = label ?? t(key);
+  renderConnection();
+}
+
+function localizedValue(value) {
+  if (typeof value === "string") return value;
+  if (!value || typeof value !== "object") return "";
+  return value[getLocale()] ?? value.ko ?? value.en ?? "";
+}
+
+function resultValue(result, field) {
+  if (!result || typeof result !== "object" || Array.isArray(result)) return undefined;
+  return result[field];
+}
+
+function formatMetric(metric, result) {
+  if (!metric || typeof metric.field !== "string") return "";
+  const value = Number(resultValue(result, metric.field));
+  if (!Number.isFinite(value)) return "";
+  const fractionDigits = Number.isInteger(metric.fractionDigits)
+    ? Math.max(0, Math.min(3, metric.fractionDigits))
+    : 0;
+  const number = new Intl.NumberFormat(getLocale() === "en" ? "en-US" : "ko-KR", {
+    minimumFractionDigits: fractionDigits,
+    maximumFractionDigits: fractionDigits,
+    useGrouping: metric.useGrouping === true
+  }).format(value);
+  return `${localizedValue(metric.prefix)}${number}${localizedValue(metric.suffix)}`;
+}
+
+function formatResult(result) {
+  const display = sourceGame?.resultDisplay;
+  if (!display) return "";
+  return [formatMetric(display.primary, result), formatMetric(display.secondary, result)]
+    .filter(Boolean)
+    .join(typeof display.separator === "string" ? display.separator : " · ");
+}
+
+function formatResultStatus(result) {
+  const statusDisplay = sourceGame?.resultDisplay?.status;
+  if (!statusDisplay || typeof statusDisplay.field !== "string") return t("player.finished");
+  const copy = resultValue(result, statusDisplay.field)
+    ? localizedValue(statusDisplay.whenTrue)
+    : localizedValue(statusDisplay.whenFalse);
+  return copy || t("player.finished");
 }
 
 function renderScore() {
-  if (!lastResult) return;
-  scoreValue.textContent = `${lastResult.stitches}${t("player.stitchesShort")} · ${lastResult.accuracy.toFixed(1)}%`;
+  const result = lastResult ?? scoreResult;
+  if (!result) return;
+  const formatted = formatResult(result);
+  scoreValue.textContent = formatted || "--";
+}
+
+function renderConnection() {
+  connectionStatus.textContent = runEnded
+    ? formatResultStatus(lastResult)
+    : connectionLabel ?? t(connectionKey);
 }
 
 function renderControlLabels() {
@@ -63,7 +127,7 @@ function renderGameChrome() {
     noticeTitle.textContent = t(noticeKeys.title);
     noticeCopy.textContent = t(noticeKeys.copy);
   }
-  connectionStatus.textContent = connectionLabel ?? t(connectionKey);
+  renderConnection();
   renderControlLabels();
   renderScore();
 }
@@ -85,32 +149,42 @@ function handleRunnerMessage(event) {
 
   switch (message.type) {
     case "runner:loading":
+      setRunState("loading");
       setConnection("player.loadingGame");
       break;
     case "runner:ready":
     case "game:ready":
+      setRunState("ready");
       notice.hidden = true;
       setConnection("player.playing");
       enableControls();
       break;
     case "game:score":
-      scoreValue.textContent = String(Math.max(0, Number(message.payload?.score) || 0));
+      scoreResult = message.payload?.result ?? null;
+      renderScore();
       break;
     case "game:state":
+      runEnded = false;
+      lastResult = null;
+      scoreResult = null;
+      scoreValue.textContent = "--";
+      setRunState("playing");
       setConnection("player.playing");
       break;
     case "game:over":
-      lastResult = {
-        stitches: Math.max(0, Number(message.payload?.stitches) || 0),
-        accuracy: Math.max(0, Number(message.payload?.accuracy) || 0)
-      };
-      setConnection(message.payload?.completed ? "player.complete" : "player.failed");
+      lastResult = message.payload?.result ?? null;
+      scoreResult = lastResult;
+      runEnded = true;
+      setRunState("ended", message.payload?.eventSequence);
+      renderConnection();
       renderScore();
       break;
     case "game:exit":
       window.location.assign(document.querySelector("#detail-link").href);
       break;
     case "runner:error":
+      runEnded = false;
+      setRunState("error");
       setConnection("player.loadError");
       showTranslatedNotice("player.loadError", "player.releaseError");
       break;
@@ -118,10 +192,15 @@ function handleRunnerMessage(event) {
 }
 
 function connectRunner(game) {
+  const runnerVersion = game.artifact.runnerVersion;
+  if (typeof runnerVersion !== "string" || !/^v[1-9][0-9]*$/.test(runnerVersion)) {
+    throw new Error(t("player.releaseError"));
+  }
+
   const nonceBytes = new Uint8Array(16);
   crypto.getRandomValues(nonceBytes);
   const nonce = Array.from(nonceBytes, (byte) => byte.toString(16).padStart(2, "0")).join("");
-  frame.src = `/runner/v1/index.html#${nonce}`;
+  frame.src = `/runner/${runnerVersion}/index.html#${nonce}`;
 
   frame.addEventListener("load", () => {
     if (connected) return;
@@ -140,9 +219,9 @@ function connectRunner(game) {
 
     send("host:init", {
       slug: game.slug,
-      title: game.title,
       locale: getLocale(),
       version: game.artifact.version,
+      bridgeMode: game.artifact.bridgeMode ?? "contract-v1",
       entryUrl: game.artifact.entryUrl,
       styleUrls: game.artifact.styleUrls,
       assetBaseUrl: game.artifact.assetBaseUrl
@@ -165,8 +244,12 @@ muteButton.addEventListener("click", () => {
 
 restartButton.addEventListener("click", () => {
   paused = false;
+  runEnded = false;
   lastResult = null;
+  scoreResult = null;
   scoreValue.textContent = "--";
+  setRunState("restarting");
+  setConnection("player.playing");
   renderControlLabels();
   send("host:restart");
 });
@@ -182,7 +265,8 @@ window.addEventListener("pagehide", () => {
 }, { once: true });
 
 try {
-  const slug = getRequestedSlug() || "stitch";
+  const slug = getRequestedSlug();
+  if (!slug) throw new Error(t("player.notFound"));
   const catalog = await loadCatalog();
   sourceGame = findGame(catalog, slug);
   if (!sourceGame) throw new Error(t("detail.notFound"));
@@ -192,12 +276,14 @@ try {
   renderGameChrome();
 
   if (!isPlayableArtifact(game)) {
+    setRunState("draft");
     showTranslatedNotice("player.draftTitle", "player.draftCopy");
     setConnection("player.draftTitle", "DRAFT");
   } else {
     connectRunner(game);
   }
 } catch (error) {
-  showNotice(t("player.notFound"), error.message);
+  setRunState("not-found");
+  showNotice(t("player.notFound"), error instanceof Error ? error.message : t("player.notFound"));
   setConnection("player.notFound", "NOT FOUND");
 }
