@@ -27,7 +27,10 @@ export default {
   },
 
   readState({ runner }) {
-    return runner.evaluate(() => globalThis.__gameState ?? null)
+    return runner.evaluate(() => {
+      window.dispatchEvent(new Event('stitch:debug-state'))
+      return globalThis.__gameState ?? null
+    })
   },
 
   hasProgressed(state) {
@@ -46,17 +49,26 @@ export default {
     return state?.paused === true
   },
 
-  async step({ runner, delay }, state) {
-    if (
-      state?.phase === 'travel' &&
-      state.progress >= state.targetProgress - 0.035 &&
-      state.progress <= state.targetProgress + 0.04
-    ) {
-      await runner.locator('canvas').click({ position: { x: 195, y: 422 }, force: true })
-      await delay(55)
-    } else {
-      await delay(7)
-    }
+  async step({ runner, delay }) {
+    const tapped = await runner.evaluate(() => {
+      window.dispatchEvent(new Event('stitch:debug-state'))
+      const state = globalThis.__gameState
+      if (
+        state?.phase !== 'travel' ||
+        state.progress < state.targetProgress - 0.035 ||
+        state.progress > state.targetProgress + 0.04
+      ) return false
+      const canvas = document.querySelector('canvas')
+      if (!canvas) return false
+      canvas.dispatchEvent(new KeyboardEvent('keydown', {
+        code: 'Space',
+        key: ' ',
+        bubbles: true,
+        cancelable: true,
+      }))
+      return true
+    })
+    await delay(tapped ? 30 : 5)
   },
 
   isFinished(state) {
