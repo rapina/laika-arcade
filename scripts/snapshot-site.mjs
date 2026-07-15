@@ -5,7 +5,7 @@ import { resolve } from 'node:path'
 const require = createRequire(import.meta.url)
 const { chromium } = require(resolve(
   import.meta.dirname,
-  '../../games/2026/2026-07-15-stitch/node_modules/playwright-core',
+  '../../games/2026/2026-07-14-stitch/node_modules/playwright-core',
 ))
 const output = resolve(import.meta.dirname, '../qa')
 mkdirSync(output, { recursive: true })

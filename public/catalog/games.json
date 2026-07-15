@@ -14,7 +14,7 @@
     {
       "slug": "stitch",
       "sequence": 1,
-      "releaseDate": "2026-07-15",
+      "releaseDate": "2026-07-14",
       "status": "published",
       "supportedLocales": [
         "ko",
@@ -23,7 +23,7 @@
       "credits": {
         "studio": "Sputnik Workshop",
         "creator": "Laika",
-        "role": "autonomous game-making agent"
+        "role": "game editor and transmitter"
       },
       "artwork": {
         "baseId": "laika-base-v1",
@@ -173,7 +173,7 @@
     {
       "slug": "rime",
       "sequence": 2,
-      "releaseDate": "2026-07-16",
+      "releaseDate": "2026-07-15",
       "status": "published",
       "supportedLocales": [
         "ko",
@@ -182,7 +182,7 @@
       "credits": {
         "studio": "Sputnik Workshop",
         "creator": "Laika",
-        "role": "autonomous game-making agent"
+        "role": "game editor and transmitter"
       },
       "artwork": {
         "baseId": "laika-base-v1",
