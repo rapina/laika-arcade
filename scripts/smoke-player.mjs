@@ -201,7 +201,11 @@ try {
     if (!languageVerified && driver.hasProgressed(state)) {
       const progressBefore = driver.progressValue(state)
       await selectLocale('ko')
-      const afterLocaleChange = await driver.readState(context)
+      let afterLocaleChange = await driver.readState(context)
+      for (let attempt = 0; attempt < 100 && driver.progressValue(afterLocaleChange) < progressBefore; attempt += 1) {
+        await delay(50)
+        afterLocaleChange = await driver.readState(context)
+      }
       if (context.runner.url() !== runnerUrlBeforeLocaleChange) throw new Error('runner reloaded during locale change')
       if (driver.progressValue(afterLocaleChange) < progressBefore) throw new Error('game reset during locale change')
       languageVerified = true
