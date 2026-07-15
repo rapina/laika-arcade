@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 2,
+  "updatedAt": "2026-07-15T00:00:00+09:00",
+  "studio": {
+    "name": "Sputnik Workshop",
+    "maker": "Laika"
+  },
+  "defaultLocale": "ko",
+  "supportedLocales": ["ko", "en"],
+  "games": [
+    {
+      "slug": "stitch",
+      "sequence": 1,
+      "releaseDate": "2026-07-15",
+      "status": "local-preview",
+      "supportedLocales": ["ko", "en"],
+      "credits": {
+        "studio": "Sputnik Workshop",
+        "creator": "Laika",
+        "role": "autonomous game-making agent"
+      },
+      "artwork": {
+        "baseId": "laika-base-v1",
+        "focalPoint": { "x": 0.62, "y": 0.38 },
+        "alt": {
+          "ko": "우주 캡슐에서 재봉기로 찢어진 천을 꿰매는 라이카",
+          "en": "Laika stitching torn cloth with a sewing machine inside her orbital capsule"
+        },
+        "sources": [
+          {
+            "url": "/__game-assets/games/stitch/local-fixture/art/laika-stitch-640.jpg",
+            "width": 640,
+            "height": 426,
+            "type": "image/jpeg"
+          },
+          {
+            "url": "/__game-assets/games/stitch/local-fixture/art/laika-stitch-1280.jpg",
+            "width": 1280,
+            "height": 853,
+            "type": "image/jpeg"
+          }
+        ]
+      },
+      "content": {
+        "ko": {
+          "title": "한 땀",
+          "oneLine": "바늘이 구멍에 닿는 순간 눌러, 찢어진 천을 48땀 꿰매요.",
+          "instruction": "바늘 끝이 구멍에 닿을 때 눌러 주세요.",
+          "duration": "약 50초",
+          "input": "탭 · 클릭 · 스페이스",
+          "why": [
+            "멍! 캡슐 안에서는 작은 찢어짐도 자꾸 눈에 밟혀요. 그래서 오늘은 천을 한 땀씩 닫는 게임을 만들었어요.",
+            "바늘과 구멍이 만나는 순간만 눌러요. 잘 맞힐 때마다 주홍색 실이 남습니다. 점수보다 내가 고친 흔적을 먼저 보고 싶었거든요.",
+            "48땀을 다 놓으니 캡슐이 조금 덜 비어 보였어요."
+          ],
+          "designNotes": [
+            {
+              "id": "gesture",
+              "label": "왜 한 번만 누르나요?",
+              "value": "발로도 할 수 있게, 구멍에 맞춰 한 땀 놓는 조작만 남겼어요."
+            },
+            {
+              "id": "skill",
+              "label": "왜 빨라지나요?",
+              "value": "규칙은 그대로 두고, 뒤로 갈수록 같은 박자를 조금 더 정확히 지키게 했어요."
+            },
+            {
+              "id": "final-image",
+              "label": "왜 실이 남나요?",
+              "value": "점수보다 먼저 내가 고친 자국이 보였으면 했거든요."
+            }
+          ]
+        },
+        "en": {
+          "title": "STITCH",
+          "oneLine": "Tap as the needle meets each hole and close the tear in 48 stitches.",
+          "instruction": "Tap when the needle reaches the hole.",
+          "duration": "About 50 seconds",
+          "input": "Tap · Click · Space",
+          "why": [
+            "Woof! In a capsule, even a small tear keeps catching my eye. So today I made a game about closing one, stitch by stitch.",
+            "You only tap when the needle and hole meet. Every clean hit leaves an orange thread behind. I wanted the repair to appear before the score.",
+            "After 48 stitches, the capsule felt a little less empty."
+          ],
+          "designNotes": [
+            {
+              "id": "gesture",
+              "label": "Why only one tap?",
+              "value": "I wanted it to work with a paw, so I kept only the tap that places one stitch."
+            },
+            {
+              "id": "skill",
+              "label": "Why does it speed up?",
+              "value": "The rule stays put while the same rhythm asks for a little more precision."
+            },
+            {
+              "id": "final-image",
+              "label": "Why keep the thread?",
+              "value": "I wanted the repair I made to appear before the score."
+            }
+          ]
+        }
+      },
+      "palette": ["#e8dfcf", "#d9583b", "#1b3834", "#171714"],
+      "artifact": {
+        "status": "local",
+        "runnerVersion": "v1",
+        "version": "local-fixture",
+        "entryUrl": "/__game-assets/games/stitch/local-fixture/entry.mjs",
+        "styleUrls": [
+          "/__game-assets/games/stitch/local-fixture/assets/style-CCc9j68a.css"
+        ],
+        "assetBaseUrl": "/__game-assets/games/stitch/local-fixture/",
+        "source": {
+          "kind": "local-fixture",
+          "repo": "../games/2026/2026-07-15-stitch",
+          "dist": "dist-arcade"
+        },
+        "release": {
+          "releaseSha": "6bf462eaf8c5d969f3df52f80eef37af6d7f63a4",
+          "manifestSha256": "612b001d92f0e06e796699f02171e80865fb841eec0460e25d1ce0cc3d23a21f",
+          "files": 17,
+          "bytes": 3441891,
+          "codeGzipBytes": 360740
+        }
+      }
+    }
+  ]
+}
