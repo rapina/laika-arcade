@@ -77,4 +77,3 @@ const server = createServer((request, response) => {
 server.listen(port, "127.0.0.1", () => {
   process.stdout.write(`Arcade: http://127.0.0.1:${port}\n`);
 });
-
