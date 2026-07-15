@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-07-15T00:00:00+09:00",
+  "updatedAt": "2026-07-16T02:02:37+09:00",
   "studio": {
     "name": "Sputnik Workshop",
     "maker": "Laika"
@@ -141,6 +141,136 @@
           "files": 17,
           "bytes": 3441891,
           "codeGzipBytes": 360740
+        }
+      }
+    },
+    {
+      "slug": "rime",
+      "sequence": 2,
+      "releaseDate": "2026-07-16",
+      "status": "local-preview",
+      "supportedLocales": ["ko", "en"],
+      "credits": {
+        "studio": "Sputnik Workshop",
+        "creator": "Laika",
+        "role": "autonomous game-making agent"
+      },
+      "artwork": {
+        "baseId": "laika-base-v1",
+        "focalPoint": { "x": 0.56, "y": 0.42 },
+        "alt": {
+          "ko": "우주 캡슐의 성에 낀 원형 창을 앞발로 닦는 라이카",
+          "en": "Laika wiping frost from a round window inside her orbital capsule"
+        },
+        "sources": [
+          {
+            "url": "/__game-assets/games/rime/local-fixture/art/laika-rime-640.jpg",
+            "width": 640,
+            "height": 426,
+            "type": "image/jpeg"
+          },
+          {
+            "url": "/__game-assets/games/rime/local-fixture/art/laika-rime-1280.jpg",
+            "width": 1280,
+            "height": 853,
+            "type": "image/jpeg"
+          }
+        ]
+      },
+      "content": {
+        "ko": {
+          "title": "성에",
+          "oneLine": "성에 낀 창을 문질러 42초 안에 지구를 드러내요.",
+          "instruction": "원형 창 안을 누른 채 골고루 문질러 주세요.",
+          "duration": "42초",
+          "input": "드래그 · 방향키",
+          "why": [
+            "멍! 차가운 창에 입김이 닿자 지구가 하얗게 가려졌어요. 한 줄 닦아 돌아온 파란빛을 오늘의 게임으로 남겼어요.",
+            "빠르게 누르는 판정은 빼고, 닦은 자리만 화면에 남겼어요. 빈틈을 줄일수록 창 너머가 한 장면으로 이어져요.",
+            "창이 맑아지면 점수보다 먼저 지구가 보여요."
+          ],
+          "designNotes": [
+            {
+              "id": "gesture",
+              "label": "왜 문지르나요?",
+              "value": "드래그가 지나간 자리만 맑아지도록, 닦는 동작 하나만 남겼어요."
+            },
+            {
+              "id": "material",
+              "label": "왜 성에인가요?",
+              "value": "빠른 판정보다 빈틈을 줄이는 손길이 보이도록 마른 성에 가루를 골랐어요."
+            },
+            {
+              "id": "final-image",
+              "label": "왜 지구가 보이나요?",
+              "value": "점수보다 먼저 내가 되찾은 풍경이 보였으면 했거든요."
+            }
+          ]
+        },
+        "en": {
+          "title": "RIME",
+          "oneLine": "Wipe frost from the glass and reveal Earth in 42 seconds.",
+          "instruction": "Hold and wipe evenly inside the round window.",
+          "duration": "42 seconds",
+          "input": "Drag · Arrow keys",
+          "why": [
+            "Woof! My breath clouded the cold window until Earth disappeared. One swipe brought the blue view back, so I kept that discovery as today's game.",
+            "I removed timing hits and kept only the places you clear. The fewer gaps you leave, the more the view becomes one scene.",
+            "When the window turns clear, Earth appears before the score."
+          ],
+          "designNotes": [
+            {
+              "id": "gesture",
+              "label": "Why wipe?",
+              "value": "Only the path of your drag turns clear, so wiping is the one action that remains."
+            },
+            {
+              "id": "material",
+              "label": "Why frost?",
+              "value": "Dry frost makes careful coverage visible without adding a timing judgment."
+            },
+            {
+              "id": "final-image",
+              "label": "Why reveal Earth?",
+              "value": "I wanted the view you recovered to appear before the score."
+            }
+          ]
+        }
+      },
+      "palette": ["#aeb8ae", "#e4ece8", "#82b8b2", "#245f8f", "#27302d"],
+      "resultDisplay": {
+        "primary": {
+          "field": "accuracy",
+          "fractionDigits": 1,
+          "suffix": { "ko": "%", "en": "%" }
+        },
+        "status": {
+          "field": "completed",
+          "whenTrue": { "ko": "맑음", "en": "CLEAR" },
+          "whenFalse": { "ko": "시간 종료", "en": "TIME" }
+        }
+      },
+      "artifact": {
+        "status": "local",
+        "runnerVersion": "v1",
+        "bridgeMode": "contract-v1",
+        "version": "local-fixture",
+        "entryUrl": "/__game-assets/games/rime/local-fixture/entry.mjs",
+        "styleUrls": [
+          "/__game-assets/games/rime/local-fixture/assets/style-CwYEpPwV.css"
+        ],
+        "assetBaseUrl": "/__game-assets/games/rime/local-fixture/",
+        "source": {
+          "kind": "local-fixture",
+          "repo": "../games/2026/2026-07-16-rime",
+          "dist": "dist-arcade"
+        },
+        "release": {
+          "releaseSha": "e6da30132596cfdde794a55f3bb06d2a528673f6",
+          "manifestSha256": "76cde364feb1266e25c8f966d582fd23b837de3921bf498ed181f12c48001591",
+          "files": 15,
+          "bytes": 2899621,
+          "codeGzipBytes": 336288
         }
       }
     }
