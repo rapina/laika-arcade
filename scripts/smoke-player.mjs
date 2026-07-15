@@ -16,7 +16,6 @@ const protectionSecret = process.env.VERCEL_AUTOMATION_BYPASS_SECRET
 const protectionHeaders = protectionSecret
   ? {
       'x-vercel-protection-bypass': protectionSecret,
-      'x-vercel-set-bypass-cookie': 'samesitenone',
     }
   : {}
 const catalogUrl = new URL('/catalog/games.json', `${baseUrl}/`)
@@ -88,8 +87,17 @@ const browser = await chromium.launch({
 const page = await browser.newPage({
   viewport: driver.viewport ?? { width: 430, height: 932 },
   deviceScaleFactor: 1,
-  extraHTTPHeaders: protectionHeaders,
 })
+if (protectionSecret) {
+  await page.context().route(`${baseUrl}/**`, (route) => {
+    return route.continue({
+      headers: {
+        ...route.request().headers(),
+        'x-vercel-protection-bypass': protectionSecret,
+      },
+    })
+  })
+}
 const consoleErrors = []
 const pageErrors = []
 const failedRequests = []
@@ -179,7 +187,19 @@ try {
   await driver.assertLocale(context, 'ko')
   await selectLocale('en')
   const runnerUrlBeforeLocaleChange = context.runner.url()
-  await driver.start(context)
+  try {
+    await driver.start(context)
+  } catch (error) {
+    process.stderr.write(`${JSON.stringify({
+      frames: page.frames().map((frame) => frame.url()),
+      runnerText: await context.runner.locator('body').innerText().catch(() => ''),
+      notice: await page.locator('#notice-copy').textContent().catch(() => ''),
+      consoleErrors,
+      pageErrors,
+      failedRequests,
+    }, null, 2)}\n`)
+    throw error
+  }
   await driver.assertLocale(context, 'en')
 
   let pausedVerified = false
