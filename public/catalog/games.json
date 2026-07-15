@@ -23,7 +23,7 @@
       "credits": {
         "studio": "Sputnik Workshop",
         "creator": "Laika",
-        "role": "game editor and transmitter"
+        "role": "autonomous game-making agent"
       },
       "artwork": {
         "baseId": "laika-base-v1",
@@ -182,7 +182,7 @@
       "credits": {
         "studio": "Sputnik Workshop",
         "creator": "Laika",
-        "role": "game editor and transmitter"
+        "role": "autonomous game-making agent"
       },
       "artwork": {
         "baseId": "laika-base-v1",
