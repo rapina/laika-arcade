@@ -1,19 +1,25 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-07-16T02:02:37+09:00",
+  "updatedAt": "2026-07-16T00:00:00+09:00",
   "studio": {
     "name": "Sputnik Workshop",
     "maker": "Laika"
   },
   "defaultLocale": "ko",
-  "supportedLocales": ["ko", "en"],
+  "supportedLocales": [
+    "ko",
+    "en"
+  ],
   "games": [
     {
       "slug": "stitch",
       "sequence": 1,
       "releaseDate": "2026-07-15",
       "status": "local-preview",
-      "supportedLocales": ["ko", "en"],
+      "supportedLocales": [
+        "ko",
+        "en"
+      ],
       "credits": {
         "studio": "Sputnik Workshop",
         "creator": "Laika",
@@ -21,7 +27,10 @@
       },
       "artwork": {
         "baseId": "laika-base-v1",
-        "focalPoint": { "x": 0.62, "y": 0.38 },
+        "focalPoint": {
+          "x": 0.62,
+          "y": 0.38
+        },
         "alt": {
           "ko": "우주 캡슐에서 재봉기로 찢어진 천을 꿰매는 라이카",
           "en": "Laika stitching torn cloth with a sewing machine inside her orbital capsule"
@@ -101,23 +110,40 @@
           ]
         }
       },
-      "palette": ["#e8dfcf", "#d9583b", "#1b3834", "#171714"],
+      "palette": [
+        "#e8dfcf",
+        "#d9583b",
+        "#1b3834",
+        "#171714"
+      ],
       "resultDisplay": {
         "primary": {
           "field": "phase",
           "fractionDigits": 0,
-          "suffix": { "ko": "땀", "en": "st" }
+          "suffix": {
+            "ko": "땀",
+            "en": "st"
+          }
         },
         "secondary": {
           "field": "accuracy",
           "fractionDigits": 1,
-          "suffix": { "ko": "%", "en": "%" }
+          "suffix": {
+            "ko": "%",
+            "en": "%"
+          }
         },
         "separator": " · ",
         "status": {
           "field": "completed",
-          "whenTrue": { "ko": "완성", "en": "COMPLETE" },
-          "whenFalse": { "ko": "실이 끊어졌어요", "en": "THREAD BROKE" }
+          "whenTrue": {
+            "ko": "완성",
+            "en": "COMPLETE"
+          },
+          "whenFalse": {
+            "ko": "실이 끊어졌어요",
+            "en": "THREAD BROKE"
+          }
         }
       },
       "artifact": {
@@ -148,8 +174,11 @@
       "slug": "rime",
       "sequence": 2,
       "releaseDate": "2026-07-16",
-      "status": "local-preview",
-      "supportedLocales": ["ko", "en"],
+      "status": "published",
+      "supportedLocales": [
+        "ko",
+        "en"
+      ],
       "credits": {
         "studio": "Sputnik Workshop",
         "creator": "Laika",
@@ -157,20 +186,23 @@
       },
       "artwork": {
         "baseId": "laika-base-v1",
-        "focalPoint": { "x": 0.56, "y": 0.42 },
+        "focalPoint": {
+          "x": 0.56,
+          "y": 0.42
+        },
         "alt": {
           "ko": "우주 캡슐의 성에 낀 원형 창을 앞발로 닦는 라이카",
           "en": "Laika wiping frost from a round window inside her orbital capsule"
         },
         "sources": [
           {
-            "url": "/__game-assets/games/rime/local-fixture/art/laika-rime-640.jpg",
+            "url": "/__game-assets/games/rime/fb0a08cd88c277b3db1cf51d3f3a5b5537f60b5d/art/laika-rime-640.jpg",
             "width": 640,
             "height": 426,
             "type": "image/jpeg"
           },
           {
-            "url": "/__game-assets/games/rime/local-fixture/art/laika-rime-1280.jpg",
+            "url": "/__game-assets/games/rime/fb0a08cd88c277b3db1cf51d3f3a5b5537f60b5d/art/laika-rime-1280.jpg",
             "width": 1280,
             "height": 853,
             "type": "image/jpeg"
@@ -237,40 +269,55 @@
           ]
         }
       },
-      "palette": ["#aeb8ae", "#e4ece8", "#82b8b2", "#245f8f", "#27302d"],
+      "palette": [
+        "#aeb8ae",
+        "#e4ece8",
+        "#82b8b2",
+        "#245f8f",
+        "#27302d"
+      ],
       "resultDisplay": {
         "primary": {
           "field": "accuracy",
           "fractionDigits": 1,
-          "suffix": { "ko": "%", "en": "%" }
+          "suffix": {
+            "ko": "%",
+            "en": "%"
+          }
         },
         "status": {
           "field": "completed",
-          "whenTrue": { "ko": "맑음", "en": "CLEAR" },
-          "whenFalse": { "ko": "시간 종료", "en": "TIME" }
+          "whenTrue": {
+            "ko": "맑음",
+            "en": "CLEAR"
+          },
+          "whenFalse": {
+            "ko": "시간 종료",
+            "en": "TIME"
+          }
         }
       },
       "artifact": {
-        "status": "local",
+        "status": "published",
         "runnerVersion": "v1",
         "bridgeMode": "contract-v1",
-        "version": "local-fixture",
-        "entryUrl": "/__game-assets/games/rime/local-fixture/entry.mjs",
+        "version": "fb0a08cd88c277b3db1cf51d3f3a5b5537f60b5d",
+        "entryUrl": "/__game-assets/games/rime/fb0a08cd88c277b3db1cf51d3f3a5b5537f60b5d/entry.mjs",
         "styleUrls": [
-          "/__game-assets/games/rime/local-fixture/assets/style-CwYEpPwV.css"
+          "/__game-assets/games/rime/fb0a08cd88c277b3db1cf51d3f3a5b5537f60b5d/assets/style-CwYEpPwV.css"
         ],
-        "assetBaseUrl": "/__game-assets/games/rime/local-fixture/",
+        "assetBaseUrl": "/__game-assets/games/rime/fb0a08cd88c277b3db1cf51d3f3a5b5537f60b5d/",
         "source": {
-          "kind": "local-fixture",
-          "repo": "../games/2026/2026-07-16-rime",
+          "kind": "vercel-blob",
+          "repo": "rapina/toss-game-rime",
           "dist": "dist-arcade"
         },
         "release": {
-          "releaseSha": "e6da30132596cfdde794a55f3bb06d2a528673f6",
-          "manifestSha256": "76cde364feb1266e25c8f966d582fd23b837de3921bf498ed181f12c48001591",
+          "releaseSha": "fb0a08cd88c277b3db1cf51d3f3a5b5537f60b5d",
+          "manifestSha256": "961dbaa56cf3424dd4350ce325240bb253ec2caf983c779cbdaaa29d2a396dbd",
           "files": 15,
-          "bytes": 2899621,
-          "codeGzipBytes": 336288
+          "bytes": 2918370,
+          "codeGzipBytes": 340250
         }
       }
     }

@@ -4,6 +4,10 @@
   "cleanUrls": false,
   "rewrites": [
     {
+      "source": "/__game-assets/:path*",
+      "destination": "https://84zodfjeioojds9n.public.blob.vercel-storage.com/:path*"
+    },
+    {
       "source": "/games/:slug",
       "destination": "/game.html?slug=:slug"
     },
