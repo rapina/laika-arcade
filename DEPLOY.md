@@ -1,93 +1,76 @@
 # Vercel 배포 가이드
 
-Vercel에는 아케이드 저장소 하나만 연결한다. 게임 저장소와 런치패드는 각각 독립 저장소로 유지하고, 검증된 게임 산출물만 Vercel Blob의 불변 경로로 전달한다.
+Vercel에는 `rapina/laika-arcade` 저장소 하나만 연결한다. 게임과 런치패드는 독립 저장소로 유지하고, 게임마다 별도 Vercel 프로젝트를 만들지 않는다.
 
-## 1. 사이트 프로젝트 연결
+매일의 공개는 관제 저장소의 `scripts/publish-game.mjs`가 맡는다. 파일별 Blob 업로드, 카탈로그 편집, preview 승격을 수동으로 반복하지 않는다.
 
-Vercel 대시보드에서 `rapina/laika-arcade`를 새 프로젝트로 가져온다.
+## 최초 한 번만 준비
 
+아케이드 디렉터리에서 Vercel CLI에 로그인하고 기존 프로젝트를 연결한다.
+
+```bash
+cd arcade
+vercel login
+vercel link --project laika --scope rapinas-projects
+vercel env pull .env.local --yes
+vercel whoami
+```
+
+필요한 로컬 값은 `BLOB_READ_WRITE_TOKEN`이다. `.env.local`, `.vercel/`, 토큰 값은 커밋하지 않는다.
+
+Vercel 프로젝트 설정은 다음과 같다.
+
+- Git 저장소: `rapina/laika-arcade`
 - Framework Preset: `Other`
 - Root Directory: 저장소 루트
 - Build Command: 비움
-- Output Directory: `public` (`vercel.json`이 지정함)
+- Output Directory: `public`
 - Production Branch: `main`
 
-이 상태의 첫 배포에서는 홈과 작품 노트를 확인할 수 있다. 카탈로그의 게임이 `artifact.status: local`인 동안에는 Vercel에서 플레이를 열지 않고 준비 화면을 보여 주는 것이 정상이다.
+Public Blob store는 기존 프로젝트에 하나만 둔다. 새 게임마다 store를 만들지 않는다.
 
-CLI를 쓸 때는 아케이드 디렉터리에서 프로젝트를 연결한다.
+## 매일 공개
 
-```bash
-vercel login
-vercel link
-vercel                 # preview
-```
-
-`.vercel/`과 토큰은 커밋하지 않는다.
-
-## 2. 게임 자산을 Blob에 올리기
-
-Vercel 프로젝트의 Storage에서 Public Blob store를 만들거나 CLI를 사용한다.
+게임의 로컬 검증과 아케이드 등록을 마친 뒤 관제 저장소 루트에서 실행한다.
 
 ```bash
-vercel blob create-store sputnik-game-assets --access public
-vercel env pull .env.local --yes
+node scripts/publish-game.mjs --dry-run --game games/YYYY/YYYY-MM-DD-slug
+node scripts/publish-game.mjs --publish --game games/YYYY/YYYY-MM-DD-slug
 ```
 
-게임 저장소의 `dist-arcade/release.json` 검증이 끝난 뒤, 모든 파일을 다음 경로에 올린다.
+첫 명령은 네트워크와 파일을 바꾸지 않고 다음 내용을 보여 준다.
 
-```text
-games/<slug>/<releaseSha>/<release-relative-path>
-```
+- 게임 slug와 full Git SHA
+- Vercel Blob의 불변 prefix
+- 업로드할 파일, 크기, SHA-256
+- 바뀔 아케이드와 관제 파일
+- 전체 계획의 SHA-256
 
-CLI에서는 파일마다 원래 상대 경로를 보존한다.
+두 번째 명령은 다음 작업을 이어서 수행한다.
+
+1. 게임, 아케이드, 관제 저장소의 HEAD와 변경 상태를 검사한다.
+2. 게임 테스트, 빌드, 뷰포트와 전체 스모크를 다시 실행한다.
+3. `games/<slug>/<releaseSha>/`에 자산을 올리고 원격 바이트를 검증한다.
+4. `release.json`을 마지막에 올려 릴리스 완료를 표시한다.
+5. 아케이드 release 브랜치를 push하고 Vercel preview에서 한 판을 완주한다.
+6. 검증한 같은 커밋을 `main`에 올린다.
+7. production deployment URL과 `https://laika365.vercel.app`에서 다시 완주한다.
+8. 관제 카탈로그와 Arcade submodule 포인터를 커밋한다.
+
+운영 검증이 실패하면 아케이드 공개 커밋을 자동으로 revert한다. Blob 자산은 불변 경로이므로 삭제하거나 덮어쓰지 않는다.
+
+## 인증이 막혔을 때
+
+로그인 상태부터 확인한다.
 
 ```bash
-vercel blob put <local-file> \
-  --pathname games/<slug>/<releaseSha>/<relative-path> \
-  --cache-control-max-age 31536000
+cd arcade
+vercel whoami
+gh auth status
 ```
 
-`releaseSha` 경로는 덮어쓰지 않는다. 수정이 생기면 새 SHA로 다시 빌드하고 새 경로를 만든다.
+Vercel 로그인이 없으면 `vercel login`, 프로젝트 연결이 없으면 `vercel link --project laika --scope rapinas-projects`, 환경 파일이 없으면 `vercel env pull .env.local --yes`를 실행한다. 토큰 문자열을 채팅이나 터미널 로그에 출력하지 않는다.
 
-## 3. 같은 출처 경로 연결
+## 별도 승인 작업
 
-Blob이 발급한 public hostname을 확인한 뒤 `vercel.json`의 `rewrites` 맨 앞에 추가한다.
-
-```json
-{
-  "source": "/__game-assets/:path*",
-  "destination": "https://YOUR_STORE.public.blob.vercel-storage.com/:path*"
-}
-```
-
-아케이드 카탈로그의 해당 게임도 같은 변경에서 갱신한다.
-
-- `artifact.status`: `published`
-- `artifact.version`: `<releaseSha>`
-- `entryUrl`: `/__game-assets/games/<slug>/<releaseSha>/entry.mjs`
-- `styleUrls`, `assetBaseUrl`: 같은 SHA prefix
-- `artifact.release`: 업로드한 `release.json`의 해시·파일 수·바이트
-
-## 4. Preview 검증과 Production 전환
-
-브랜치 push나 `vercel` 명령으로 preview를 만든 뒤 다음을 확인한다.
-
-- `/`, `/games/<slug>`, `/play/<slug>`가 한국어와 영어로 열린다.
-- entry, CSS, 이미지, 오디오 요청이 모두 200이다.
-- 한 판 완주, 언어 변경, 일시정지, 음소거, 재시작이 동작한다.
-- 브라우저 콘솔 오류와 실패 요청이 없다.
-- 응답에 CSP, `nosniff`, referrer·permissions 정책이 유지된다.
-
-검증한 preview를 그대로 production으로 승격한다.
-
-```bash
-vercel promote <preview-url>
-```
-
-문제가 생기면 새 빌드를 만들기보다 직전 배포로 먼저 되돌린다.
-
-```bash
-vercel rollback
-```
-
-새 게임부터는 `게임 검증 → Blob 업로드 → 카탈로그 PR → preview 완주 → promote` 순서를 반복한다.
+이 자동화는 기존 Vercel 아케이드 공개까지만 맡는다. Toss `.ait` 제출과 출시, 새 유료 리소스, 계정·도메인 변경은 별도 승인 뒤에 진행한다.

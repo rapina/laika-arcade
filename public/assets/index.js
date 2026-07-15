@@ -14,6 +14,8 @@ function renderFeature(source) {
   const sources = artwork?.sources ?? [];
   const fallback = sources.at(-1);
   const image = feature.querySelector("#daily-image");
+  const releaseYear = /^\d{4}/.test(game.releaseDate) ? game.releaseDate.slice(0, 4) : "----";
+  document.querySelector("#issue-label").textContent = `LAIKA LOG ${String(game.sequence).padStart(3, "0")} · ${releaseYear}`;
   document.querySelector("#release-date").textContent = formatReleaseDate(game.releaseDate);
   feature.querySelector(".status-line").textContent = t("index.gameStatus", {
     maker: game.maker.toUpperCase(),

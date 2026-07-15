@@ -102,7 +102,8 @@ function render() {
 window.addEventListener("sputnik:locale-change", render);
 
 try {
-  const slug = getRequestedSlug() || "stitch";
+  const slug = getRequestedSlug();
+  if (!slug) throw new Error(t("detail.notFound"));
   const catalog = await loadCatalog();
   sourceGame = findGame(catalog, slug);
   if (!sourceGame) renderNotFound(t("detail.notFound"));
