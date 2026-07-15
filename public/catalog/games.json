@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-07-16T00:00:00+09:00",
+  "updatedAt": "2026-07-15T00:00:00+09:00",
   "studio": {
     "name": "Sputnik Workshop",
     "maker": "Laika"
@@ -15,7 +15,7 @@
       "slug": "stitch",
       "sequence": 1,
       "releaseDate": "2026-07-15",
-      "status": "local-preview",
+      "status": "published",
       "supportedLocales": [
         "ko",
         "en"
@@ -37,13 +37,13 @@
         },
         "sources": [
           {
-            "url": "/__game-assets/games/stitch/local-fixture/art/laika-stitch-640.jpg",
+            "url": "/__game-assets/games/stitch/d2cc6b24b385c200dfb147f973a0c85e51b92728/art/laika-stitch-640.jpg",
             "width": 640,
             "height": 426,
             "type": "image/jpeg"
           },
           {
-            "url": "/__game-assets/games/stitch/local-fixture/art/laika-stitch-1280.jpg",
+            "url": "/__game-assets/games/stitch/d2cc6b24b385c200dfb147f973a0c85e51b92728/art/laika-stitch-1280.jpg",
             "width": 1280,
             "height": 853,
             "type": "image/jpeg"
@@ -147,26 +147,26 @@
         }
       },
       "artifact": {
-        "status": "local",
+        "status": "published",
         "runnerVersion": "v1",
         "bridgeMode": "legacy-run-v1",
-        "version": "local-fixture",
-        "entryUrl": "/__game-assets/games/stitch/local-fixture/entry.mjs",
+        "version": "d2cc6b24b385c200dfb147f973a0c85e51b92728",
+        "entryUrl": "/__game-assets/games/stitch/d2cc6b24b385c200dfb147f973a0c85e51b92728/entry.mjs",
         "styleUrls": [
-          "/__game-assets/games/stitch/local-fixture/assets/style-CCc9j68a.css"
+          "/__game-assets/games/stitch/d2cc6b24b385c200dfb147f973a0c85e51b92728/assets/style-CCc9j68a.css"
         ],
-        "assetBaseUrl": "/__game-assets/games/stitch/local-fixture/",
+        "assetBaseUrl": "/__game-assets/games/stitch/d2cc6b24b385c200dfb147f973a0c85e51b92728/",
         "source": {
-          "kind": "local-fixture",
-          "repo": "../games/2026/2026-07-15-stitch",
+          "kind": "vercel-blob",
+          "repo": "rapina/toss-game-stitch",
           "dist": "dist-arcade"
         },
         "release": {
-          "releaseSha": "6bf462eaf8c5d969f3df52f80eef37af6d7f63a4",
-          "manifestSha256": "612b001d92f0e06e796699f02171e80865fb841eec0460e25d1ce0cc3d23a21f",
+          "releaseSha": "d2cc6b24b385c200dfb147f973a0c85e51b92728",
+          "manifestSha256": "231a4b0843fccc3634b2e106f1404c25eb3e06b5f289e7dd9ef0dca13c9cc12e",
           "files": 17,
-          "bytes": 3441891,
-          "codeGzipBytes": 360740
+          "bytes": 3460770,
+          "codeGzipBytes": 364740
         }
       }
     },
