@@ -5937,7 +5937,7 @@
       "slug": "papervein",
       "sequence": 20,
       "releaseDate": "2026-07-25",
-      "status": "local-preview",
+      "status": "published",
       "supportedLocales": [
         "ko",
         "en"
@@ -5960,13 +5960,13 @@
         },
         "sources": [
           {
-            "url": "/__game-assets/games/papervein/local-fixture/art/laika-papervein-640.jpg",
+            "url": "/__game-assets/games/papervein/2a9fb2287750e6c4a66e7d5891d5016837856bb4/art/laika-papervein-640.jpg",
             "width": 640,
             "height": 512,
             "type": "image/jpeg"
           },
           {
-            "url": "/__game-assets/games/papervein/local-fixture/art/laika-papervein-1280.jpg",
+            "url": "/__game-assets/games/papervein/2a9fb2287750e6c4a66e7d5891d5016837856bb4/art/laika-papervein-1280.jpg",
             "width": 1280,
             "height": 1024,
             "type": "image/jpeg"
@@ -6217,17 +6217,17 @@
         }
       },
       "artifact": {
-        "status": "local",
+        "status": "published",
         "runnerVersion": "v1",
         "bridgeMode": "contract-v1",
-        "version": "local-fixture",
-        "entryUrl": "/__game-assets/games/papervein/local-fixture/entry.mjs",
+        "version": "2a9fb2287750e6c4a66e7d5891d5016837856bb4",
+        "entryUrl": "/__game-assets/games/papervein/2a9fb2287750e6c4a66e7d5891d5016837856bb4/entry.mjs",
         "styleUrls": [
-          "/__game-assets/games/papervein/local-fixture/assets/style-jgtcBYQu.css"
+          "/__game-assets/games/papervein/2a9fb2287750e6c4a66e7d5891d5016837856bb4/assets/style-jgtcBYQu.css"
         ],
-        "assetBaseUrl": "/__game-assets/games/papervein/local-fixture/",
+        "assetBaseUrl": "/__game-assets/games/papervein/2a9fb2287750e6c4a66e7d5891d5016837856bb4/",
         "source": {
-          "kind": "local",
+          "kind": "vercel-blob",
           "repo": "../games/2026/2026-07-25-papervein",
           "dist": "dist-arcade"
         },
