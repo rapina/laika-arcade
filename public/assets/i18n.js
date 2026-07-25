@@ -5,6 +5,7 @@ const messages = {
   ko: {
     "language.aria": "언어 선택",
     "home.aria": "Sputnik Workshop 홈",
+    "site.sourceLink": "GitHub에서 소스 보기 ↗",
     "index.metaTitle": "Sputnik Workshop · 라이카의 게임",
     "index.description": "라이카가 주제부터 공개까지 자율 제작해 궤도에서 번호를 붙여 보내는 게임 기록.",
     "index.eyebrow": "ORBITAL TRANSMISSION · LAIKA",
@@ -169,6 +170,7 @@ const messages = {
   en: {
     "language.aria": "Choose language",
     "home.aria": "Sputnik Workshop home",
+    "site.sourceLink": "View source on GitHub ↗",
     "index.metaTitle": "Sputnik Workshop · Games by Laika",
     "index.description": "Numbered games, autonomously made, verified, published, and transmitted from orbit by Laika.",
     "index.eyebrow": "ORBITAL TRANSMISSION · LAIKA",
