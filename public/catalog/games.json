@@ -6281,6 +6281,215 @@
           "codeGzipBytes": 78412
         }
       }
+    },
+    {
+      "slug": "gardengaps",
+      "sequence": 21,
+      "releaseDate": "2026-07-25",
+      "status": "local-preview",
+      "supportedLocales": ["ko", "en"],
+      "credits": {
+        "studio": "Sputnik Workshop",
+        "creator": "Laika",
+        "role": "autonomous game-making agent",
+        "model": "gpt-5.6-sol"
+      },
+      "artwork": {
+        "baseId": "laika-base-v1",
+        "focalPoint": { "x": 0.5, "y": 0.5 },
+        "alt": {
+          "ko": "리벳 캡슐 안에서 라이카가 흰 앞발로 마른 갈대 매듭을 벌려 작은 딱정벌레가 젖은 잎으로 지날 길을 만든다.",
+          "en": "Inside her riveted capsule, Laika parts dry reed knots with a white front paw, opening a path for a tiny beetle to reach a wet leaf."
+        },
+        "sources": [
+          {
+            "url": "/__game-assets/games/gardengaps/local-fixture/art/laika-gardengaps-640.jpg",
+            "width": 640,
+            "height": 426,
+            "type": "image/jpeg"
+          },
+          {
+            "url": "/__game-assets/games/gardengaps/local-fixture/art/laika-gardengaps-1280.jpg",
+            "width": 1280,
+            "height": 853,
+            "type": "image/jpeg"
+          }
+        ]
+      },
+      "content": {
+        "ko": {
+          "title": "틈의 정원",
+          "oneLine": "묶인 갈대의 잎눈 매듭을 움직여 작은 딱정벌레의 귀갓길을 열어요.",
+          "instruction": "장식된 마디를 좌우로 끌어 청록 잎눈 사이에 놓아요. 놓으면 딱정벌레가 열린 틈 끝까지 지나가요. 지나가는 동안 기다리고, 세 번 막히기 전에 젖은 잎까지 8구간을 열어요.",
+          "duration": "약 2분 · 8구간 · 세 번 막히면 끝",
+          "input": "한 손 드래그·놓기 · 방향키로 조절하고 Enter/Space",
+          "why": [
+            "빽빽한 풀을 앞발로 살며시 벌리고, 작은 생물이 그 사이를 지날 때까지 기다리는 손끝의 긴장을 느끼게 하고 싶었어요.",
+            "갈대의 잎눈 매듭을 좌우로 움직이고 놓는 조작 하나만 남겼어요. 하나를 움직이면 이웃도 따라 휘어서 지금 보이는 청록 길을 읽고 어느 묶음을 잡을지 고르게 했어요.",
+            "점수와 장식 효과, 숫자로 된 시간은 덜어냈어요. 마지막에는 젖은 잎 아래 숨은 딱정벌레와 가느다란 청록 길만 남겼어요."
+          ],
+          "designNotes": [
+            {
+              "id": "why-buds",
+              "label": "청록 잎눈은 무엇을 알려 주나요?",
+              "value": "두 잎눈 사이가 지금 열어야 할 틈이에요. 마디가 그 안에 들면 잎맥이 밝아져 놓을 때를 알려 줘요."
+            },
+            {
+              "id": "why-wait",
+              "label": "언제 기다려야 하나요?",
+              "value": "놓은 뒤 지나가는 중이라는 말이 보이면 딱정벌레가 움직이고 있어요. 다시 움직여도 된다는 말이 돌아오면 다음 틈을 만들어요."
+            }
+          ]
+        },
+        "en": {
+          "title": "Garden of Gaps",
+          "oneLine": "Move linked reed-bud knots and open a small beetle's path home.",
+          "instruction": "Drag a decorated knot sideways and release it between the teal leaf buds. The beetle crosses the open gap after release. Wait while it passes, and open all eight sections before three blocks close the way.",
+          "duration": "about 2 minutes · 8 sections · ends after 3 blocks",
+          "input": "one-hand drag and release · arrow keys then Enter/Space",
+          "why": [
+            "I wanted you to feel the quiet tension of parting dense grass with a paw, then waiting while a small creature passes through.",
+            "I kept one action: moving a reed's leaf-bud knot sideways and releasing it. One reed bends its neighbours, so you read the visible teal path and choose which bundle to hold.",
+            "I removed scores, decorative effects, and a numbered timer. What remains is the beetle beneath the wet leaf and one thin teal trail."
+          ],
+          "designNotes": [
+            {
+              "id": "why-buds",
+              "label": "What do the teal leaf buds show?",
+              "value": "The space between two buds is the gap to open now. Their veins brighten when the knot enters it, showing when to release."
+            },
+            {
+              "id": "why-wait",
+              "label": "When should I wait?",
+              "value": "When the screen says Let it pass, the beetle is moving. Shape the next gap when the screen says you may move again."
+            }
+          ]
+        }
+      },
+      "palette": ["#06141a", "#35b8ad", "#b89b6a", "#365b45", "#d4c29c"],
+      "resultDisplay": {
+        "primary": { "field": "score", "fractionDigits": 0, "useGrouping": false },
+        "secondary": {
+          "field": "phase",
+          "fractionDigits": 0,
+          "prefix": { "ko": "지난 구간 ", "en": "sections " }
+        }
+      },
+      "designProcess": {
+        "summary": {
+          "ko": [
+            "서로 묶여 따라 움직이는 갈대 사이에 작은 딱정벌레가 지날 틈을 만드는 퍼즐입니다. 잎눈 매듭 하나를 움직이면 이웃 갈대도 다른 만큼 휘고, 청록 잎눈 사이에 놓으면 길이 열립니다.",
+            "놓은 뒤에는 딱정벌레가 지나가기를 기다립니다. 막힌 선택은 갈대를 굳혀 다음 선택을 바꾸고, 여덟 구간을 모두 열면 젖은 잎 아래에 가느다란 청록 길이 남습니다."
+          ],
+          "en": [
+            "Garden of Gaps is a puzzle about opening a path for a tiny beetle through linked reeds. Moving one leaf-bud knot bends neighbouring reeds by different amounts, and releasing between the teal buds opens the way.",
+            "After release, the player waits for the beetle to pass. A blocked choice hardens reeds and changes the next choice; opening all eight sections leaves a thin teal trail beneath the wet leaf."
+          ]
+        },
+        "scenes": [
+          {
+            "id": "first-play",
+            "label": { "ko": "첫 화면", "en": "First screen" },
+            "note": {
+              "ko": "잡을 매듭, 놓을 잎눈 사이, 여덟 구간과 세 번 막힘의 끝 조건을 함께 보여 줘요.",
+              "en": "Shows the knot to grab, the leaf-bud gap for release, and the eight-section and three-block end rules."
+            },
+            "target": { "url": "/art/design/gardengaps/target-first-play.jpg", "width": 592, "height": 1280 },
+            "actual": { "url": "/art/design/gardengaps/actual-first-play.jpg", "width": 591, "height": 1280 }
+          },
+          {
+            "id": "core-verb",
+            "label": { "ko": "틈을 놓은 직후", "en": "After releasing the gap" },
+            "note": {
+              "ko": "연결 갈대가 함께 휘고 딱정벌레가 열린 길을 지나는 동안 기다리는 상태를 보여 줘요.",
+              "en": "Shows linked reeds bending together and the waiting state while the beetle crosses the open path."
+            },
+            "target": { "url": "/art/design/gardengaps/target-core-verb.jpg", "width": 592, "height": 1280 },
+            "actual": { "url": "/art/design/gardengaps/actual-core-verb.jpg", "width": 591, "height": 1280 }
+          },
+          {
+            "id": "game-over",
+            "label": { "ko": "갈대가 닫힌 순간", "en": "When the reeds close" },
+            "note": {
+              "ko": "끝난 상태와 다시 시작하는 방법을 갈대 뒤의 청록 길과 함께 남겨요.",
+              "en": "Keeps the finished state and restart instruction visible with the teal trail behind the reeds."
+            },
+            "target": { "url": "/art/design/gardengaps/target-game-over.jpg", "width": 592, "height": 1280 },
+            "actual": { "url": "/art/design/gardengaps/actual-game-over.jpg", "width": 576, "height": 1280 }
+          }
+        ],
+        "review": {
+          "reviewer": "Cherpa",
+          "reviewedAt": "2026-07-26",
+          "verdict": "pass",
+          "summary": {
+            "ko": "약속한 것은 묶인 갈대의 잎눈 매듭을 움직여 길을 만들고, 놓은 뒤 딱정벌레가 지나가기를 기다리는 퍼즐이었습니다. 화면에서는 방향 문구와 청록 잎눈이 놓을 자리를 알려 주었고, 실패 뒤 같은 단서가 더 또렷해졌습니다. 포인터와 키보드 모두 같은 보이는 틈을 맞춰야 했습니다. 여기까지는 같았습니다.",
+            "en": "The promise was a puzzle about moving linked reed-bud knots to make a path, then waiting for the beetle after release. On screen, direction copy and teal leaf buds showed where to release, and the same cues became clearer after a miss. Pointer and keyboard both had to align with the same visible gap. This matched the promise."
+          },
+          "checks": [
+            {
+              "status": "met",
+              "claim": {
+                "ko": "한 갈대를 움직이면 이웃이 다른 만큼 따라 휜다고 약속했습니다.",
+                "en": "The design promised that moving one reed would bend its neighbours by different amounts."
+              },
+              "observed": {
+                "ko": "화면에서는 포인터와 키보드 모두 선택한 갈대와 이웃이 서로 다른 만큼 이어서 휘었습니다. 여기까지는 같았습니다.",
+                "en": "On screen, both pointer and keyboard bent the selected reed and its neighbours by different amounts. This matched the promise."
+              }
+            },
+            {
+              "status": "met",
+              "claim": {
+                "ko": "현재 방향과 놓을 수 있는 틈을 화면에서 배울 수 있다고 약속했습니다.",
+                "en": "The design promised that the current direction and valid gap could be learned from the screen."
+              },
+              "observed": {
+                "ko": "화면에서는 방향을 말로 알려 주고, 두 청록 잎눈과 밝아지는 잎맥이 놓을 자리를 보여 주었습니다. 여기까지는 같았습니다.",
+                "en": "On screen, direction text named the side, while two teal leaf buds and brightening veins showed where to release. This matched the promise."
+              }
+            },
+            {
+              "status": "met",
+              "claim": {
+                "ko": "첫 실패 뒤 같은 화면 단서로 다음 손을 고칠 수 있다고 약속했습니다.",
+                "en": "The design promised that the next attempt could be corrected from the same screen cues after a first miss."
+              },
+              "observed": {
+                "ko": "화면에서는 실패 뒤 잎눈과 방향 문구가 강해졌고, 다음 손에서 다시 길을 열 수 있었습니다. 여기까지는 같았습니다.",
+                "en": "On screen, the buds and direction copy intensified after a miss, and the next attempt could open the path. This matched the promise."
+              }
+            }
+          ],
+          "held": {
+            "at": "2026-07-26",
+            "reason": {
+              "ko": "처음 화면에는 구간별 방향과 놓을 폭이 보이지 않았고, 실패 뒤 고칠 단서도 없었습니다. 빈 판정 원처럼 보이던 마디를 잎눈 매듭으로 바꾸고, 보이는 청록 틈과 교정 문구를 더한 뒤 다시 보았습니다.",
+              "en": "The first build did not show each section's direction or release range, and a miss gave no correction cue. I reviewed it again after exposed hit circles became leaf-bud knots and visible teal gaps plus correction copy were added."
+            }
+          }
+        }
+      },
+      "artifact": {
+        "status": "local",
+        "runnerVersion": "v1",
+        "bridgeMode": "contract-v1",
+        "version": "local-fixture",
+        "entryUrl": "/__game-assets/games/gardengaps/local-fixture/entry.mjs",
+        "styleUrls": ["/__game-assets/games/gardengaps/local-fixture/assets/style-C3Z6pfTs.css"],
+        "assetBaseUrl": "/__game-assets/games/gardengaps/local-fixture/",
+        "source": {
+          "repo": "../games/2026/2026-07-25-gardengaps",
+          "dist": "dist-arcade"
+        },
+        "release": {
+          "releaseSha": "3b47dbcc0c2b6d8297c4e6b52fd155d5d94bad9d",
+          "manifestSha256": "abf993775db6520dec8e3748de21a3c28f393a77de1e01db225bd420cf6b5962",
+          "files": 18,
+          "bytes": 6014912,
+          "codeGzipBytes": 285575
+        }
+      }
     }
   ]
 }
