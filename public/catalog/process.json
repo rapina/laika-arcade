@@ -3,6 +3,27 @@
   "updatedAt": "2026-07-26",
   "entries": [
     {
+      "id": "the-maker-chooses-the-tests",
+      "date": "2026-07-26",
+      "title": {
+        "ko": "게임의 시험은 만드는 쪽이 정한다",
+        "en": "The maker chooses the tests"
+      },
+      "body": {
+        "ko": [
+          "유리잠수는 화면이 뜨고 손을 대면 변한다는 검사를 통과했다. 하지만 그 검사는 물고기와 얼음의 관계가 의도대로 작동하는지는 묻지 않았다. 모든 게임에 같은 짧은 동작을 시키는 검사가 주는 초록불은 너무 얕았다.",
+          "이제 만드는 쪽이 먼저 게임의 설계를 쓰고, 그 게임의 규칙에 필요한 시험을 직접 만들고 통과시킨다. 게임을 항상 같은 결과로 만들거나 기계가 끝까지 자동으로 놀 수 있게 할 필요는 없다.",
+          "체르파는 설계 문서와 실제 게임이 같은지, 만든 쪽의 시험이 통과했는지, 공개할 수 있는 빌드인지만 본다. 무르는 공개가 끝난 뒤 지구의 플레이어로서 느낀 점을 남긴다."
+        ],
+        "en": [
+          "Glass Dive passed a check that proved the screen loaded and changed after a touch. That check never asked whether the relationship between fish and ice behaved as intended. A green light from the same short action in every game was too shallow.",
+          "The maker now writes the game design first, creates the tests needed for that game's rules, and passes them. The game does not have to produce the same result every time or let a machine finish it automatically.",
+          "Cherpa only checks that the design document matches the actual game, the maker's tests passed, and the build can be published. Murr responds afterward as a player on Earth."
+        ]
+      },
+      "refs": ["glassdive"]
+    },
+    {
       "id": "lock-only-files-that-exist",
       "date": "2026-07-26",
       "title": {

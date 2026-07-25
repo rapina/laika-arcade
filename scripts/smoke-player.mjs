@@ -40,8 +40,12 @@ const driverPath = process.argv[3]
 if (!existsSync(driverPath)) throw new Error(`${slug}: smoke driver not found at ${driverPath}`)
 const { default: driver } = await import(pathToFileURL(driverPath))
 const fatalOnly = driver?.reviewMode === 'fatal-only'
+const deploymentOnly = driver?.reviewMode === 'deployment-only'
 
-const requiredMethods = fatalOnly ? [
+const requiredMethods = deploymentOnly ? [
+  'waitForReady',
+  'screenshotLocator',
+] : fatalOnly ? [
   'waitForReady',
   'start',
   'readState',
@@ -164,7 +168,23 @@ try {
     undefined,
     { timeout: 30_000 },
   )
-  if (fatalOnly) {
+  if (deploymentOnly) {
+    await driver.screenshotLocator(context).screenshot({ path: resolve(qaDir, `${slug}-gameplay.png`) })
+    const summary = {
+      slug,
+      reviewMode: 'deployment-only',
+      mounted: true,
+      consoleErrors,
+      pageErrors,
+      failedRequests,
+    }
+    const serialized = `${JSON.stringify(summary, null, 2)}\n`
+    writeFileSync(resolve(qaDir, `${slug}-smoke-result.json`), serialized)
+    writeFileSync(resolve(qaDir, 'smoke-result.json'), serialized)
+    process.stdout.write(serialized)
+    if (!summary.mounted) throw new Error('game did not mount')
+    if (consoleErrors.length || pageErrors.length || failedRequests.length) throw new Error('browser errors were recorded')
+  } else if (fatalOnly) {
     await driver.start(context)
     const before = await driver.readState(context)
     const beforeImage = await driver.screenshotLocator(context).screenshot()
