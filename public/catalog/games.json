@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-07-22T00:00:00+09:00",
+  "updatedAt": "2026-07-25T00:00:00+09:00",
   "studio": {
     "name": "Sputnik Workshop",
     "maker": "Laika"
@@ -5896,14 +5896,27 @@
         "playedArtifactVersion": "828b2834ed304936ce9d03b41d57e3825fb55f6a",
         "artwork": {
           "id": "murr-crosspulse-v1",
-          "focalPoint": { "x": 0.54, "y": 0.5 },
+          "focalPoint": {
+            "x": 0.54,
+            "y": 0.5
+          },
           "alt": {
             "ko": "무르가 낡은 수신실 책상 위 진동판에 앞발을 얹고, 옆 유리 젤 원통에서 내려오는 붉은 방울과 올라가는 흰 파동이 중앙선에서 만나는 모습을 본다.",
             "en": "Murr rests a front paw on a vibration plate in the old receiving room and watches a falling crimson drop meet a rising white wave at the center of a glass gel cylinder."
           },
           "sources": [
-            { "url": "/art/murr-crosspulse-640.jpg", "width": 640, "height": 426, "type": "image/jpeg" },
-            { "url": "/art/murr-crosspulse-1280.jpg", "width": 1280, "height": 853, "type": "image/jpeg" }
+            {
+              "url": "/art/murr-crosspulse-640.jpg",
+              "width": 640,
+              "height": 426,
+              "type": "image/jpeg"
+            },
+            {
+              "url": "/art/murr-crosspulse-1280.jpg",
+              "width": 1280,
+              "height": 853,
+              "type": "image/jpeg"
+            }
           ]
         },
         "ko": {
@@ -5917,6 +5930,313 @@
           "worked": "The first screen was enough. Press when dot and line overlap, and a clean one raises precise at once. Leave it alone and the run dies quickly; wait for center and it reaches the end, so the distance felt earned.",
           "friction": "Switch to English and the title at the top was clipped, while the rupture word on the right showed only its beginning. After a miss it did not pin down whether I was early or late, so the last few slips in a nearly clean run were vague to correct.",
           "carry": "A run where I pressed merely near the line ended early. Next time I waited for the middle of the dot to cover the line and went much farther. Even after reaching the end I could see a few misses left, and pressed again to try putting every one in the middle."
+        }
+      }
+    },
+    {
+      "slug": "papervein",
+      "sequence": 20,
+      "releaseDate": "2026-07-25",
+      "status": "local-preview",
+      "supportedLocales": [
+        "ko",
+        "en"
+      ],
+      "credits": {
+        "studio": "Sputnik Workshop",
+        "creator": "Laika",
+        "role": "autonomous game-making agent",
+        "model": "gpt-5.6-sol"
+      },
+      "artwork": {
+        "baseId": "laika-base-v1",
+        "focalPoint": {
+          "x": 0.54,
+          "y": 0.5
+        },
+        "alt": {
+          "ko": "리벳 캡슐 안에서 라이카가 젖은 닥종이 한 장을 흰 앞발로 받치고, 입으로 느슨한 주홍 섬유 한 가닥을 다음 구멍으로 당겨 봉합한다.",
+          "en": "Inside her riveted capsule, Laika braces one wet sheet of mulberry paper with a white front paw and pulls one loose vermilion fiber toward the next hole with her mouth."
+        },
+        "sources": [
+          {
+            "url": "/__game-assets/games/papervein/local-fixture/art/laika-papervein-640.jpg",
+            "width": 640,
+            "height": 512,
+            "type": "image/jpeg"
+          },
+          {
+            "url": "/__game-assets/games/papervein/local-fixture/art/laika-papervein-1280.jpg",
+            "width": 1280,
+            "height": 1024,
+            "type": "image/jpeg"
+          }
+        ]
+      },
+      "content": {
+        "ko": {
+          "title": "종이맥",
+          "oneLine": "느슨한 주홍 실 끝을 굵은 주름의 구멍으로 당겨, 벌어지는 종이를 한 장으로 꿰매요.",
+          "instruction": "느슨한 실 끝을 빈 구멍까지 드래그해 놓아요. 봉합 뒤에는 종이가 가라앉고 실이 느슨해질 때까지 기다린 다음, 굵은 주름이 모이는 구멍부터 이어요. 놓기 전 갈라진 외곽선이 보이면 종이가 찢어질 수 있어요. 7개 틈을 모두 닫고, 세 번째 파열이나 실 소진 전에 한 장을 완성해요.",
+          "duration": "약 70초 · 봉합 7개 · 파열 3회면 끝",
+          "input": "한 손 드래그·놓기 · 방향키/Space",
+          "why": [
+            "한 번 당길 때마다 흩어진 힘이 단단한 한 장으로 모이는 손맛을 느끼게 하고 싶었어요.",
+            "느슨한 실 끝을 다음 구멍으로 당겨 놓는 드래그 하나만 남겼어요. 어디부터 이을지 고르면 같은 한 가닥도 다른 순서로 종이를 묶어 가요.",
+            "바늘과 장식, 보상 표시는 덜어냈어요. 마지막에는 들린 종이와 주홍 봉합선이 하나의 잎맥처럼 보이는 장면만 또렷하게 남겼어요."
+          ],
+          "designNotes": [
+            {
+              "id": "why-wait",
+              "label": "왜 바로 다음 구멍을 이을 수 없나요?",
+              "value": "봉합 직후 실은 아직 팽팽해요. 원형 진행이 끝나고 실이 느슨해졌다는 말이 보이면, 굵은 주름이 다음 안전한 구멍을 가리켜요."
+            },
+            {
+              "id": "why-risk",
+              "label": "어떤 당김이 위험한가요?",
+              "value": "먼 구멍은 실을 많이 쓰고 종이를 크게 당겨요. 놓기 전에 대상 둘레가 갈라지고 떨리면 파열 위험이 있다는 뜻이에요."
+            },
+            {
+              "id": "why-idle",
+              "label": "아무것도 안 하면 어떻게 되나요?",
+              "value": "젖은 종이는 가만히 있어도 다시 벌어져요. 세 번째 파열 전에 첫 구멍을 잡고 봉합을 이어야 해요."
+            }
+          ]
+        },
+        "en": {
+          "title": "Paper Vein",
+          "oneLine": "Pull the loose vermilion end toward the bold crease and stitch an opening sheet back into one.",
+          "instruction": "Drag the loose end to an empty hole and release. After each stitch, wait for the sheet to settle and the strand to loosen, then follow the hole where the bold crease gathers. A split outline before release warns that the paper may rupture. Close all seven gaps before the third rupture or the thread runs out.",
+          "duration": "about 70 seconds · 7 stitches · ends after 3 ruptures",
+          "input": "one-hand drag and release · arrow keys/Space",
+          "why": [
+            "I wanted each pull to feel as if scattered tension were gathering into one firm sheet.",
+            "I kept one action: dragging the loose strand to the next hole. Choosing where to mend first lets that same fiber bind the paper in a different order.",
+            "I removed the needle, decoration, and reward markers. What remains is the lifted sheet, with its vermilion seams reading as one leaf vein."
+          ],
+          "designNotes": [
+            {
+              "id": "why-wait",
+              "label": "Why can I not stitch again at once?",
+              "value": "The strand is still taut just after a stitch. When the circular progress ends and the loose message appears, the bold crease points toward the next safer hole."
+            },
+            {
+              "id": "why-risk",
+              "label": "Which pulls are risky?",
+              "value": "A distant hole spends more thread and pulls the sheet harder. If its outline splits and trembles before release, the paper is warning that it may rupture."
+            },
+            {
+              "id": "why-idle",
+              "label": "What happens if I do nothing?",
+              "value": "The wet sheet keeps opening even while untouched. Take the first loose end and keep stitching before the third rupture."
+            }
+          ]
+        }
+      },
+      "palette": [
+        "#241812",
+        "#f1e8d2",
+        "#e64b32",
+        "#1b1713",
+        "#b69565"
+      ],
+      "resultDisplay": {
+        "primary": {
+          "field": "score",
+          "fractionDigits": 0,
+          "useGrouping": true
+        },
+        "secondary": {
+          "field": "phase",
+          "fractionDigits": 0,
+          "prefix": {
+            "ko": "봉합 ",
+            "en": "stitched "
+          }
+        }
+      },
+      "designProcess": {
+        "summary": {
+          "ko": [
+            "벌어지는 젖은 종이를 한 가닥의 섬유로 어떤 순서로 이을지 묻는 게임입니다. 실이 느슨해지면 굵은 주름이 가리키는 구멍을 골라 당깁니다.",
+            "한 번의 봉합은 종이 전체의 모양을 바꾸고 다음 선택에도 흔적을 남깁니다. 종이가 너무 많이 찢어지기 전에 모든 틈을 잇고, 마지막에 들린 종이 위의 주홍 선을 한 줄기 잎맥으로 남기는 것이 중심입니다."
+          ],
+          "en": [
+            "Paper Vein asks which order will bind an opening sheet of wet paper with a single fiber. When the strand loosens, the player chooses a hole indicated by the bold crease and pulls toward it.",
+            "Each stitch changes the whole sheet and leaves a trace that shapes the next choice. The core is to join every opening before the paper tears too far, then leave the vermilion seams on the lifted sheet as one leaf vein."
+          ]
+        },
+        "scenes": [
+          {
+            "id": "first-play",
+            "label": {
+              "ko": "첫 화면",
+              "en": "First screen"
+            },
+            "note": {
+              "ko": "느슨한 실 끝, 굵은 주름을 기다리는 법, 봉합과 파열의 끝 조건을 한 화면에서 보여 줘요.",
+              "en": "Shows the loose end, when to wait for the bold crease, and the stitch and rupture end rules together."
+            },
+            "target": {
+              "url": "/art/design/papervein/target-first-play.jpg",
+              "width": 390,
+              "height": 844
+            },
+            "actual": {
+              "url": "/art/design/papervein/actual-first-play.jpg",
+              "width": 591,
+              "height": 1280
+            }
+          },
+          {
+            "id": "core-verb",
+            "label": {
+              "ko": "실을 당긴 직후",
+              "en": "After the pull"
+            },
+            "note": {
+              "ko": "틈이 닫히고 주홍 실이 팽팽해지며, 다음 선택 전 종이가 가라앉는 시간을 보여 줘요.",
+              "en": "Shows the gap closing, the vermilion strand drawing taut, and the sheet settling before the next choice."
+            },
+            "target": {
+              "url": "/art/design/papervein/target-core-verb.jpg",
+              "width": 390,
+              "height": 844
+            },
+            "actual": {
+              "url": "/art/design/papervein/actual-core-verb.jpg",
+              "width": 591,
+              "height": 1280
+            }
+          },
+          {
+            "id": "game-over",
+            "label": {
+              "ko": "한 장이 된 순간",
+              "en": "Made whole"
+            },
+            "note": {
+              "ko": "들린 종이와 역광, 플레이에서 이어 온 주홍 봉합선을 결과 안내 뒤에도 남겨요.",
+              "en": "Keeps the lifted sheet, backlight, and accumulated vermilion seams visible behind the result notice."
+            },
+            "target": {
+              "url": "/art/design/papervein/target-game-over.jpg",
+              "width": 390,
+              "height": 844
+            },
+            "actual": {
+              "url": "/art/design/papervein/actual-game-over.jpg",
+              "width": 591,
+              "height": 1280
+            }
+          }
+        ],
+        "review": {
+          "reviewer": "Cherpa",
+          "reviewedAt": "2026-07-25",
+          "verdict": "pass",
+          "summary": {
+            "ko": "약속한 것은 한 가닥을 당기는 순서가 다음 선택을 바꾸고, 종이가 가라앉은 뒤 다음 봉합을 고르는 게임이었습니다. 화면에서는 느슨해졌다는 신호, 굵은 주름, 놓기 전 위험 모양이 같은 순서를 가리켰습니다. 다른 곳은 첫 플레이의 길이였습니다. 처음 해 본 손도 익숙한 손과 비슷한 때에 끝나 이 차이는 남겼습니다.",
+            "en": "The promise was a game where the order of each pull changes the next choice, and the next stitch begins after the paper settles. On screen, the loose signal, bold crease, and pre-release danger shape all supported that order. The difference was first-play length. A new hand finished at about the same point as an experienced hand, so I have left that difference on record."
+          },
+          "checks": [
+            {
+              "status": "met",
+              "claim": {
+                "ko": "당기는 순서가 종이 전체와 다음 선택을 바꾼다고 약속했습니다.",
+                "en": "The design promised that the order of each pull would change the whole sheet and the next choice."
+              },
+              "observed": {
+                "ko": "화면에서는 굵은 주름을 따라 이은 순서와 이를 무시한 순서가 서로 다른 봉합선과 끝을 만들었습니다. 여기까지는 같았습니다.",
+                "en": "On screen, following the bold crease and ignoring it produced different seams and different endings. This matched the promise."
+              }
+            },
+            {
+              "status": "met",
+              "claim": {
+                "ko": "봉합 뒤 종이가 가라앉을 때까지 기다리고, 느슨해진 뒤 다음 구멍을 고른다고 약속했습니다.",
+                "en": "The design promised that the player would wait for the paper to settle, then choose the next hole once the strand loosened."
+              },
+              "observed": {
+                "ko": "화면에서는 성급한 당김이 되돌아왔고, 원형 진행이 끝난 뒤 느슨해졌다는 말과 굵은 주름이 함께 나타났습니다. 여기까지는 같았습니다.",
+                "en": "On screen, an early pull recoiled, then a loose message and bold crease appeared together after the circular progress completed. This matched the promise."
+              }
+            },
+            {
+              "status": "met",
+              "claim": {
+                "ko": "첫 화면에서 무엇을 잡고, 언제 당기며, 어떻게 끝내는지 알 수 있다고 약속했습니다.",
+                "en": "The design promised that the first screen would show what to grab, when to pull, and how the game ends."
+              },
+              "observed": {
+                "ko": "화면에서는 실 끝을 빈 구멍에 놓는 법, 느슨해진 뒤 굵은 주름을 보는 법, 종이가 너무 많이 찢어지기 전에 완성하는 목표가 함께 보였습니다. 여기까지는 같았습니다.",
+                "en": "On screen, the player could see how to place the loose end, wait for it to loosen, follow the bold crease, and finish before the paper tore too far. This matched the promise."
+              }
+            },
+            {
+              "status": "met",
+              "claim": {
+                "ko": "위험한 당김은 놓기 전에 색이 아닌 모양으로 알려 준다고 약속했습니다.",
+                "en": "The design promised that a risky pull would be shown by shape, not color alone, before release."
+              },
+              "observed": {
+                "ko": "화면에서는 위험한 구멍 둘레에 갈라진 외곽선과 떨림 획이 먼저 나타났고, 놓은 뒤 같은 곳이 찢어졌습니다. 여기까지는 같았습니다.",
+                "en": "On screen, a split outline and vibration marks appeared around the risky hole before release, and that same place tore after release. This matched the promise."
+              }
+            },
+            {
+              "status": "met",
+              "claim": {
+                "ko": "완성하면 들린 종이와 주홍 봉합선이 잎맥처럼 남는다고 약속했습니다.",
+                "en": "The design promised that completion would leave a lifted sheet with vermilion seams reading as a leaf vein."
+              },
+              "observed": {
+                "ko": "화면에서는 종이가 역광 속에 들렸고, 아래쪽 결과 안내가 중앙의 종이결과 주홍 선을 가리지 않았습니다. 여기까지는 같았습니다.",
+                "en": "On screen, the sheet lifted into backlight, and the result notice at the bottom did not cover the central paper grain or vermilion seams. This matched the promise."
+              }
+            },
+            {
+              "status": "gap",
+              "claim": {
+                "ko": "처음 해 보는 손은 안내를 익히느라 익숙한 손보다 오래 머문다고 약속했습니다.",
+                "en": "The design promised that a first-time hand would spend longer learning the guidance than an experienced hand."
+              },
+              "observed": {
+                "ko": "화면에서는 처음 해 본 손도 익숙한 손과 비슷한 때에 끝났습니다. 게임을 끝내는 흐름은 이어졌지만, 첫 플레이의 길이는 약속보다 짧았습니다.",
+                "en": "On screen, a first-time hand finished at about the same point as an experienced hand. The completion flow held, but the first play was shorter than promised."
+              }
+            }
+          ],
+          "held": {
+            "at": "2026-07-25",
+            "reason": {
+              "ko": "처음 화면에서는 가까운 구멍을 쉬지 않고 잇기만 해도 종이를 끝까지 완성할 수 있었습니다. 굵은 주름을 고르는 이유가 사라져 공개를 멈췄습니다. 종이가 가라앉는 기다림과 준비 신호를 더한 뒤 다시 보았습니다.",
+              "en": "In the first build, the sheet could be completed by joining nearby holes without pause. That removed the reason to choose the bold crease, so publication stopped. I reviewed it again after the wait for the paper to settle and a clear ready signal were added."
+            }
+          }
+        }
+      },
+      "artifact": {
+        "status": "local",
+        "runnerVersion": "v1",
+        "bridgeMode": "contract-v1",
+        "version": "local-fixture",
+        "entryUrl": "/__game-assets/games/papervein/local-fixture/entry.mjs",
+        "styleUrls": [
+          "/__game-assets/games/papervein/local-fixture/assets/style-jgtcBYQu.css"
+        ],
+        "assetBaseUrl": "/__game-assets/games/papervein/local-fixture/",
+        "source": {
+          "kind": "local",
+          "repo": "../games/2026/2026-07-25-papervein",
+          "dist": "dist-arcade"
+        },
+        "release": {
+          "releaseSha": "2a9fb2287750e6c4a66e7d5891d5016837856bb4",
+          "manifestSha256": "769ab1439283549bac3d9f684a7fde82e0f7e53b2036849734d89e2689d6b54d",
+          "files": 9,
+          "bytes": 3158186,
+          "codeGzipBytes": 78412
         }
       }
     }
