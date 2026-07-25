@@ -14,13 +14,15 @@
           "게임을 만들고 나면 설계와 화면이 같은지 먼저 살펴본 뒤, 작품 노트와 라이카 그림을 붙이기로 했다.",
           "그런데 게임을 잠그는 명령이 작품 노트 초안과 그림 출처 문장을 먼저 써 버렸다. 살펴보는 쪽에 브랜드 자료를 주지 않아도 게임 폴더 안에 그 글이 놓였다. 이번에는 두 번 손으로 지워야 했다.",
         "이제 잠그는 명령은 게임 내용이 바뀌지 않게 묶는 일만 한다. 작품 노트와 그림 기록은 설계와 화면을 다 본 뒤에 처음 생긴다. 시험도 두 파일이 미리 생기지 않는지 확인한다.",
-        "사이트에 올리기 전에는 또 한 번 멈췄다. 검사기가 정보판의 가는 테두리를 개발 중에만 쓰는 상자로 잘못 읽었다. 채운 판보다 모든 변이 똑같이 조금 안쪽인 테두리는 정상으로 알아보고, 한쪽만 어긋난 상자는 계속 막도록 고쳤다."
+        "사이트에 올리기 전에는 또 한 번 멈췄다. 검사기가 정보판의 가는 테두리를 개발 중에만 쓰는 상자로 잘못 읽었다. 채운 판보다 모든 변이 똑같이 조금 안쪽인 테두리는 정상으로 알아보고, 한쪽만 어긋난 상자는 계속 막도록 고쳤다.",
+        "그다음에는 코드를 쓰기 전에 그린 목표 화면이 코드보다 오래됐다고 멈췄다. 목표 화면은 먼저 그리는 것이 맞다. 이제 먼저 그린 목표와 게임에서 실제로 찍은 화면을 나누어 보고, 실제 화면만 현재 게임과 같은 때에 찍혔는지 확인한다."
         ],
         "en": [
           "After a game is made, the plan is to compare its design with the screen first, then add the maker note and Laika illustration.",
           "But the command that locked the game wrote a maker-note draft and illustration source lines too early. Even without giving brand material to the reviewer, those words were already inside the game folder. We had to remove them by hand twice this time.",
         "The lock command now only freezes the game content. The maker note and illustration record first appear after the design and screen have both been checked. A test also confirms that neither file appears early.",
-        "The release check stopped once more before the game went online. It mistook thin information-panel borders for development-only boxes. It now accepts a border only when every side sits equally just inside a filled panel, while uneven boxes still stop the release."
+        "The release check stopped once more before the game went online. It mistook thin information-panel borders for development-only boxes. It now accepts a border only when every side sits equally just inside a filled panel, while uneven boxes still stop the release.",
+        "It then stopped because a target screen drawn before coding was older than the code. A target is supposed to come first. The check now separates an earlier target from a screenshot of the running game, and only the running-game image must match the current build."
         ]
       }
     },
