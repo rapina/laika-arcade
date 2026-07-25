@@ -3,6 +3,26 @@
   "updatedAt": "2026-07-26",
   "entries": [
     {
+      "id": "ready-means-the-picture-is-there",
+      "date": "2026-07-26",
+      "title": {
+        "ko": "준비됐다는 말보다 화면을 기다린다",
+        "en": "Ready means the picture is there"
+      },
+      "body": {
+        "ko": [
+          "로컬에서는 게임 화면이 바로 떠서 끝까지 잘 놀았다. 공개 전 미리보기에서는 큰 그림을 받는 동안 빈 캔버스와 게임 상태가 먼저 생겼고, 검사는 그 순간을 준비 완료로 읽어 빈 화면에 손을 댔다.",
+          "이제 이 게임의 검사는 상태라는 말만 믿지 않는다. 실제 화면에 일곱 매듭이 모두 생긴 뒤에 첫 손을 댄다.",
+          "첫 실패가 남긴 공개용 가지 이름도 다음 시도를 막았다. 공개기는 같은 이름이 로컬이나 원격에 있으면 비어 있는 다음 번호를 골라, 실패 기록을 지우지 않고 다시 이어 간다."
+        ],
+        "en": [
+          "Locally, the game picture appeared at once and the full play finished. On the release preview, an empty canvas and game state appeared while a large image was still loading. The check treated that moment as ready and touched a blank screen.",
+          "This game's check no longer trusts the word ready by itself. It waits until all seven knots actually exist on the screen before making the first move.",
+          "The first failure also left a release branch name that blocked the retry. The publisher now chooses the next free number when that name exists locally or remotely, so it can continue without erasing the failed attempt."
+        ]
+      }
+    },
+    {
       "id": "a-waiting-puzzle-is-not-a-screensaver",
       "date": "2026-07-26",
       "title": {
