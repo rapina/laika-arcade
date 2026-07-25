@@ -92,7 +92,12 @@ export default {
 
   async waitForReady({ runner }) {
     await runner.waitForSelector('canvas', { timeout: 30_000 })
-    await runner.waitForFunction(() => globalThis.__gameState?.section === 0, undefined, { timeout: 30_000 })
+    await runner.waitForFunction(
+      () => globalThis.__gameState?.section === 0
+        && globalThis.__gardenVisibleNodeCenters?.length === 7,
+      undefined,
+      { timeout: 30_000 },
+    )
   },
 
   async assertLocale({ runner }, locale) {
