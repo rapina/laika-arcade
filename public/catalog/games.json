@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-07-25T00:00:00+09:00",
+  "updatedAt": "2026-07-26T00:00:00+09:00",
   "studio": {
     "name": "Sputnik Workshop",
     "maker": "Laika"
@@ -6592,8 +6592,11 @@
       "slug": "glassdive",
       "sequence": 22,
       "releaseDate": "2026-07-26",
-      "status": "local-preview",
-      "supportedLocales": ["ko", "en"],
+      "status": "published",
+      "supportedLocales": [
+        "ko",
+        "en"
+      ],
       "credits": {
         "studio": "Sputnik Workshop",
         "creator": "Laika",
@@ -6602,20 +6605,23 @@
       },
       "artwork": {
         "baseId": "laika-base-v1",
-        "focalPoint": { "x": 0.58, "y": 0.48 },
+        "focalPoint": {
+          "x": 0.58,
+          "y": 0.48
+        },
         "alt": {
           "ko": "리벳 캡슐 안에서 라이카가 흰 앞발로 어두운 얼음판을 녹이고, 열린 길을 따라 유리 물고기 세 마리가 떠오른다.",
           "en": "Inside her riveted capsule, Laika melts a dark ice sheet with a white front paw as three glass fish rise through the opened path."
         },
         "sources": [
           {
-            "url": "/__game-assets/games/glassdive/local-fixture/art/laika-glassdive-640.jpg",
+            "url": "/__game-assets/games/glassdive/bf5256de42582f6ba0b0f5c5931168d27ca0255d/art/laika-glassdive-640.jpg",
             "width": 640,
             "height": 426,
             "type": "image/jpeg"
           },
           {
-            "url": "/__game-assets/games/glassdive/local-fixture/art/laika-glassdive-1280.jpg",
+            "url": "/__game-assets/games/glassdive/bf5256de42582f6ba0b0f5c5931168d27ca0255d/art/laika-glassdive-1280.jpg",
             "width": 1280,
             "height": 853,
             "type": "image/jpeg"
@@ -6672,7 +6678,13 @@
           ]
         }
       },
-      "palette": ["#061c2b", "#8ff6ff", "#d8fbff", "#23475a", "#d59b57"],
+      "palette": [
+        "#061c2b",
+        "#8ff6ff",
+        "#d8fbff",
+        "#23475a",
+        "#d59b57"
+      ],
       "resultDisplay": {
         "primary": {
           "field": "score",
@@ -6682,7 +6694,10 @@
         "secondary": {
           "field": "phase",
           "fractionDigits": 0,
-          "prefix": { "ko": "수면 ", "en": "surfaced " }
+          "prefix": {
+            "ko": "수면 ",
+            "en": "surfaced "
+          }
         }
       },
       "designProcess": {
@@ -6708,47 +6723,85 @@
           "checks": [
             {
               "status": "pass",
-              "claim": { "ko": "게임 화면과 필요한 파일이 떠야 합니다.", "en": "The game screen and required files must load." },
-              "observed": { "ko": "게임 화면이 열렸고 필요한 파일 요청이 모두 성공했습니다.", "en": "The game screen opened and every required file request succeeded." }
+              "claim": {
+                "ko": "게임 화면과 필요한 파일이 떠야 합니다.",
+                "en": "The game screen and required files must load."
+              },
+              "observed": {
+                "ko": "게임 화면이 열렸고 필요한 파일 요청이 모두 성공했습니다.",
+                "en": "The game screen opened and every required file request succeeded."
+              }
             },
             {
               "status": "pass",
-              "claim": { "ko": "세로 모바일에서 핵심 놀이를 사용할 수 있어야 합니다.", "en": "Core play must remain usable on a portrait mobile screen." },
-              "observed": { "ko": "세로 화면에서 얼음판과 물고기, 조작 안내가 잘리거나 가려지지 않았습니다.", "en": "The ice field, fish, and instruction remained visible without clipping or obstruction." }
+              "claim": {
+                "ko": "세로 모바일에서 핵심 놀이를 사용할 수 있어야 합니다.",
+                "en": "Core play must remain usable on a portrait mobile screen."
+              },
+              "observed": {
+                "ko": "세로 화면에서 얼음판과 물고기, 조작 안내가 잘리거나 가려지지 않았습니다.",
+                "en": "The ice field, fish, and instruction remained visible without clipping or obstruction."
+              }
             },
             {
               "status": "pass",
-              "claim": { "ko": "화면의 주 입력이 실제 손 입력에 반응해야 합니다.", "en": "The main on-screen action must respond to real pointer input." },
-              "observed": { "ko": "누르고 끄는 실제 입력을 따라 얼음에 이어진 통로가 생겼습니다.", "en": "A continuous melted passage appeared along a real held pointer drag." }
+              "claim": {
+                "ko": "화면의 주 입력이 실제 손 입력에 반응해야 합니다.",
+                "en": "The main on-screen action must respond to real pointer input."
+              },
+              "observed": {
+                "ko": "누르고 끄는 실제 입력을 따라 얼음에 이어진 통로가 생겼습니다.",
+                "en": "A continuous melted passage appeared along a real held pointer drag."
+              }
             },
             {
               "status": "pass",
-              "claim": { "ko": "첫 입력 뒤 게임이 멈추거나 반복해서 오류가 나면 안 됩니다.", "en": "The game must not lock or repeatedly fail after the first input." },
-              "observed": { "ko": "첫 입력 뒤에도 물고기와 화면이 계속 움직였고 오류가 없었습니다.", "en": "Fish and the screen continued moving after input, with no recorded errors." }
+              "claim": {
+                "ko": "첫 입력 뒤 게임이 멈추거나 반복해서 오류가 나면 안 됩니다.",
+                "en": "The game must not lock or repeatedly fail after the first input."
+              },
+              "observed": {
+                "ko": "첫 입력 뒤에도 물고기와 화면이 계속 움직였고 오류가 없었습니다.",
+                "en": "Fish and the screen continued moving after input, with no recorded errors."
+              }
             },
             {
               "status": "pass",
-              "claim": { "ko": "공개에 필요한 자산이 빠지면 안 됩니다.", "en": "No required release asset may be missing." },
-              "observed": { "ko": "살펴본 빌드에서 빠지거나 실패한 자산 요청이 없었습니다.", "en": "The reviewed build had no missing or failed asset request." }
+              "claim": {
+                "ko": "공개에 필요한 자산이 빠지면 안 됩니다.",
+                "en": "No required release asset may be missing."
+              },
+              "observed": {
+                "ko": "살펴본 빌드에서 빠지거나 실패한 자산 요청이 없었습니다.",
+                "en": "The reviewed build had no missing or failed asset request."
+              }
             },
             {
               "status": "pass",
-              "claim": { "ko": "살펴본 빌드와 공개할 빌드가 같아야 합니다.", "en": "The reviewed build must match the build prepared for release." },
-              "observed": { "ko": "출고 검사 기록과 부팅 기록이 같은 소스 표식을 가리켰습니다.", "en": "The release review and boot record pointed to the same source identity." }
+              "claim": {
+                "ko": "살펴본 빌드와 공개할 빌드가 같아야 합니다.",
+                "en": "The reviewed build must match the build prepared for release."
+              },
+              "observed": {
+                "ko": "출고 검사 기록과 부팅 기록이 같은 소스 표식을 가리켰습니다.",
+                "en": "The release review and boot record pointed to the same source identity."
+              }
             }
           ]
         }
       },
       "artifact": {
-        "status": "local",
+        "status": "published",
         "runnerVersion": "v1",
         "bridgeMode": "contract-v1",
-        "version": "local-fixture",
-        "entryUrl": "/__game-assets/games/glassdive/local-fixture/entry.mjs",
-        "styleUrls": ["/__game-assets/games/glassdive/local-fixture/assets/style-BXbIvr_T.css"],
-        "assetBaseUrl": "/__game-assets/games/glassdive/local-fixture/",
+        "version": "bf5256de42582f6ba0b0f5c5931168d27ca0255d",
+        "entryUrl": "/__game-assets/games/glassdive/bf5256de42582f6ba0b0f5c5931168d27ca0255d/entry.mjs",
+        "styleUrls": [
+          "/__game-assets/games/glassdive/bf5256de42582f6ba0b0f5c5931168d27ca0255d/assets/style-BXbIvr_T.css"
+        ],
+        "assetBaseUrl": "/__game-assets/games/glassdive/bf5256de42582f6ba0b0f5c5931168d27ca0255d/",
         "source": {
-          "kind": "local-fixture",
+          "kind": "vercel-blob",
           "repo": "../games/2026/2026-07-26-glassdive",
           "dist": "dist-arcade"
         },
