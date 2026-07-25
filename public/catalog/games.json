@@ -6522,6 +6522,48 @@
           }
         }
       },
+      "earthReview": {
+        "reviewer": "Murr",
+        "reviewedAt": "2026-07-26",
+        "playedArtifactVersion": "3b47dbcc0c2b6d8297c4e6b52fd155d5d94bad9d",
+        "artwork": {
+          "id": "murr-gardengaps-v1",
+          "focalPoint": {
+            "x": 0.48,
+            "y": 0.5
+          },
+          "alt": {
+            "ko": "무르가 낡은 수신실 책상 위 황갈색 갈대밭에서 비슷한 두 매듭 사이를 망설이며 한 앞발로 청록 잎눈 틈을 벌린다.",
+            "en": "Murr hesitates between two similar knots while parting an ochre reed field toward teal leaf buds on the old receiving-room desk."
+          },
+          "sources": [
+            {
+              "url": "/art/murr-gardengaps-640.jpg",
+              "width": 640,
+              "height": 426,
+              "type": "image/jpeg"
+            },
+            {
+              "url": "/art/murr-gardengaps-1280.jpg",
+              "width": 1280,
+              "height": 853,
+              "type": "image/jpeg"
+            }
+          ]
+        },
+        "ko": {
+          "impression": "어두운 물 위 청록 덩굴과 마른 갈대가 절제되어 있었어. 손으로 틈을 직조하는 장면은 바로 기억에 남더라.",
+          "worked": "마디를 끌면 여러 갈대가 함께 휘는 반응이 부드러웠어. 한 마디로 갈대밭 전체 모양을 바꾸는 손맛과 청록·황갈색 대비도 또렷했고.",
+          "friction": "선택할 마디와 놓아야 할 잎 틈이 서로 비슷해 보였어. 안내를 읽고도 무엇을 잡아 어디까지 옮길지 자꾸 망설였고, 결국 젖은 잎까지 가지 못했어.",
+          "carry": "갈대 배열을 읽는 공간 퍼즐은 느껴졌지만 본편을 끝내지 못해 깊이는 아직 모르겠어. 한 마디가 전체를 바꾸는 동사와 조용한 촉감은 남기고, 다음에는 지금 잡을 곳과 놓을 곳을 한눈에 갈라 줬으면 해."
+        },
+        "en": {
+          "impression": "The restrained dark water, teal vine, and dry reeds stayed with me. Weaving a gap by hand was immediately memorable.",
+          "worked": "Dragging one knot bent several reeds together with smooth material feedback. The single action reshaped the whole field, and the teal and ochre stayed distinct.",
+          "friction": "The knot to choose and the leaf gap to release into looked too similar. Even after reading the prompt, I kept hesitating over what to grab and how far to move it, and I never reached the wet leaf.",
+          "carry": "I sensed a spatial puzzle in reading the reed formation, but I could not finish the run, so its depth remains unknown. Keep the one-knot whole-field action and quiet tactility, then separate the current grab point and destination at a glance."
+        }
+      },
       "artifact": {
         "status": "published",
         "runnerVersion": "v1",
