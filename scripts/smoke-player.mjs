@@ -39,8 +39,15 @@ const driverPath = process.argv[3]
   : resolve(import.meta.dirname, 'smoke-drivers', `${slug}.mjs`)
 if (!existsSync(driverPath)) throw new Error(`${slug}: smoke driver not found at ${driverPath}`)
 const { default: driver } = await import(pathToFileURL(driverPath))
+const fatalOnly = driver?.reviewMode === 'fatal-only'
 
-for (const method of [
+const requiredMethods = fatalOnly ? [
+  'waitForReady',
+  'start',
+  'readState',
+  'step',
+  'screenshotLocator',
+] : [
   'waitForReady',
   'assertLocale',
   'start',
@@ -52,7 +59,8 @@ for (const method of [
   'shouldCapture',
   'screenshotLocator',
   'assertFinal',
-]) {
+]
+for (const method of requiredMethods) {
   if (typeof driver?.[method] !== 'function') throw new Error(`${slug}: smoke driver is missing ${method}()`)
 }
 
@@ -156,6 +164,35 @@ try {
     undefined,
     { timeout: 30_000 },
   )
+  if (fatalOnly) {
+    await driver.start(context)
+    const before = await driver.readState(context)
+    const beforeImage = await driver.screenshotLocator(context).screenshot()
+    await driver.step(context, before)
+    await delay(driver.interactionWaitMs ?? 500)
+    const after = await driver.readState(context)
+    const afterImage = await driver.screenshotLocator(context).screenshot({
+      path: resolve(qaDir, `${slug}-gameplay.png`),
+    })
+    const interactionVerified = typeof driver.hasInteracted === 'function'
+      ? await driver.hasInteracted(context, before, after)
+      : JSON.stringify(before) !== JSON.stringify(after) || !beforeImage.equals(afterImage)
+    const summary = {
+      slug,
+      reviewMode: 'fatal-only',
+      mounted: Boolean(after),
+      interactionVerified,
+      consoleErrors,
+      pageErrors,
+      failedRequests,
+    }
+    const serialized = `${JSON.stringify(summary, null, 2)}\n`
+    writeFileSync(resolve(qaDir, `${slug}-smoke-result.json`), serialized)
+    writeFileSync(resolve(qaDir, 'smoke-result.json'), serialized)
+    process.stdout.write(serialized)
+    if (!summary.mounted || !interactionVerified) throw new Error('game did not mount or respond to pointer input')
+    if (consoleErrors.length || pageErrors.length || failedRequests.length) throw new Error('browser errors were recorded')
+  } else {
   const localeControls = context.runner.locator(driver.localeControlSelector ?? '.locale-btn')
   const localeControlHidden = await localeControls.count() === 0 || await localeControls.evaluateAll(
     (controls) => controls.every((control) => control.hidden || getComputedStyle(control).display === 'none'),
@@ -260,6 +297,7 @@ try {
 
   if (!languageVerified || !localeControlHidden) throw new Error('locale contract did not reach the game')
   if (consoleErrors.length || pageErrors.length || failedRequests.length) throw new Error('browser errors were recorded')
+  }
 } finally {
   await browser.close()
 }
