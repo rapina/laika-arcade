@@ -6216,6 +6216,48 @@
           }
         }
       },
+      "earthReview": {
+        "reviewer": "Murr",
+        "reviewedAt": "2026-07-25",
+        "playedArtifactVersion": "2a9fb2287750e6c4a66e7d5891d5016837856bb4",
+        "artwork": {
+          "id": "murr-papervein-v1",
+          "focalPoint": {
+            "x": 0.52,
+            "y": 0.5
+          },
+          "alt": {
+            "ko": "무르가 낡은 수신실 책상에서 젖은 닥종이 위의 주홍 섬유를 한 앞발로 당겨 벌어진 틈을 잇는다.",
+            "en": "Murr pulls a vermilion fiber across wet handmade paper with one front paw, joining its openings on the old receiving-room desk."
+          },
+          "sources": [
+            {
+              "url": "/art/murr-papervein-640.jpg",
+              "width": 640,
+              "height": 426,
+              "type": "image/jpeg"
+            },
+            {
+              "url": "/art/murr-papervein-1280.jpg",
+              "width": 1280,
+              "height": 853,
+              "type": "image/jpeg"
+            }
+          ]
+        },
+        "ko": {
+          "impression": "검은 틈이 주홍 봉합선으로 바뀌는 순간은 좋았어. 종이결을 한 발로 붙드는 느낌이 또렷하더라.",
+          "worked": "느슨한 끝을 구멍에 놓는 드래그는 바로 손에 걸렸어. 종이결, 굵은 주름, 주홍 실도 서로 잘 갈렸고. 첫 판보다 다음 판에 한 땀 더 이으면서 잡는 자리와 움직일 때를 조금씩 배웠지.",
+          "friction": "섬유가 느슨해지는 중이라는 말은 기다리라는 뜻처럼 읽혔는데, 기다리는 동안 종이가 더 갈라졌어. 주홍 꼬리와 갈색 매듭 가운데 어디를 잡는지도 처음엔 망설였고. 결과가 말한 구멍 번호는 종이 위에 없어서 다음 손으로 옮기기 어려웠어.",
+          "carry": "끝까지 잇지는 못했어. 그래도 다음에는 멈춰 서기보다 굵은 주름을 계속 좇아 보고 싶더라. 재료의 말이 지금 기다릴지 움직일지를 함께 알려 주고, 결과가 보이는 모양이나 자리를 짚어 주면 순서가 암호보다 손에 익는 기술이 될 거야."
+        },
+        "en": {
+          "impression": "The best moment is when a black opening turns into a vermilion seam. It feels like holding paper grain under one paw.",
+          "worked": "Dragging the loose end into a hole caught immediately. Paper grain, bold creases, and vermilion thread stayed distinct. I added one more stitch on the next run, gradually learning where to grab and when to move.",
+          "friction": "The fibers are loosening sounded like a reason to wait, but the sheet kept tearing while I waited. At first the vermilion tail and brown knot also competed as grab points. The result named a hole number that was not visible on the sheet, so it was hard to turn into the next action.",
+          "carry": "I did not finish the sheet. I still wanted to retry by moving continuously and following the bold crease. If material text said whether to wait or act, and the result pointed to a visible shape or place, the order could feel like learned craft instead of a hidden answer."
+        }
+      },
       "artifact": {
         "status": "published",
         "runnerVersion": "v1",
