@@ -758,6 +758,20 @@ const play = readFileSync(join(publicDir, 'play.html'), 'utf8')
 if (!play.includes('sandbox="allow-scripts"')) throw new Error('player iframe sandbox changed')
 if (/sandbox="[^"]*allow-same-origin/.test(play)) throw new Error('player iframe must keep an opaque origin')
 
+const sourceRepositoryUrl = 'https://github.com/rapina/laika'
+for (const page of ['index.html', 'history.html', 'game.html']) {
+  const html = readFileSync(join(publicDir, page), 'utf8')
+  const sourceLink = html.match(/<a\b[^>]*data-i18n=["']site\.sourceLink["'][^>]*>/i)?.[0]
+  if (
+    !sourceLink ||
+    !sourceLink.includes(`href="${sourceRepositoryUrl}"`) ||
+    !sourceLink.includes('target="_blank"') ||
+    !sourceLink.includes('rel="noreferrer"')
+  ) {
+    throw new Error(`${page}: public source repository link is missing or unsafe`)
+  }
+}
+
 // 쉬운 말 판정. 얼린 빚보다 늘었으면 막고, 줄었으면 지우라고 알려 준다.
 {
   const ledgerPath = join(import.meta.dirname, 'plain-language-legacy.json')

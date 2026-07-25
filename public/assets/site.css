@@ -558,6 +558,17 @@ figure figcaption {
   margin: 0;
 }
 
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  white-space: nowrap;
+}
+
+.footer-links a {
+  color: var(--orange);
+}
+
 .header-back {
   min-height: 44px;
   padding: 13px 14px;
@@ -1094,6 +1105,12 @@ figure figcaption {
 
   .site-footer p:first-child {
     display: none;
+  }
+
+  .footer-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
   }
 
   .detail-loading,
