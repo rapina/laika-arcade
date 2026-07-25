@@ -2077,47 +2077,6 @@
           ]
         }
       },
-      "earthReview": {
-        "reviewer": "Murr",
-        "reviewedAt": "2026-07-18",
-        "artwork": {
-          "id": "murr-maejil-v1",
-          "focalPoint": {
-            "x": 0.42,
-            "y": 0.45
-          },
-          "alt": {
-            "ko": "지구 수신실에서 무르가 한 버튼 조작기에 앞발을 얹고, 가운데만 붉게 달궈진 쇠막대 위로 떨어지는 망치를 지켜보는 모습",
-            "en": "Murr resting a front paw on the one-button controller while watching a hammer fall toward an iron bar glowing hot only in the middle, in the Earth listening room"
-          },
-          "sources": [
-            {
-              "url": "/art/murr-maejil-640.jpg",
-              "width": 640,
-              "height": 426,
-              "type": "image/jpeg"
-            },
-            {
-              "url": "/art/murr-maejil-1280.jpg",
-              "width": 1280,
-              "height": 853,
-              "type": "image/jpeg"
-            }
-          ]
-        },
-        "ko": {
-          "impression": "두드릴수록 옆이 부풀어 오르는 쇠 한 토막이 판마다 다른 숙제를 냈어. 요령이 붙는 만큼 정직하게 결과가 올랐는데, 마지막 한 뼘의 정밀함은 반 박자 지연 때문에 끝까지 손에 안 잡혔어.",
-          "worked": "한 곳을 치면 그 자리가 꺼지고 양옆이 봉긋 솟아서, 어디를 몇 번 칠지 계속 다시 계산했어. 주황에서 잿빛으로 식는 색이 호흡을 정해 주고, 판 끝의 최악 구간 화살표 한 줄이 매 판 계획을 바꿨어. 파단 난 막대까지 선반에 걸리는 게 좋았어.",
-          "friction": "안내 세 줄을 읽는 사이 첫 막대가 타 버렸어. 반 박자 늦게 떨어지는 망치가 막 다 된 구간 위로 떨어져 부러진 판이 두 번, 취소가 안 되니 억울했어. 목표 점선이 뜨거운 쇠 위에서 묻혀 눈대중으로 쳤고, 광택은 열 판 내내 무광이었어.",
-          "carry": "연타는 부러지고 식은 쇠는 눌리지 않아서, 읽고 나눠 치는 손만 결과가 올랐어. 열 판을 돌게 한 건 어디서 틀렸는지 짚어 주는 줄 하나였어. 다 된 구간 위로 뒤늦게 떨어지는 망치는 끝까지 억울했고, 안내를 읽는 동안 쇠가 타 버리는 것도 그대로였어."
-        },
-        "en": {
-          "impression": "A bar of iron that bulges beside every dent set a new puzzle each run. Results rose honestly as my knack grew, but the last inch of precision stayed out of reach behind the half-beat delay.",
-          "worked": "Strike one spot and it sinks while the sides swell, so I kept re-planning where to hit. The orange-to-ash cooling set my rhythm, and the worst-zone arrow line rewrote my plan every run. Even broken bars hang on the shelf.",
-          "friction": "The first bar burned away while I read the guide. Twice a late hammer landed on a zone I had just finished and snapped the bar, with no cancel. The dashed target sinks into hot orange right when it matters, and polish stayed matte for all ten runs.",
-          "carry": "Mashing snaps it and cold iron will not dent, so only a hand that reads and rations gets anywhere. What kept me for ten runs was the line naming where I went wrong. The late hammer landing on a zone I had just finished never stopped stinging, and iron kept burning while I read the guide."
-        }
-      },
       "palette": [
         "#131a24",
         "#f08424",
@@ -2364,6 +2323,47 @@
           "files": 16,
           "bytes": 3561154,
           "codeGzipBytes": 281012
+        }
+      },
+      "earthReview": {
+        "reviewer": "Murr",
+        "reviewedAt": "2026-07-18",
+        "artwork": {
+          "id": "murr-maejil-v1",
+          "focalPoint": {
+            "x": 0.42,
+            "y": 0.45
+          },
+          "alt": {
+            "ko": "지구 수신실에서 무르가 한 버튼 조작기에 앞발을 얹고, 가운데만 붉게 달궈진 쇠막대 위로 떨어지는 망치를 지켜보는 모습",
+            "en": "Murr resting a front paw on the one-button controller while watching a hammer fall toward an iron bar glowing hot only in the middle, in the Earth listening room"
+          },
+          "sources": [
+            {
+              "url": "/art/murr-maejil-640.jpg",
+              "width": 640,
+              "height": 426,
+              "type": "image/jpeg"
+            },
+            {
+              "url": "/art/murr-maejil-1280.jpg",
+              "width": 1280,
+              "height": 853,
+              "type": "image/jpeg"
+            }
+          ]
+        },
+        "ko": {
+          "impression": "두드릴수록 옆이 부풀어 오르는 쇠 한 토막이 판마다 다른 숙제를 냈어. 요령이 붙는 만큼 정직하게 결과가 올랐는데, 마지막 한 뼘의 정밀함은 반 박자 지연 때문에 끝까지 손에 안 잡혔어.",
+          "worked": "한 곳을 치면 그 자리가 꺼지고 양옆이 봉긋 솟아서, 어디를 몇 번 칠지 계속 다시 계산했어. 주황에서 잿빛으로 식는 색이 호흡을 정해 주고, 판 끝의 최악 구간 화살표 한 줄이 매 판 계획을 바꿨어. 파단 난 막대까지 선반에 걸리는 게 좋았어.",
+          "friction": "안내 세 줄을 읽는 사이 첫 막대가 타 버렸어. 반 박자 늦게 떨어지는 망치가 막 다 된 구간 위로 떨어져 부러진 판이 두 번, 취소가 안 되니 억울했어. 목표 점선이 뜨거운 쇠 위에서 묻혀 눈대중으로 쳤고, 광택은 열 판 내내 무광이었어.",
+          "carry": "연타는 부러지고 식은 쇠는 눌리지 않아서, 읽고 나눠 치는 손만 결과가 올랐어. 열 판을 돌게 한 건 어디서 틀렸는지 짚어 주는 줄 하나였어. 다 된 구간 위로 뒤늦게 떨어지는 망치는 끝까지 억울했고, 안내를 읽는 동안 쇠가 타 버리는 것도 그대로였어."
+        },
+        "en": {
+          "impression": "A bar of iron that bulges beside every dent set a new puzzle each run. Results rose honestly as my knack grew, but the last inch of precision stayed out of reach behind the half-beat delay.",
+          "worked": "Strike one spot and it sinks while the sides swell, so I kept re-planning where to hit. The orange-to-ash cooling set my rhythm, and the worst-zone arrow line rewrote my plan every run. Even broken bars hang on the shelf.",
+          "friction": "The first bar burned away while I read the guide. Twice a late hammer landed on a zone I had just finished and snapped the bar, with no cancel. The dashed target sinks into hot orange right when it matters, and polish stayed matte for all ten runs.",
+          "carry": "Mashing snaps it and cold iron will not dent, so only a hand that reads and rations gets anywhere. What kept me for ten runs was the line naming where I went wrong. The late hammer landing on a zone I had just finished never stopped stinging, and iron kept burning while I read the guide."
         }
       }
     },
@@ -6811,6 +6811,48 @@
           "files": 7,
           "bytes": 2245368,
           "codeGzipBytes": 71938
+        }
+      },
+      "earthReview": {
+        "reviewer": "Murr",
+        "reviewedAt": "2026-07-26",
+        "playedArtifactVersion": "bf5256de42582f6ba0b0f5c5931168d27ca0255d",
+        "artwork": {
+          "id": "murr-glassdive-v1",
+          "focalPoint": {
+            "x": 0.48,
+            "y": 0.5
+          },
+          "alt": {
+            "ko": "낡은 수신실에서 무르가 한 앞발로 어두운 얼음 조작판을 문지르고, 희미한 손자국 아래 남은 유리 물고기 한 마리를 바라본다.",
+            "en": "In the old receiving room, Murr rubs a dark ice controller with one front paw and watches the single glass fish left beneath a faint trail."
+          },
+          "sources": [
+            {
+              "url": "/art/murr-glassdive-640.jpg",
+              "width": 640,
+              "height": 426,
+              "type": "image/jpeg"
+            },
+            {
+              "url": "/art/murr-glassdive-1280.jpg",
+              "width": 1280,
+              "height": 853,
+              "type": "image/jpeg"
+            }
+          ]
+        },
+        "ko": {
+          "impression": "차가운 격자 물속에서 작은 물고기 셋이 천천히 밀렸어. 조용해서 바로 손을 댔어.",
+          "worked": "끌고 간 자리가 짙어져 손끝 반응은 분명했어. 물고기와 얼음이 가까워질 때는 잠깐 숨을 참았고.",
+          "friction": "여러 번 문질러도 길이 열린 건지 확신하기 어려웠어. 물고기 둘이 흐려졌는데 뭘 놓쳤는지도 바로 잡히지 않았어.",
+          "carry": "끝까지 가지 못하고 한 마리만 남은 데서 멈췄어. 얇은 물고기 선과 어두워지는 손자국은 남았고, 다음에는 문지른 결과가 끝났는지 진행 중인지 손을 떼는 순간 갈렸으면 해."
+        },
+        "en": {
+          "impression": "Three small fish moved slowly through cold gridded water. It was quiet, so I touched it right away.",
+          "worked": "The trail darkened under my drag, so the response at my paw was clear. I held my breath when a fish drew close to the ice.",
+          "friction": "Even after rubbing the ice several times, I could not tell whether the path was fully open. Two fish faded, and I could not immediately see what I had missed.",
+          "carry": "I did not finish and stopped with one fish left. The thin fish lines and darkening touch trail stayed with me. Next time, let release make it obvious whether melting is done or still in progress."
         }
       }
     }
