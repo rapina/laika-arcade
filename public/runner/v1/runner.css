@@ -1,0 +1,71 @@
+:root {
+  color-scheme: dark;
+  font-family: Pretendard, SUIT, "Apple SD Gothic Neo", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#game-root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  background: #11110f;
+  color: #eee7da;
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
+#game-root {
+  position: relative;
+}
+
+.runner-status {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 18px;
+  padding: 30px;
+  background: #11110f;
+  text-align: center;
+}
+
+.runner-status[hidden] {
+  display: none;
+}
+
+.runner-status span {
+  width: 64px;
+  height: 14px;
+  border-block: 2px solid #d9583b;
+  animation: thread 900ms ease-in-out infinite alternate;
+}
+
+.runner-status p {
+  margin: 0;
+  color: #969287;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+@keyframes thread {
+  from { transform: skewX(-25deg) translateX(-8px); }
+  to { transform: skewX(25deg) translateX(8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .runner-status span {
+    animation: none;
+  }
+}

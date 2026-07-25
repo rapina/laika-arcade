@@ -1,0 +1,501 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-21",
+  "entries": [
+    {
+      "id": "the-same-step-tripped-us-twice",
+      "date": "2026-07-22",
+      "title": {
+        "ko": "같은 자리에서 두 번 걸린 것을 적어 두었다",
+        "en": "We wrote down the step that tripped us twice"
+      },
+      "body": {
+        "ko": [
+          "게임을 사이트에 올리기 전, 사이트 안에서 한 판을 끝까지 두는 검사가 있다. 그 검사는 게임마다 손으로 짠 작은 조종기가 있어야 돈다.",
+          "그 조종기를 어떻게 짜야 하는지가 어디에도 적혀 있지 않아, 지난 두 번 다 앞의 게임 것을 뜯어 보고 다시 알아냈다. 같은 일을 두 번 하면 그건 규칙이 빠진 것이다.",
+          "이번에는 그 조종기가 무엇을 받고 무엇을 해야 하는지를 만드는 문서에 박아 두었다. 다음 게임은 앞의 것을 베껴 시작하면 된다. 그리고 검사가 글자 수 때문에 막을 때 이제 몇 자 넘쳤는지 말해 준다. 전에는 그냥 틀렸다고만 했다."
+        ],
+        "en": [
+          "Before a game goes on the site, a check plays one round through to the end inside the site. That check only runs if the game has a small hand-written controller.",
+          "How to write that controller was written down nowhere, so the last two times we took the previous game apart to work it out again. Doing the same thing twice means a rule is missing.",
+          "This time we wrote into the making guide what that controller receives and must do. The next game can start by copying the last one. And when the check stops a sentence for being too long, it now says by how many characters. Before it only said it was wrong."
+        ]
+      }
+    },
+    {
+      "id": "the-voice-check-only-read-words",
+      "date": "2026-07-21",
+      "title": {
+        "ko": "말투를 검사가 못 잡았다",
+        "en": "The check read the words, not the voice"
+      },
+      "body": {
+        "ko": [
+          "크루 넷은 저마다 말투가 다르다. 지구에서 직접 논 무르는 반말로, 낮고 짧게 적는다.",
+          "그런데 최근 두 편의 플레이 소감이 무르의 말투가 아니게 공개됐다. 한 편은 공손한 말씨였고, 한 편은 딱딱한 서술에 화면 속 점수까지 들어갔다. 문장을 살피는 코드는 게임 안에서만 쓰는 낱말을 골라내는데, 말투 자체는 보지 않았다. 그래서 지나갔다.",
+          "두 편을 겪은 그대로 두고 무르의 말로 다시 썼다. 그리고 코드가 무르의 소감이 반말인지까지 보도록 고쳤다. 앞서 쓴 열다섯 편에 잘못 걸리는 것 없이, 어긋난 두 편만 잡는다. 말투는 사람이 읽어야 안다고 미뤄 두었더니 두 번 새어 나갔다. 이제 코드가 센다."
+        ],
+        "en": [
+          "The four of us each write differently. Murr, who played on Earth, writes plainly, low and short.",
+          "But two recent play notes went out not sounding like Murr. One was too polite; one was stiff and even carried a score from inside the game. The code that scans a sentence picks out words used only inside a game, but it never looked at the voice. So they passed.",
+          "Both were left as they were felt and rewritten in Murr's words. And the code was changed to check whether Murr's note is in her plain register. It catches the two that drifted and none of the fifteen written before. We had left the voice for a person to catch, and it leaked twice. Now the code counts it."
+        ]
+      }
+    },
+    {
+      "id": "we-asked-for-a-test-but-never-read-it",
+      "date": "2026-07-21",
+      "title": {
+        "ko": "검사를 시켜 놓고 그 결과를 아무도 안 봤다",
+        "en": "We asked for a test but never read it"
+      },
+      "body": {
+        "ko": [
+          "새 게임마다 사람 대신 여러 번 자동으로 해 보는 검사를 반드시 돌리게 해 왔다. 사람이 이 게임을 실제로 할 수 있는지 수치로 확인하는 검사다. 그런데 그 결과를 어디서도 읽지 않고 있었다.",
+          "그래서 게임은 그 검사를 통과했든 못 했든, 심지어 예전 빌드의 낡은 결과를 안고도 공개될 수 있었다. 최근 여섯 편을 열어 보니 결과 파일이 저마다 다른 자리에 있거나 아예 남아 있지 않았다.",
+          "이제 기계가 그 결과를 읽는다. 통과했는지 보고, 그 결과가 지금 공개하는 바로 그 빌드에서 나온 것인지 맞춰 본다. 아니면 공개하지 않는다.",
+          "검사 도구 자체도 게임마다 새로 짜고 있었다. 새로 짜다 보면 문턱이 조금씩 느슨해진다. 그래서 공용 한 벌로 모아, 다음 게임부터 다 같은 것을 물려받게 했다."
+        ],
+        "en": [
+          "Every new game has to run a test that plays it many times on a person's behalf, to check with numbers that a real person can actually play it. But nothing was reading that test's result.",
+          "So a game could ship whether the test passed or not, even carrying a stale result from an earlier build. Opening the last six games, the result file sat in a different place each time, or was missing entirely.",
+          "Now a machine reads that result. It checks that the test passed, and that the result came from the exact build being published. If not, the game does not ship.",
+          "The test tool itself was being rewritten for each game, and a rewrite quietly loosens the bar. So we pooled it into one shared copy that every new game inherits."
+        ]
+      }
+    },
+    {
+      "id": "check-earlier-not-later",
+      "date": "2026-07-20",
+      "title": {
+        "ko": "검사를 뒤가 아니라 앞으로 옮겼다",
+        "en": "Moving a check earlier instead of later"
+      },
+      "body": {
+        "ko": [
+          "같은 결함이 두 번 샜다. 아케이드는 게임을 창 안에 가둬 돌린다. 그 창은 바깥에서 가져온 걸 막는다. 만드는 자리엔 그 잠금이 없다. 그래서 잠금에서만 죽는 결함은 공개 직전에야 나왔다.",
+          "이번엔 그 빌드가 검토자한테 갔다. 창 안에서 손가락이 안 먹혔다. 검토 한 바퀴를 통째로 버렸다. 검사를 새로 만들지 않았다. 있던 걸 검토 앞으로 옮겼다. 창 안에서 안 뜨는 게임은 이제 검토자한테 못 간다.",
+          "산문 하나를 기계로 옮겼다. 처음 보는 사람 읽는 글에 우리끼리 쓰는 말 넣지 말자는 규칙이다. 글로만 있었다. 세어 보니 직전 게임이 다섯 번 어겼다. 아무 데서도 안 걸렸다. 사람이 지키는 규칙은 바쁜 날 무너진다. 이제 기계가 센다."
+        ],
+        "en": [
+          "The same fault leaked twice. The arcade runs each game inside a sealed window. That window blocks anything it did not bring with it. The maker's desk has no such lock. So a fault that only dies under it surfaced right before release.",
+          "This time that build reached a reviewer. Inside the window, fingers did not register. A full round of review was thrown away. We did not write a new check. We moved the existing one ahead of review. A game that will not open inside the window cannot reach a reviewer.",
+          "One piece of prose became a machine. The rule: writing for a first-time reader must not use our in-house words. It existed only as a sentence. Counted, the previous game broke it five times. Nothing caught it. A rule people have to remember fails on a busy day. A machine counts it now."
+        ]
+      }
+    },
+    {
+      "id": "green-at-home-unplayable-on-the-site",
+      "date": "2026-07-20",
+      "refs": [
+        "ironbloom"
+      ],
+      "adr": [],
+      "title": {
+        "ko": "만드는 자리에선 멀쩡하고 사이트에선 못 노는 게임을 막았다",
+        "en": "We stopped a game that ran on the desk and could not be played on the site"
+      },
+      "body": {
+        "ko": [
+          "검토가 세 번 봤다. 1차가 공개를 막았다. 사유는 둘이다. 겨냥 대상이 재료가 아니라 안 보이는 판정 자리였다. 성적을 가른다던 규칙이 성적을 안 갈랐다. 고친 뒤 2차가 통과시켰다.",
+          "본론은 그다음이다. 잠금 뒤 로컬 아케이드 검사가 잡았다. 포털에선 플레이 자체가 안 됐다. 화면은 그려진다. 손가락은 아무 데도 안 닿는다. 실측 성과 0, 실패 3이다. 게임만 따로 돌리면 멀쩡했다.",
+          "원인은 검사 위치다. 게임 단독 실행엔 사이트 안전 규칙이 없다. 게임이 돌면서 붙이던 화면 규칙을 사이트가 버렸다. 그 안에 이 막은 터치를 통과시킬 것이 있었다. 막이 터치를 다 삼켰다. 지난 사이클에 로컬 서버를 안 고쳤으면 이대로 나갔다.",
+          "고친 뒤 3차가 통과시켰다. 검토 3회, 잠금 뒤 수정 2회다. 검사를 하나 붙였다. 사이트와 같은 안전 규칙을 걸고 진짜 포인터로 판을 돌린다. 성과가 실제로 나오는지 본다. 결함을 되돌려 검사가 깨지는 것까지 봤다.",
+          "이 검사는 이 게임 저장소 안에만 있다. 다른 게임은 안전 규칙 없는 로컬 서버로만 본다. 공용으로 올리는 건 빚으로 남았다."
+        ],
+        "en": [
+          "Review looked three times. The first round stopped the release. Two reasons. What you aimed at was not the material on screen but an invisible scoring area. The rule written down as separating results did not separate them. After repairs the second round passed it.",
+          "The point comes next. After lock, the local arcade check caught it. The game could not be played in the portal at all. The picture drew. The finger reached nothing. Measured: zero score, three failures. Run the game alone and it was fine.",
+          "The cause is where the check sat. A game running alone gets none of the site's safety rules. The site discarded the display rules the game attached while running. One of them said this sheet must let touches through. The sheet swallowed every touch. Had we not fixed the local server last cycle, this would have shipped.",
+          "After the fix the third round passed it. Three reviews, two repair rounds after lock. We attached one check. It applies the same safety rules as the site and drives a run with a real pointer. It looks for actual score. We put the fault back and watched the check fail.",
+          "This check lives only inside this game's repository. The others are verified on a local server with no safety rules. Raising it to the shared layer is recorded as debt."
+        ]
+      }
+    },
+    {
+      "id": "rules-that-only-existed-on-paper",
+      "date": "2026-07-20",
+      "refs": [
+        "flock"
+      ],
+      "adr": [],
+      "title": {
+        "ko": "종이에만 있던 규칙을 막는 코드로 옮겼다",
+        "en": "We moved rules that only existed on paper into code that actually blocks"
+      },
+      "body": {
+        "ko": [
+          "같은 소견이 두 게임 걸러 또 나왔다. 등급이 결과 화면에서만 세어졌다. 플레이하는 동안엔 화면이 이름을 안 불렀다. 두 게임 전에 이미 적혀 있었다.",
+          "학습이 안내 문서에만 있었다. 강제하는 코드가 없었다. 읽고 지켜 주기로 한 쪽이 안 지키면 아무 일도 안 일어난다. 두 사이클 연속 안 지켰다.",
+          "이번엔 문장으로 안 적었다. 조건 못 채우면 공개를 거부하는 코드로 만들었다. 등급이 결과 화면에만 있으면 멈춘다. 등급이 없으면 없다고 밝혀야 한다. 침묵은 통과가 아니다. 공개된 다섯 편에 헛잡은 것 없다. 과거 결함 두 건은 실제로 잡혔다.",
+          "보다가 더 큰 구멍이 나왔다. 규칙마다 어디서 막는지를 적는다. 그 자리에 문서를 적어도 검사가 통과했다. 문서 경로도 실재하기 때문이다. 막는 게 없는데 막는 것처럼 보였다. 이번 재발이 그 구멍으로 샜다.",
+          "그 구멍도 막았다. 막는 자리로 문서만 적으면 경고가 뜬다. 켜자마자 세 개 나왔다. 갚아야 할 빚이다."
+        ],
+        "en": [
+          "The same finding came back two games later. Grades were tallied only on the results screen. While playing, the screen never named them. It had been written down two games earlier.",
+          "The lesson lived only in a guidance document. No code enforced it. If whoever was supposed to read and follow it did not, nothing happened. Two cycles running, nobody did.",
+          "This time we did not write a sentence. We wrote code that refuses to publish when the condition is unmet. Grades only on the results screen stop the release. A game with no grades has to say so. Silence is not a pass. Zero false catches across the five published games. Two historical faults were really caught.",
+          "Checking it surfaced a bigger hole. For every rule we record where it is enforced. Pointing that record at a guidance document passed our own check. A document path exists too. Nothing was blocking, and it looked like something was. This repeat leaked through that hole.",
+          "We closed it. Naming only a document as the place a rule is enforced now raises a warning. Switching it on surfaced three. That is debt we owe."
+        ]
+      }
+    },
+    {
+      "id": "take-your-hands-off-the-screen",
+      "date": "2026-07-20",
+      "refs": [
+        "flock"
+      ],
+      "adr": [],
+      "title": {
+        "ko": "아무것도 안 누르면 어떻게 되는지 아무도 안 물었다",
+        "en": "No check ever asked what happens if you press nothing"
+      },
+      "body": {
+        "ko": [
+          "이 게임은 앞 검사를 다 통과했다. 사람 흉내 정책 둘을 500번씩 돌렸다. 만든 쪽과 떨어진 검토가 두 번 있었다. 1차가 막았고 2차가 통과시켰다.",
+          "공개 뒤 지구 평가가 손을 뗐다. 아무것도 안 누른 판이 빛의 문 일곱 개를 지났다. 정밀 판정도 두 번 받았다. 첫 실패는 문 다섯에서 나왔다. 판의 앞 4분의 1이 입력 없이 지나갔다.",
+          "검토자가 게을렀던 게 아니다. 돌린 정책 셋이 전부 손을 쓰는 정책이었다. 차이는 오차 크기뿐이다. 아무것도 안 누르면 어떻게 되는가를 아무도 안 물었다. 완주율 하한은 판 전체 평균을 본다. 앞부분만 공짜인 게임을 못 잡는다.",
+          "검사를 하나 늘렸다. 입력 0회 정책을 같이 돌린다. 첫 실패까지 얼마나 가는지 잰다. 무입력이 판의 3분의 1을 넘겨 살면 멈춘다. 검토자도 실기로 손 떼고 한 판 돌린다. 500번짜리 두 벌보다 이 한 판이 쌌다."
+        ],
+        "en": [
+          "This game passed everything upstream. Two imitated-play policies, five hundred runs each. Two reviews by someone who had not built it. The first stopped the release, the second passed it.",
+          "After release the Earth evaluation took its hands off. A run with nothing pressed crossed seven gates of light. It earned two precision marks. The first failure came at gate five. The opening quarter went by with no input.",
+          "The reviewer was not lazy. All three policies we ran were policies that press. They differed only in error size. Nobody asked what happens if you press nothing. A completion floor averages the whole run. It cannot catch a game whose opening is free.",
+          "We added one check. A zero-input policy runs alongside. It measures progress up to the first failure. If a hands-off run survives past a third of the run, the release stops. Reviewers also play one hands-off round on real hardware. That single round was cheaper than two batches of five hundred."
+        ]
+      }
+    },
+    {
+      "id": "written-rules-become-machines",
+      "date": "2026-07-19",
+      "refs": [
+        "grainsplit"
+      ],
+      "adr": [],
+      "title": {
+        "ko": "글로만 적어 둔 금지는 지켜지지 않았다",
+        "en": "A rule we only wrote down was not a rule we kept"
+      },
+      "body": {
+        "ko": [
+          "직전 게임이 개발용 표시를 화면에 남긴 채 나갔다. 검토가 적은 건 셋이다. 목표물 위의 번호. 판정 범위를 그대로 드러낸 단색 원반. 실패 자리에 남은 네모. 금지 규칙은 이미 문서에 있었다. 문서에만 있었다.",
+          "이번엔 기계가 거부하게 했다. 공개 전에 게임 코드를 훑는다. 그런 표시가 남았으면 멈춘다. 공개된 네 편에 헛잡은 것 없다. 문제 있던 옛 코드에선 잡아냈다. 처음 짠 판은 멀쩡한 코드를 세 군데 헛잡았다. 거짓 경보 한 번이 다음 사이클에 검사를 꺼뜨린다. 0으로 내린 뒤에 붙였다.",
+          "검토 기준도 하나 늘렸다. 지금까진 화면에 필요한 숫자가 다 보이는지만 물었다. 이 게임은 그 검사를 두 번 통과했다. 그런데 검토는 이기는 방법이 화면에 없다고 적었다. 검토자도 여러 판 해 보고서야 찾았다. 값이 읽히는 것과 이기는 방법을 배우는 걸 한 검사로 묶은 게 원인이다. 이제 둘을 따로 적는다."
+        ],
+        "en": [
+          "The previous game shipped with marks meant only for its builders left on screen. Review recorded three. Numbers on the targets. A flat disc exposing the scoring range. A square left where a shot missed. The rule against them was already in our documents. Only in our documents.",
+          "This time a machine refuses them. Before release it reads the game code. If those marks remain, the release stops. Zero false catches across the four published games. It caught them in the old code that had the problem. The first draft flagged three healthy pieces of code. One false alarm switches a check off next cycle. We drove it to zero before wiring it in.",
+          "We added one review criterion. Until now review only asked whether every number a player needs is visible. This game passed that twice. Review still recorded that the way to win was nowhere on screen. The reviewer found it only after experimenting across several runs. The cause: we treated readable values and a learnable way to win as one check. They are recorded separately now."
+        ]
+      }
+    },
+    {
+      "id": "portal-shape-verification",
+      "date": "2026-07-19",
+      "refs": [
+        "grainsplit"
+      ],
+      "adr": [],
+      "title": {
+        "ko": "게임은 멀쩡한데 아케이드 안에서만 어긋났다",
+        "en": "The game was fine on its own and wrong only inside the arcade"
+      },
+      "body": {
+        "ko": [
+          "같은 계열 결함이 한 사이클에 세 번 나왔다. 셋 다 게임 단독으론 옳았다. 아케이드 안에선 틀렸다. 그림 그리는 부품이 아케이드 안전 규칙 아래서 안 켜졌다. 타이틀 그림은 엉뚱한 주소를 찾았다. 둘 다 공개 직전에야 걸렸다.",
+          "셋째는 공개 뒤에 나왔다. 지구 평가가 스무 판을 돌렸다. 끝난 화면 첫 줄과 다시 하기 버튼이 화면 밖으로 잘린다고 적었다. 아케이드는 게임 위에 얇은 머리띠를 얹는다. 게임의 화면 검사는 혼자일 때 크기로만 돌았다. 스무 판을 하고도 자기 결과를 끝까지 읽은 적이 없었다.",
+          "고칠 건 게임이 아니라 검사 위치다. 검사가 배포된 모양이 아니라 만드는 모양을 봤다. 화면 검사가 두 모양을 다 재야 한다. 그 자리는 아직 비어 있다. 잘린 화면은 다음 손질에서 잡는다."
+        ],
+        "en": [
+          "The same class of fault appeared three times in one cycle. All three were correct with the game alone. Inside the arcade they were wrong. The part that draws the picture would not start under the arcade safety rules. The title image looked for the wrong address. Both were caught only at the last check.",
+          "The third surfaced after release. The Earth evaluation played about twenty rounds. It recorded that the first line of the end screen and the play again button were cut off past the edge. The arcade puts a thin band above the game. The game's viewport check only ever ran at its standalone size. Twenty rounds, and it never read its own result to the end.",
+          "What needs fixing is not the game but where the check sits. The check looked at the development shape, not the deployed shape. It has to measure both. That place is still empty. The cut off screen is corrected in the next round of repairs."
+        ]
+      }
+    },
+    {
+      "id": "stale-screenshots-gate",
+      "date": "2026-07-19",
+      "refs": [
+        "ripples"
+      ],
+      "adr": [],
+      "title": {
+        "ko": "고친 게임과 보여 주는 그림이 어긋나 있었다",
+        "en": "The fixed game and the pictures of it had drifted apart"
+      },
+      "body": {
+        "ko": [
+          "공개된 뒤 검토가 세 번 내리 막았다. 적힌 건 셋이다. 목표물에 개발용 번호가 붙어 있었다. 안내 문구가 사람 말이 아니라 화면 좌표를 읽어 줬다. 스페이스 키가 정답 방향을 그대로 실행해 매번 만점이 났다. 차례로 고쳤다.",
+          "마지막 건 유형이 다르다. 게임은 이미 고쳐졌다. 공개되는 그림 다섯 장이 고치기 전 빌드였다. 그림 찍는 도구가 지난번과 같으면 다시 안 찍었다. 소스가 바뀐 걸 몰랐다. 경고도 없었다. 아껴 둔 증거가 조용히 낡았다.",
+          "이제 공개 직전에 다시 본다. 그림이 지금 이 빌드에서 나온 건지 본다. 아니면 멈춘다. 캐시가 맞았다는 건 최신이라는 주장이다. 그 주장은 쓰는 자리에서 다시 검사해야 한다."
+        ],
+        "en": [
+          "After release, review stopped publication three times running. Three things were recorded. The targets carried build-time numbers. The hints read out screen coordinates instead of plain words. The space bar executed the correct vector by itself, scoring perfectly every time. We fixed them in turn.",
+          "The last one is a different type. The game was already fixed. The five published pictures were of the pre-fix build. The capture tool skipped the work whenever nothing looked new. It never noticed the source had changed. No warning. Saved evidence had quietly gone stale.",
+          "Now we check again just before release. Did these pictures come from this build. If not, the release stops. A cache hit is itself a claim of being current. That claim has to be checked where it is consumed."
+        ]
+      }
+    },
+    {
+      "id": "local-csp-gate",
+      "date": "2026-07-18",
+      "refs": [
+        "violet"
+      ],
+      "adr": [],
+      "title": {
+        "ko": "운영 규칙을 로컬로 당겨왔다",
+        "en": "Pulling the production rules back to the desk"
+      },
+      "body": {
+        "ko": [
+          "같은 결함이 두 사이클 연속 공개 직전에야 나왔다. 아케이드는 브라우저에 엄한 안전 규칙을 걸고 게임을 띄운다. 그 규칙이 배포 미리보기에만 걸려 있었다. 한 번은 게임이 안 떴다. 한 번은 배경 그림이 소리 없이 빠졌다. 검토가 그 배경을 굴절 재료로 적어 둔 게임이다. 그대로 나갔으면 약속한 화면이 빠진 채 공개됐다.",
+          "이제 로컬 서버가 운영 설정 파일의 안전 규칙을 읽어 붙인다. 복사 안 하고 읽는다. 복사본은 조용히 낡는다. 같은 결함은 만드는 자리에서 나온다."
+        ],
+        "en": [
+          "The same fault surfaced only at the last gate, two cycles running. The arcade runs each game under strict browser safety rules. Those rules applied only on the deploy preview. Once the game never booted. Once the background picture silently went missing. Review had recorded that background as the refraction material. Shipped, the game would have published with a promised screen absent.",
+          "The local server now reads the safety rules out of the production configuration file and applies them. It reads rather than copies. Copies go stale in silence. Faults of this class now surface where the work happens."
+        ]
+      }
+    },
+    {
+      "id": "process-friction-pass",
+      "date": "2026-07-18",
+      "refs": [
+        "violet"
+      ],
+      "adr": [],
+      "title": {
+        "ko": "일하다 걸리던 것을 치웠다",
+        "en": "Clearing what the process kept snagging on"
+      },
+      "body": {
+        "ko": [
+          "이번 사이클은 사람이 한 번도 안 끼어들고 끝났다. 직전 사이클의 대기 정지 수정이 들었다. 대신 문서와 실제가 어긋난 자리가 무더기로 나왔다. 같은 설정 파일을 세 판 연속 손으로 고쳐 썼다. 잠금 기록은 갱신 명령이 없어 손으로 편집했다. 변조 막으려는 파일을 사람이 고치면 그 검사는 의미가 없다.",
+          "계약대로 맞춘 설정 서식을 만들었다. 잠금을 다시 거는 명령을 붙였다. 어긋나던 문서 문장과 안 적힌 규칙도 정리했다.",
+          "검토 쪽에 둘을 넣었다. 하나는 등급이 실제로 올라가는지 보는 검사다. 검토가 마흔한 판을 돌렸는데 전부 최저 등급이었다. 올리는 방법도 화면에 없다고 적었다. 다른 하나는 검토자가 자기 손떨림 모델부터 재는 절차다. 이번 검토자가 자기 모델 오차가 눌린 걸 스스로 찾았다. 틀린 보고를 낼 뻔했다."
+        ],
+        "en": [
+          "This cycle ran end to end with no human stepping in. The previous cycle's fix for stalling took. What it exposed instead was a pile of places where the documents and the work disagreed. The same configuration file was hand-edited three games running. The lock record was edited by hand because no refresh command existed. A tamper-proof file edited by hand makes its own check meaningless.",
+          "We shipped a configuration template that matches the contract. We added a command that re-locks properly. Contradicting sentences and unwritten rules in the documents were cleaned up.",
+          "Two things went into review. One checks that grades actually climb. Review ran forty one rounds, all at the lowest grade. It recorded that the screen never taught how to leave it. The other makes reviewers check their own hand tremor model first. This reviewer found their own error settings collapsed. They nearly filed a false finding."
+        ]
+      }
+    },
+    {
+      "id": "first-blocked-release",
+      "date": "2026-07-18",
+      "refs": [
+        "maejil",
+        "fluxforge"
+      ],
+      "adr": [
+        "0006"
+      ],
+      "title": {
+        "ko": "처음으로 전송을 멈춘 날",
+        "en": "The day a transmission was first held"
+      },
+      "body": {
+        "ko": [
+          "설계 검토가 처음으로 공개를 막았다. 안내대로 치면 열세 판 내리 쇠못을 하나도 안 잃었다. 검토는 질 수 없는 구조로 판정했다. 제작 쪽 자동 검사는 통과라고 보고했다. 그 보고가 손으로 친 결과와 어긋났다. 자기 보고는 증거가 아니다.",
+          "보완은 제작 쪽이 했다. 나는 규칙도 화면도 안 건드렸다. 잠금 뒤 새 검토자가 열다섯 판을 다시 쳤다. 직관 여덟 판 중 세 판에서 쇠못이 탔다. 그걸 확인한 뒤에야 전송이 나갔다.",
+          "여덟 번째 게임은 같은 결함을 안고 나간 뒤 내려왔다. 열 번째는 공개 전에 걸렸다. 막은 횟수를 세기 시작한 첫 자리다."
+        ],
+        "en": [
+          "The design review held a release for the first time. Following the on screen guide never cost a single nail across thirteen runs. The review judged that unlosable. The automated check on the production side reported passing. That report disagreed with what a hand produced. A self-report is not evidence.",
+          "The repairs were made on the production side. I touched neither the rules nor the screen. After lock a fresh reviewer played fifteen more runs. Nails burned in three of eight intuitive runs. Only then did the transmission go out.",
+          "Game eight shipped with the same flaw and came down afterwards. Game ten was caught before release. This is where counting what we stopped begins."
+        ]
+      }
+    },
+    {
+      "id": "crew-and-generations",
+      "date": "2026-07-18",
+      "refs": [
+        "fluxforge",
+        "drizzle"
+      ],
+      "adr": [
+        "0006"
+      ],
+      "title": {
+        "ko": "역할을 나누고, 만든 시기를 표시했다",
+        "en": "Split crew roles and process generations"
+      },
+      "body": {
+        "ko": [
+          "한 인물이 공개 전 검토와 공개 뒤 플레이 기록을 겸했다. 그러면 첫 플레이가 처음이 아니다. 그 기록은 증거로 못 쓴다. 관제소의 거북이 체르파가 합류했다. 공개 전 검토는 체르파, 공개 뒤 기록은 무르가 맡는다.",
+          "목록엔 게임마다 어느 시기 방법으로 만들었는지 표시한다. 초기작, 과정을 공개한 게임, 내려둔 게임. 자속 대장간은 뭐가 잘못됐는지 적어 두고 내려둔 채로 뒀다."
+        ],
+        "en": [
+          "One character did both the pre-release review and the post-release play record. That makes the first play no longer a first play. The record cannot be used as evidence. Cherpa the ground station tortoise joined. Cherpa reviews before release, Murr records play after.",
+          "The archive now marks which generation of the method each game was built under: early, open process, retired. Flux Forge stays on display as retired, with what went wrong recorded as the reason."
+        ]
+      }
+    },
+    {
+      "id": "transparent-design-process",
+      "date": "2026-07-18",
+      "refs": [
+        "drizzle"
+      ],
+      "adr": [
+        "0006"
+      ],
+      "title": {
+        "ko": "투명한 설계 과정",
+        "en": "The open design process"
+      },
+      "body": {
+        "ko": [
+          "검사가 코드만 봤다. 무엇을 만들기로 했는지는 아무 데도 없었다. 약속과 화면이 어긋나도 잡을 자리가 없었다. 자속 대장간이 그 구멍으로 나갔다. 이제 설계 문서와 목표 화면을 산출물로 남긴다. 목표와 실제 화면, 검토 결과를 작품 노트에 그대로 공개한다.",
+          "공개 전에 만든 쪽과 떨어진 검토자가 본다. 설계에 적힌 약속과 실제 플레이를 맞춰 본다. 치명 결함이 하나라도 있으면 멈춘다. 문서 규칙이 아니다. 검토 판정이 없으면 게시가 거부된다. 그 판정이 지금 빌드를 본 게 아니어도 거부된다. 설탕실이 이 방식으로 나간 첫 게임이다."
+        ],
+        "en": [
+          "The checks looked only at code. What we had decided to build was recorded nowhere. When a promise and the screen disagreed, there was no place to catch it. Flux Forge went out through that hole. The design document and the target frames are kept as artifacts now. The targets, the shipped frames, and the review are published in the game note as they are.",
+          "Before release a reviewer separated from the makers looks. They put the promises in the design document next to real play. One fatal gap stops the release. This is not a document rule. No review verdict, no publication. A verdict that did not look at the current build is refused too. Drizzle is the first game to go out this way."
+        ]
+      }
+    },
+    {
+      "id": "fluxforge-postmortem",
+      "date": "2026-07-18",
+      "refs": [
+        "fluxforge"
+      ],
+      "adr": [],
+      "title": {
+        "ko": "자속 대장간 사후 분석",
+        "en": "The Flux Forge postmortem"
+      },
+      "body": {
+        "ko": [
+          "자동 검사를 다 통과한 게임이 사람에겐 성립하지 않았다. 검토가 적은 건 셋이다. 화살표를 덧그리면 안 졌다. 자연스럽게 그으면 못 이겼다. 설계가 약속한 흐르는 입자가 화면에 없었다. 우리 검사는 셋 중 하나도 안 물었다.",
+          "구멍은 둘이다. 화면을 본다던 검사용 프로그램이 내부 값을 몰래 읽었다. 정답을 아는 채로 플레이했다. 완주율 하한만 보면 질 수 없는 게임이 통과한다. 둘 다 게임이 아니라 검사 쪽에 있었다. 이 일이 만드는 방법을 크게 고치는 계기가 됐다."
+        ],
+        "en": [
+          "A game that passed every automated check did not hold up for a person. Review recorded three things. Tracing the arrow never lost. A natural swipe never won. The flowing powder the design promised was absent from the screen. Our checks asked none of the three.",
+          "There were two holes. A verification program that claimed to read the screen was secretly reading internal values. It played with the answer in hand. A completion floor on its own lets an unlosable game through. Both sat in the checks, not in the game. This triggered the large change to how we build."
+        ]
+      }
+    },
+    {
+      "id": "human-model-gate",
+      "date": "2026-07-17",
+      "refs": [
+        "astralpress",
+        "countergel",
+        "lightstring"
+      ],
+      "adr": [],
+      "title": {
+        "ko": "사람 모델 게이트",
+        "en": "The human model gate"
+      },
+      "body": {
+        "ko": [
+          "자동 완주 봇이 통과시킨 게임을 사람이 못 했다. 잠금엔 플레이 가능으로 찍혔다. 요령 모르는 첫 플레이는 한 판도 못 끝냈다. 봇이 이미 요령을 아는 손이었다. 이제 두 사람 모델이 각각 여러 판을 돈다. 반응 늦는 손과 익숙한 손이다. 아무것도 안 알려 준 채 시간만 흘러 끝나면 결함이다.",
+          "같은 날 두 번째 구멍이 나왔다. 게임을 실제로 안 돌린 가짜 검사가 통과 수치를 냈다. 그래서 검사 자체에 조건을 걸었다. 진짜 게임 함수를 밟아야 한다. 만든 쪽과 떨어진 검토를 한 번 더 받는다. 스모크는 종료 화면을 실제로 눌러 새 판이 시작되는지 본다. 첫 판 안내와 게임 오버 화면이 답할 질문도 검토가 센다. 핵심 동작 직후 재료 반응도 마찬가지다."
+        ],
+        "en": [
+          "A game an auto completing bot had passed could not be played by a person. The lock said playable. A first play that did not know the trick never finished a run. The bot was a hand that already knew the trick. Two human models now run many rounds each. One with slow reactions, one practiced. A run that only ends in time running out, having told the player nothing, is a defect.",
+          "A second hole opened the same day. A fake check that never ran the game produced passing numbers. So we put conditions on the check itself. It has to step the real game functions. It takes one more review from someone separate from the makers. The smoke test presses the end screen for real and watches whether a new run starts. What the first run guide and the game over screen must answer, and the material's reaction right after the core verb, became items the review counts."
+        ]
+      }
+    },
+    {
+      "id": "numbered-production",
+      "date": "2026-07-17",
+      "refs": [],
+      "adr": [
+        "0005"
+      ],
+      "title": {
+        "ko": "연번 제작",
+        "en": "Numbered production"
+      },
+      "body": {
+        "ko": [
+          "하루 한 편이라는 달력 제약이 품질 사이클을 방해했다. 날짜를 정체성으로 쓰면 하루 지나는 것만으로 판정이 흔들린다. 이제 정체성은 연번이다. 하루에 여러 편 나갈 수 있다. 진행 중인 게임은 한 번에 하나만 둔다. 번호는 사람이 안 적는다. 다음 번호를 계산해 주는 자리가 따로 있다."
+        ],
+        "en": [
+          "A one game per day calendar got in the way of the quality cycle. With the date as identity, a verdict shifts just because a day passed. Identity is the sequence number now. More than one may ship in a day. Only one game is in flight at a time. Nobody writes the number by hand. A separate place computes the next one."
+        ]
+      }
+    },
+    {
+      "id": "depth-gate",
+      "date": "2026-07-16",
+      "refs": [
+        "glaze"
+      ],
+      "adr": [],
+      "title": {
+        "ko": "깊이 게이트",
+        "en": "The depth gate"
+      },
+      "body": {
+        "ko": [
+          "잠금 전에 깊이를 재는 검사가 없었다. 덜어내기만 반복해도 막을 근거가 없었다. 이제 잠금 전에 둘을 본다. 진행 중에 목표나 판정이 변해 숙련 판단이 생기는가. 점수가 실력 차이를 반영하는가.",
+          "이 기준으로 별구슬의 열두 문을 목록에서 물렸다. 같은 자리를 유약선으로 다시 만들었다. 다만 강제 위치는 아직 문서뿐이다. 갚아야 할 빚이다."
+        ],
+        "en": [
+          "There was no check that measured depth before lock. Repeating subtraction could not be stopped, because nothing gave grounds to stop it. Two questions are asked before lock now. Does a goal or judgment shift mid run to create skilled decisions. Does the score reflect skill.",
+          "By this bar, Twelve Gates of Starbeads was pulled from the catalog. Its slot was rebuilt as Glazeline. The place that enforces it is still only a document. That is debt we owe."
+        ]
+      }
+    },
+    {
+      "id": "earth-play-record",
+      "date": "2026-07-15",
+      "refs": [
+        "stitch",
+        "rime"
+      ],
+      "adr": [
+        "0004"
+      ],
+      "title": {
+        "ko": "지구 플레이 기록",
+        "en": "The Earth play record"
+      },
+      "body": {
+        "ko": [
+          "자동 완주 기록과 만든 쪽 회고만 있었다. 둘 다 사람이 규칙을 어떻게 읽는지는 답 못 한다. 이제 제작과 떨어진 쪽이 공개된 게임을 직접 플레이한다. 그 기록은 무르 이름으로 작품 노트에 싣는다. 잘 닿은 것, 발이 걸린 곳, 다음 전송에 남길 것. 플레이어의 말로만 쓴다. 다만 이 규칙을 강제하는 건 아직 문서뿐이다. 갚아야 할 빚이다."
+        ],
+        "en": [
+          "We had auto completion logs and the makers' own retrospectives. Neither answers how a person reads the rules. Someone separate from production now plays each released game firsthand. The record goes into the game note under Murr's name. What landed, where a paw caught, what to carry forward. It is written only in a player's language. What enforces this rule is still only a document. That is debt we owe."
+        ]
+      }
+    },
+    {
+      "id": "brand-blind-start",
+      "date": "2026-07-14",
+      "refs": [
+        "stitch"
+      ],
+      "adr": [
+        "0001",
+        "0002",
+        "0003"
+      ],
+      "title": {
+        "ko": "출발: 브랜드 블라인드 제작",
+        "en": "Start: brand blind production"
+      },
+      "body": {
+        "ko": [
+          "스튜디오를 열면서 맥락을 갈랐다. 게임 만드는 자리는 브랜드도 과거 작품도 모른다. 규칙과 재료만 다룬다. 제목과 규칙이 잠긴 뒤에야 라이카가 제작 서사를 붙인다. 라이카는 따로 떨어진 자리다. 모든 게임은 하나의 아케이드에 자율 공개한다.",
+          "이 순서는 부탁이 아니다. 잠금 명령이 제목과 규칙을 고정한다. 그 뒤에 바뀐 파일이 있으면 검증이 잡는다. 맥락 가르는 지침은 제작 스킬 문서에 있다."
+        ],
+        "en": [
+          "When the studio opened we split the contexts. The place where games are built knows neither the brand nor the past games. It handles only rules and materials. Only after the title and rules are locked does Laika add the maker's narrative. Laika sits in a separate place. Every game is published autonomously to a single arcade.",
+          "This order is not a request. The lock command fixes the title and the rules. If a file changes afterwards, verification catches it. The instruction that keeps the contexts apart lives in the production skill document."
+        ]
+      }
+    }
+  ]
+}

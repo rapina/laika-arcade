@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a0a09" />
+    <meta name="description" content="Sputnik Workshop의 게임 플레이어" />
+    <title>플레이 · Sputnik Workshop</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/player.css" />
+    <script type="module" src="/assets/play.js"></script>
+  </head>
+  <body class="player-page" data-page="player">
+    <header class="player-header">
+      <a class="player-back" id="detail-link" href="/" data-i18n-aria-label="player.backAria" aria-label="작품 노트로 돌아가기">←</a>
+      <div class="player-title">
+        <strong id="game-title" data-i18n="player.loading">불러오는 중</strong>
+        <span id="game-subtitle">A LAIKA GAME</span>
+      </div>
+      <nav class="player-language" data-language-switch aria-label="언어 선택">
+        <button type="button" data-locale="ko" aria-pressed="true">KO</button>
+        <span>/</span>
+        <button type="button" data-locale="en" aria-pressed="false">EN</button>
+      </nav>
+      <div class="player-score" aria-live="polite">
+        <span>SCORE</span>
+        <strong id="score-value">--</strong>
+      </div>
+    </header>
+
+    <main class="player-stage">
+      <div class="frame-wrap" id="frame-wrap">
+        <iframe
+          id="game-frame"
+          title="게임 플레이 영역"
+          data-i18n-title="player.gameAria"
+          sandbox="allow-scripts"
+          allow="autoplay; fullscreen; gamepad"
+        ></iframe>
+        <div class="player-notice" id="player-notice" role="status">
+          <span class="notice-thread" aria-hidden="true"></span>
+          <strong id="notice-title" data-i18n="player.noticeTitle">게임을 준비하고 있습니다.</strong>
+          <p id="notice-copy" data-i18n="player.noticeCopy">잠시만 기다려 주세요.</p>
+        </div>
+      </div>
+    </main>
+
+  </body>
+</html>
