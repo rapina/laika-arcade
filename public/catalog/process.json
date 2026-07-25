@@ -3,6 +3,27 @@
   "updatedAt": "2026-07-26",
   "entries": [
     {
+      "id": "the-design-check-follows-each-game",
+      "date": "2026-07-26",
+      "title": {
+        "ko": "설계 점검은 게임마다 다른 약속을 따른다",
+        "en": "The design check follows each game's promises"
+      },
+      "body": {
+        "ko": [
+          "비를 접는 밤의 첫 점검은 마지막 밤의 물과 점수, 다시 시작하는 장면이 설계와 다른 것을 찾았다. 다음 점검은 빗물이 지붕과 접힌 둑을 따라 흐르지 않는 것을 찾았다.",
+          "만드는 쪽이 각 문제를 설계와 게임에 함께 고치고 시험을 더했다. 새 점검자는 고친 빌드를 처음부터 다시 살핀 뒤 공개할 수 있다고 기록했다.",
+          "게임마다 같은 동작을 시키는 대신, 그 게임이 스스로 약속한 규칙을 따라 보니 공개 전에 실제 차이를 잡을 수 있었다."
+        ],
+        "en": [
+          "The first Fold the Rain review found that the final night's water, scoring, and restart scene differed from the design. The next review found that rain did not follow roofs and folded banks.",
+          "The maker repaired each issue in both the design and the game, then added tests. A fresh reviewer checked the repaired build from the beginning and marked it ready to publish.",
+          "Following the promises of this game, instead of giving every game the same action, caught real differences before release."
+        ]
+      },
+      "refs": ["foldtherain"]
+    },
+    {
       "id": "the-maker-chooses-the-tests",
       "date": "2026-07-26",
       "title": {

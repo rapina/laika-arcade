@@ -7065,6 +7065,48 @@
           "bytes": 2375613,
           "codeGzipBytes": 74139
         }
+      },
+      "earthReview": {
+        "reviewer": "Murr",
+        "reviewedAt": "2026-07-26",
+        "playedArtifactVersion": "dec3d21f7b191f19c848231d81954a6cdd768d8c",
+        "artwork": {
+          "id": "murr-foldtherain-v1",
+          "focalPoint": {
+            "x": 0.48,
+            "y": 0.5
+          },
+          "alt": {
+            "ko": "낡은 수신실에서 무르가 앞발로 비 내리는 종이 도시 조작판을 더듬고, 빗물이 닿지 않은 작은 화분을 바라본다.",
+            "en": "In the old receiving room, Murr feels across a rain-soaked paper-city controller and watches a small pot that the rain did not reach."
+          },
+          "sources": [
+            {
+              "url": "/art/murr-foldtherain-640.jpg",
+              "width": 640,
+              "height": 426,
+              "type": "image/jpeg"
+            },
+            {
+              "url": "/art/murr-foldtherain-1280.jpg",
+              "width": 1280,
+              "height": 853,
+              "type": "image/jpeg"
+            }
+          ]
+        },
+        "ko": {
+          "impression": "검푸른 밤에 가는 비가 내려오고, 지붕 위 작은 그릇이 기다렸어. 조용한데 손을 대는 순간부터 시간이 흘러서 발끝은 금방 바빠졌어.",
+          "worked": "손을 끌자 비가 또렷이 움직였고, 남은 밤이 줄어드는 게 몸으로 바로 왔어. 어두운 화면과 빗줄기는 한 덩어리로 잘 붙었어.",
+          "friction": "무엇을 집어 어디로 끌어야 하는지 끝내 손에 안 잡혔어. 몇 번 문지르는 사이 밤이 닫혔고, 그릇은 비어 있었어. 다시 해볼 자리를 바로 찾기도 어려웠어.",
+          "carry": "낮은 빛과 비의 결은 남겨. 대신 처음 손댈 곳이 한 번만 더 몸에 보이게 하고, 실패 뒤 다시 들어가는 길은 가까이 두면 좋겠어."
+        },
+        "en": {
+          "impression": "Fine rain fell through a deep-blue night while a small vessel waited on the roof. It was quiet, but the moment I touched it, time began moving and my paws hurried.",
+          "worked": "When I dragged, the rain moved clearly, and I could feel the night running out. The dark field and the falling lines held together well.",
+          "friction": "I never got a firm sense of what to grab or where to drag it. The night closed while I rubbed around, and the vessel stayed empty. I could not quickly find a way to try again.",
+          "carry": "Keep the low light and the texture of the rain. Let the first touch point show itself once more, and keep the way back in close after a failed attempt."
+        }
       }
     }
   ]
