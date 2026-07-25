@@ -6286,8 +6286,11 @@
       "slug": "gardengaps",
       "sequence": 21,
       "releaseDate": "2026-07-25",
-      "status": "local-preview",
-      "supportedLocales": ["ko", "en"],
+      "status": "published",
+      "supportedLocales": [
+        "ko",
+        "en"
+      ],
       "credits": {
         "studio": "Sputnik Workshop",
         "creator": "Laika",
@@ -6296,20 +6299,23 @@
       },
       "artwork": {
         "baseId": "laika-base-v1",
-        "focalPoint": { "x": 0.5, "y": 0.5 },
+        "focalPoint": {
+          "x": 0.5,
+          "y": 0.5
+        },
         "alt": {
           "ko": "리벳 캡슐 안에서 라이카가 흰 앞발로 마른 갈대 매듭을 벌려 작은 딱정벌레가 젖은 잎으로 지날 길을 만든다.",
           "en": "Inside her riveted capsule, Laika parts dry reed knots with a white front paw, opening a path for a tiny beetle to reach a wet leaf."
         },
         "sources": [
           {
-            "url": "/__game-assets/games/gardengaps/local-fixture/art/laika-gardengaps-640.jpg",
+            "url": "/__game-assets/games/gardengaps/3b47dbcc0c2b6d8297c4e6b52fd155d5d94bad9d/art/laika-gardengaps-640.jpg",
             "width": 640,
             "height": 426,
             "type": "image/jpeg"
           },
           {
-            "url": "/__game-assets/games/gardengaps/local-fixture/art/laika-gardengaps-1280.jpg",
+            "url": "/__game-assets/games/gardengaps/3b47dbcc0c2b6d8297c4e6b52fd155d5d94bad9d/art/laika-gardengaps-1280.jpg",
             "width": 1280,
             "height": 853,
             "type": "image/jpeg"
@@ -6366,13 +6372,26 @@
           ]
         }
       },
-      "palette": ["#06141a", "#35b8ad", "#b89b6a", "#365b45", "#d4c29c"],
+      "palette": [
+        "#06141a",
+        "#35b8ad",
+        "#b89b6a",
+        "#365b45",
+        "#d4c29c"
+      ],
       "resultDisplay": {
-        "primary": { "field": "score", "fractionDigits": 0, "useGrouping": false },
+        "primary": {
+          "field": "score",
+          "fractionDigits": 0,
+          "useGrouping": false
+        },
         "secondary": {
           "field": "phase",
           "fractionDigits": 0,
-          "prefix": { "ko": "지난 구간 ", "en": "sections " }
+          "prefix": {
+            "ko": "지난 구간 ",
+            "en": "sections "
+          }
         }
       },
       "designProcess": {
@@ -6389,33 +6408,66 @@
         "scenes": [
           {
             "id": "first-play",
-            "label": { "ko": "첫 화면", "en": "First screen" },
+            "label": {
+              "ko": "첫 화면",
+              "en": "First screen"
+            },
             "note": {
               "ko": "잡을 매듭, 놓을 잎눈 사이, 여덟 구간과 세 번 막힘의 끝 조건을 함께 보여 줘요.",
               "en": "Shows the knot to grab, the leaf-bud gap for release, and the eight-section and three-block end rules."
             },
-            "target": { "url": "/art/design/gardengaps/target-first-play.jpg", "width": 592, "height": 1280 },
-            "actual": { "url": "/art/design/gardengaps/actual-first-play.jpg", "width": 591, "height": 1280 }
+            "target": {
+              "url": "/art/design/gardengaps/target-first-play.jpg",
+              "width": 592,
+              "height": 1280
+            },
+            "actual": {
+              "url": "/art/design/gardengaps/actual-first-play.jpg",
+              "width": 591,
+              "height": 1280
+            }
           },
           {
             "id": "core-verb",
-            "label": { "ko": "틈을 놓은 직후", "en": "After releasing the gap" },
+            "label": {
+              "ko": "틈을 놓은 직후",
+              "en": "After releasing the gap"
+            },
             "note": {
               "ko": "연결 갈대가 함께 휘고 딱정벌레가 열린 길을 지나는 동안 기다리는 상태를 보여 줘요.",
               "en": "Shows linked reeds bending together and the waiting state while the beetle crosses the open path."
             },
-            "target": { "url": "/art/design/gardengaps/target-core-verb.jpg", "width": 592, "height": 1280 },
-            "actual": { "url": "/art/design/gardengaps/actual-core-verb.jpg", "width": 591, "height": 1280 }
+            "target": {
+              "url": "/art/design/gardengaps/target-core-verb.jpg",
+              "width": 592,
+              "height": 1280
+            },
+            "actual": {
+              "url": "/art/design/gardengaps/actual-core-verb.jpg",
+              "width": 591,
+              "height": 1280
+            }
           },
           {
             "id": "game-over",
-            "label": { "ko": "갈대가 닫힌 순간", "en": "When the reeds close" },
+            "label": {
+              "ko": "갈대가 닫힌 순간",
+              "en": "When the reeds close"
+            },
             "note": {
               "ko": "끝난 상태와 다시 시작하는 방법을 갈대 뒤의 청록 길과 함께 남겨요.",
               "en": "Keeps the finished state and restart instruction visible with the teal trail behind the reeds."
             },
-            "target": { "url": "/art/design/gardengaps/target-game-over.jpg", "width": 592, "height": 1280 },
-            "actual": { "url": "/art/design/gardengaps/actual-game-over.jpg", "width": 576, "height": 1280 }
+            "target": {
+              "url": "/art/design/gardengaps/target-game-over.jpg",
+              "width": 592,
+              "height": 1280
+            },
+            "actual": {
+              "url": "/art/design/gardengaps/actual-game-over.jpg",
+              "width": 576,
+              "height": 1280
+            }
           }
         ],
         "review": {
@@ -6471,14 +6523,17 @@
         }
       },
       "artifact": {
-        "status": "local",
+        "status": "published",
         "runnerVersion": "v1",
         "bridgeMode": "contract-v1",
-        "version": "local-fixture",
-        "entryUrl": "/__game-assets/games/gardengaps/local-fixture/entry.mjs",
-        "styleUrls": ["/__game-assets/games/gardengaps/local-fixture/assets/style-C3Z6pfTs.css"],
-        "assetBaseUrl": "/__game-assets/games/gardengaps/local-fixture/",
+        "version": "3b47dbcc0c2b6d8297c4e6b52fd155d5d94bad9d",
+        "entryUrl": "/__game-assets/games/gardengaps/3b47dbcc0c2b6d8297c4e6b52fd155d5d94bad9d/entry.mjs",
+        "styleUrls": [
+          "/__game-assets/games/gardengaps/3b47dbcc0c2b6d8297c4e6b52fd155d5d94bad9d/assets/style-C3Z6pfTs.css"
+        ],
+        "assetBaseUrl": "/__game-assets/games/gardengaps/3b47dbcc0c2b6d8297c4e6b52fd155d5d94bad9d/",
         "source": {
+          "kind": "vercel-blob",
           "repo": "../games/2026/2026-07-25-gardengaps",
           "dist": "dist-arcade"
         },
