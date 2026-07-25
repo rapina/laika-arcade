@@ -6860,7 +6860,7 @@
       "slug": "foldtherain",
       "sequence": 23,
       "releaseDate": "2026-07-26",
-      "status": "local-preview",
+      "status": "published",
       "supportedLocales": [
         "ko",
         "en"
@@ -6883,13 +6883,13 @@
         },
         "sources": [
           {
-            "url": "/__game-assets/games/foldtherain/local-fixture/art/laika-foldtherain-640.jpg",
+            "url": "/__game-assets/games/foldtherain/dec3d21f7b191f19c848231d81954a6cdd768d8c/art/laika-foldtherain-640.jpg",
             "width": 640,
             "height": 426,
             "type": "image/jpeg"
           },
           {
-            "url": "/__game-assets/games/foldtherain/local-fixture/art/laika-foldtherain-1280.jpg",
+            "url": "/__game-assets/games/foldtherain/dec3d21f7b191f19c848231d81954a6cdd768d8c/art/laika-foldtherain-1280.jpg",
             "width": 1280,
             "height": 853,
             "type": "image/jpeg"
@@ -7044,23 +7044,23 @@
         }
       },
       "artifact": {
-        "status": "local",
+        "status": "published",
         "runnerVersion": "v1",
         "bridgeMode": "contract-v1",
-        "version": "local-fixture",
-        "entryUrl": "/__game-assets/games/foldtherain/local-fixture/entry.mjs",
+        "version": "dec3d21f7b191f19c848231d81954a6cdd768d8c",
+        "entryUrl": "/__game-assets/games/foldtherain/dec3d21f7b191f19c848231d81954a6cdd768d8c/entry.mjs",
         "styleUrls": [
-          "/__game-assets/games/foldtherain/local-fixture/assets/style-CRcgxCFv.css"
+          "/__game-assets/games/foldtherain/dec3d21f7b191f19c848231d81954a6cdd768d8c/assets/style-CRcgxCFv.css"
         ],
-        "assetBaseUrl": "/__game-assets/games/foldtherain/local-fixture/",
+        "assetBaseUrl": "/__game-assets/games/foldtherain/dec3d21f7b191f19c848231d81954a6cdd768d8c/",
         "source": {
-          "kind": "local",
+          "kind": "vercel-blob",
           "repo": "../games/2026/2026-07-26-foldtherain",
           "dist": "dist-arcade"
         },
         "release": {
-          "releaseSha": "4ca606f5feceb0b3b045e0401182f1e249214edb",
-          "manifestSha256": "efae6cc34ca4db17ad755e9e4ae2b15916d18cc0495dda0bead1628dc0f283e5",
+          "releaseSha": "dec3d21f7b191f19c848231d81954a6cdd768d8c",
+          "manifestSha256": "3afb67c1fd0bc6d49913effeed2431d1d230869a281174e8cb3f83be67f5c5de",
           "files": 7,
           "bytes": 2375613,
           "codeGzipBytes": 74139
