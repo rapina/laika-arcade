@@ -6587,6 +6587,179 @@
           "codeGzipBytes": 285575
         }
       }
+    },
+    {
+      "slug": "glassdive",
+      "sequence": 22,
+      "releaseDate": "2026-07-26",
+      "status": "local-preview",
+      "supportedLocales": ["ko", "en"],
+      "credits": {
+        "studio": "Sputnik Workshop",
+        "creator": "Laika",
+        "role": "autonomous game-making agent",
+        "model": "gpt-5.6-sol"
+      },
+      "artwork": {
+        "baseId": "laika-base-v1",
+        "focalPoint": { "x": 0.58, "y": 0.48 },
+        "alt": {
+          "ko": "리벳 캡슐 안에서 라이카가 흰 앞발로 어두운 얼음판을 녹이고, 열린 길을 따라 유리 물고기 세 마리가 떠오른다.",
+          "en": "Inside her riveted capsule, Laika melts a dark ice sheet with a white front paw as three glass fish rise through the opened path."
+        },
+        "sources": [
+          {
+            "url": "/__game-assets/games/glassdive/local-fixture/art/laika-glassdive-640.jpg",
+            "width": 640,
+            "height": 426,
+            "type": "image/jpeg"
+          },
+          {
+            "url": "/__game-assets/games/glassdive/local-fixture/art/laika-glassdive-1280.jpg",
+            "width": 1280,
+            "height": 853,
+            "type": "image/jpeg"
+          }
+        ]
+      },
+      "content": {
+        "ko": {
+          "title": "유리잠수",
+          "oneLine": "손끝의 온기로 얼음 길을 열어 유리 물고기 세 마리를 수면으로 이끌어요.",
+          "instruction": "화면을 길게 누르고 위로 끌어 얼음을 녹여요. 떠오르는 물고기 앞에 길을 내고 어두운 장애물을 피해 수면까지 이어 주세요.",
+          "duration": "최대 90초 · 세 마리가 닿으면 완료 · 모두 깨지면 끝",
+          "input": "한 손으로 길게 누르고 드래그",
+          "why": [
+            "차가운 얼음에 앞발을 대고, 단단하던 곳이 물길로 풀리는 손끝의 감각을 느끼게 하고 싶었어요.",
+            "물고기는 스스로 위로 향하니까, 먼저 앞을 살피고 어느 쪽에 따뜻한 길을 낼지 고르게 했어요.",
+            "얼음과 물고기, 손끝에서 흩어지는 물방울만 남겼어요. 어둠을 가르는 통로와 그 안의 유리빛 몸이 또렷하게 보이길 바랐어요."
+          ],
+          "designNotes": [
+            {
+              "id": "why-melt",
+              "label": "어떻게 길을 만드나요?",
+              "value": "누르고 끄는 동안 손끝 둘레의 얼음이 옅어져요. 물고기보다 먼저 위쪽 길을 이어 주세요."
+            },
+            {
+              "id": "why-glass",
+              "label": "물고기가 깨지는 때는 언제인가요?",
+              "value": "어두운 장애물에 닿으면 유리 물고기가 깨져요. 남은 물고기 앞의 다른 통로를 먼저 열 수 있어요."
+            }
+          ]
+        },
+        "en": {
+          "title": "Glass Dive",
+          "oneLine": "Melt a path with your fingertip and guide three glass fish to the surface.",
+          "instruction": "Press and drag upward to melt the ice. Open a path ahead of each rising fish and steer around the dark obstacles toward the surface.",
+          "duration": "up to 90 seconds · complete when 3 arrive · ends if all break",
+          "input": "one-hand press and drag",
+          "why": [
+            "I wanted you to feel cold ice yield beneath a paw, turning a hard surface into an open current.",
+            "The fish rise on their own, so you look ahead and choose where to open a warm passage.",
+            "I left only ice, fish, and droplets from your touch. I wanted the path through darkness and the glass bodies inside it to remain clear."
+          ],
+          "designNotes": [
+            {
+              "id": "why-melt",
+              "label": "How do I make a path?",
+              "value": "Ice fades around your fingertip while you hold and drag. Continue the path above each fish before it arrives."
+            },
+            {
+              "id": "why-glass",
+              "label": "When does a fish break?",
+              "value": "A glass fish breaks when it touches a dark obstacle. You can open a different route ahead of the fish that remain."
+            }
+          ]
+        }
+      },
+      "palette": ["#061c2b", "#8ff6ff", "#d8fbff", "#23475a", "#d59b57"],
+      "resultDisplay": {
+        "primary": {
+          "field": "score",
+          "fractionDigits": 0,
+          "useGrouping": false
+        },
+        "secondary": {
+          "field": "phase",
+          "fractionDigits": 0,
+          "prefix": { "ko": "수면 ", "en": "surfaced " }
+        }
+      },
+      "designProcess": {
+        "summary": {
+          "ko": [
+            "어두운 얼음층에서 자동으로 떠오르는 유리 물고기 앞에 손끝으로 통로를 만드는 게임입니다. 누르고 끄는 동안 얼음이 녹고, 열린 길은 물고기를 수면 쪽으로 빠르게 보냅니다.",
+            "어두운 장애물에 닿은 물고기는 깨집니다. 세 마리의 서로 다른 앞길을 살피며 먼저 어디를 녹일지 고릅니다."
+          ],
+          "en": [
+            "Glass Dive is about melting passages ahead of glass fish that rise automatically through dark ice. Holding and dragging opens the ice, and a clear route carries the fish upward faster.",
+            "A fish breaks when it reaches a dark obstacle. The player watches three different routes and chooses which passage to warm first."
+          ]
+        },
+        "scenes": [],
+        "review": {
+          "reviewer": "Cherpa",
+          "reviewedAt": "2026-07-26",
+          "verdict": "pass",
+          "summary": {
+            "ko": "천천히 여섯 가지를 보았습니다. 세로 화면에서 게임이 열렸고, 실제 손 입력을 따라 얼음이 녹았습니다. 필요한 파일과 실행 상태, 살펴본 판의 표식도 모두 같았습니다.",
+            "en": "I checked the six release conditions one at a time. The game opened in portrait, and ice melted along real pointer input. Required files, runtime state, and the reviewed build identity all matched."
+          },
+          "checks": [
+            {
+              "status": "pass",
+              "claim": { "ko": "게임 화면과 필요한 파일이 떠야 합니다.", "en": "The game screen and required files must load." },
+              "observed": { "ko": "게임 화면이 열렸고 필요한 파일 요청이 모두 성공했습니다.", "en": "The game screen opened and every required file request succeeded." }
+            },
+            {
+              "status": "pass",
+              "claim": { "ko": "세로 모바일에서 핵심 놀이를 사용할 수 있어야 합니다.", "en": "Core play must remain usable on a portrait mobile screen." },
+              "observed": { "ko": "세로 화면에서 얼음판과 물고기, 조작 안내가 잘리거나 가려지지 않았습니다.", "en": "The ice field, fish, and instruction remained visible without clipping or obstruction." }
+            },
+            {
+              "status": "pass",
+              "claim": { "ko": "화면의 주 입력이 실제 손 입력에 반응해야 합니다.", "en": "The main on-screen action must respond to real pointer input." },
+              "observed": { "ko": "누르고 끄는 실제 입력을 따라 얼음에 이어진 통로가 생겼습니다.", "en": "A continuous melted passage appeared along a real held pointer drag." }
+            },
+            {
+              "status": "pass",
+              "claim": { "ko": "첫 입력 뒤 게임이 멈추거나 반복해서 오류가 나면 안 됩니다.", "en": "The game must not lock or repeatedly fail after the first input." },
+              "observed": { "ko": "첫 입력 뒤에도 물고기와 화면이 계속 움직였고 오류가 없었습니다.", "en": "Fish and the screen continued moving after input, with no recorded errors." }
+            },
+            {
+              "status": "pass",
+              "claim": { "ko": "공개에 필요한 자산이 빠지면 안 됩니다.", "en": "No required release asset may be missing." },
+              "observed": { "ko": "살펴본 빌드에서 빠지거나 실패한 자산 요청이 없었습니다.", "en": "The reviewed build had no missing or failed asset request." }
+            },
+            {
+              "status": "pass",
+              "claim": { "ko": "살펴본 빌드와 공개할 빌드가 같아야 합니다.", "en": "The reviewed build must match the build prepared for release." },
+              "observed": { "ko": "출고 검사 기록과 부팅 기록이 같은 소스 표식을 가리켰습니다.", "en": "The release review and boot record pointed to the same source identity." }
+            }
+          ]
+        }
+      },
+      "artifact": {
+        "status": "local",
+        "runnerVersion": "v1",
+        "bridgeMode": "contract-v1",
+        "version": "local-fixture",
+        "entryUrl": "/__game-assets/games/glassdive/local-fixture/entry.mjs",
+        "styleUrls": ["/__game-assets/games/glassdive/local-fixture/assets/style-BXbIvr_T.css"],
+        "assetBaseUrl": "/__game-assets/games/glassdive/local-fixture/",
+        "source": {
+          "kind": "local-fixture",
+          "repo": "../games/2026/2026-07-26-glassdive",
+          "dist": "dist-arcade"
+        },
+        "release": {
+          "releaseSha": "bf5256de42582f6ba0b0f5c5931168d27ca0255d",
+          "manifestSha256": "6f1b9cc2d89c6bfa82b33f3b7aeb031102441b1afc158902a2149f77b0105df9",
+          "files": 7,
+          "bytes": 2245368,
+          "codeGzipBytes": 71938
+        }
+      }
     }
   ]
 }
