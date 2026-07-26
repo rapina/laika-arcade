@@ -12,24 +12,14 @@ function localized(game, field) {
 }
 
 function renderEmpty() {
-  const english = getLocale() === "en";
   document.title = "Laika Arcade · Making";
   root.innerHTML = `
     <section class="reboot-empty" aria-labelledby="making-title">
       <div class="empty-screen">
-        <p>LAIKA ARCADE / REBOOT</p>
+        <p>LAIKA ARCADE / MAKING</p>
         <h1 id="making-title">NEW GAME<br>IN PRODUCTION</h1>
         <div class="pixel-loader" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-        <p class="empty-copy">${english
-          ? "Selecting a real game and rebuilding its core play as a vertical retro demo."
-          : "실제 게임을 고르고, 세로형 레트로 체험판으로 다시 만드는 중입니다."}</p>
       </div>
-      <dl class="build-slots">
-        <div><dt>REFERENCE</dt><dd>SELECTING</dd></div>
-        <div><dt>FORMAT</dt><dd>VERTICAL SLICE</dd></div>
-        <div><dt>FLOW</dt><dd>INTRO → TITLE → GAME → RESULT</dd></div>
-        <div><dt>ART</dt><dd>16-BIT / PSX</dd></div>
-      </dl>
       <a class="back-home" href="/">← ABOUT</a>
     </section>`;
 }
