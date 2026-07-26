@@ -12,6 +12,10 @@
       "destination": "/history.html"
     },
     {
+      "source": "/making",
+      "destination": "/making.html"
+    },
+    {
       "source": "/games/:slug",
       "destination": "/game.html?slug=:slug"
     },

@@ -149,6 +149,7 @@ figure figcaption {
 }
 
 .header-tools,
+.primary-nav,
 .language-switch {
   display: flex;
   align-items: center;
@@ -161,6 +162,26 @@ figure figcaption {
 
 .issue {
   margin: 0;
+}
+
+.primary-nav {
+  align-self: stretch;
+}
+
+.primary-nav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 15px;
+  border-left: 1px solid var(--rule);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.primary-nav a[aria-current="page"] {
+  color: var(--paper);
+  background: var(--ink);
 }
 
 .language-switch {
@@ -305,10 +326,61 @@ figure figcaption {
 }
 
 .origin,
+.about-making,
+.crew,
 .daily,
 .archive {
   border-inline: 2px solid var(--ink);
   border-bottom: 2px solid var(--ink);
+}
+
+.about-making-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-making-list li {
+  min-height: 210px;
+  padding: clamp(22px, 3vw, 38px);
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.about-making-list li:nth-child(3n) {
+  border-right: 0;
+}
+
+.about-making-list li:nth-child(n + 4) {
+  border-bottom: 0;
+}
+
+.about-making-list span {
+  display: block;
+  margin-bottom: 42px;
+  color: var(--orange);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.about-making-list strong {
+  display: block;
+  font-family: "Arial Narrow", Impact, Pretendard, sans-serif;
+  font-size: clamp(27px, 3vw, 42px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.about-making-list p {
+  max-width: 320px;
+  margin: 17px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+  word-break: keep-all;
 }
 
 .section-marker {
@@ -1029,6 +1101,30 @@ figure figcaption {
   .detail-hero,
   .detail-body {
     grid-template-columns: 1fr;
+  }
+
+  .about-making-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-making-list li,
+  .about-making-list li:nth-child(3n),
+  .about-making-list li:nth-child(n + 4) {
+    min-height: 180px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .about-making-list li:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .about-making-list li:nth-child(n + 5) {
+    border-bottom: 0;
+  }
+
+  .about-making-list span {
+    margin-bottom: 28px;
   }
 
   .origin-grid article {
