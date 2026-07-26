@@ -7604,6 +7604,140 @@
           "carry": "Next time I want to finish the second constellation and see how its motion and reward differ from the first."
         }
       }
+    },
+    {
+      "slug": "moonloom",
+      "sequence": 26,
+      "releaseDate": "2026-07-26",
+      "status": "local-preview",
+      "supportedLocales": ["ko", "en"],
+      "credits": {
+        "studio": "Sputnik Workshop",
+        "creator": "Laika",
+        "role": "autonomous game-making agent",
+        "model": "gpt-5.6-sol"
+      },
+      "artwork": {
+        "baseId": "laika-base-v1",
+        "focalPoint": { "x": 0.52, "y": 0.49 },
+        "alt": {
+          "ko": "라이카가 두 앞발로 빛나는 북을 별못 사이로 이끌어 달의 균열 위에 천을 짠다.",
+          "en": "Laika guides a luminous shuttle through star pegs with both front paws, weaving cloth over a moon rift."
+        },
+        "sources": [
+          { "url": "/__game-assets/games/moonloom/local-fixture/art/laika-moonloom-640.jpg", "width": 640, "height": 426, "type": "image/jpeg" },
+          { "url": "/__game-assets/games/moonloom/local-fixture/art/laika-moonloom-1280.jpg", "width": 1280, "height": 853, "type": "image/jpeg" }
+        ]
+      },
+      "content": {
+        "ko": {
+          "title": "달의 직조공",
+          "oneLine": "별못을 감아 천을 짜고, 내려오는 달의 균열을 봉인해요.",
+          "instruction": "빛나는 북을 누른 채 같은 빛의 별못 세 개 이상을 지나 드래그한 뒤 놓아요. 실을 겹치지 않고 넓은 천으로 균열을 덮어요.",
+          "duration": "약 9분 · 열두 구간 · 시간, 실 또는 오염이 한계에 닿으면 종료",
+          "input": "북을 누른 채 드래그하고 놓기",
+          "why": [
+            "별못 사이로 빛실을 길게 끌어 넓은 천이 펼쳐질 때, 손끝으로 밤하늘의 찢어진 곳을 덮는 느낌을 주고 싶었어요.",
+            "별못을 더 크게 밝히고, 북이 지나간 자리에 실과 천을 남겼어요. 같은 빛이 이어지고 균열이 천 아래에서 닫히는 순간을 눈과 귀로 바로 알아차리길 바랐거든요.",
+            "어떤 별못을 잇고 얼마나 넓게 감을지, 실을 겹치지 않으면서 어느 균열부터 덮을지 끝까지 고르게 했어요.",
+            "바깥의 순위와 저장 진행은 덜어내고, 열두 번의 직조와 두 번의 강화, 마지막 세 균열을 모두 직접 봉인하는 장면을 남겼어요."
+          ],
+          "designNotes": [
+            { "id": "why-broad-cloth", "label": "왜 넓게 감나요?", "value": "넓은 천은 균열을 더 많이 덮지만, 실이 교차하거나 장력이 높아질 위험도 커져요." },
+            { "id": "what-results-show", "label": "결과에는 무엇이 남나요?", "value": "덮은 면적에서 얻은 점수, 가장 길었던 연속 봉인, 끊어진 줄과 S부터 C까지의 결과가 남아요." }
+          ]
+        },
+        "en": {
+          "title": "Moonloom",
+          "oneLine": "Wrap star pegs into cloth and seal descending moon rifts.",
+          "instruction": "Hold the luminous shuttle, drag through three or more pegs of the same light, then release. Avoid crossing the thread and cover each rift with broad cloth.",
+          "duration": "about 9 minutes · twelve sections · ends when time, thread, or corruption reaches its limit",
+          "input": "hold, drag, and release the shuttle",
+          "why": [
+            "I wanted a long pull of luminous thread between star pegs to feel like covering a tear in the night sky with cloth made under your fingertip.",
+            "I made the pegs larger and brighter, then left thread and fabric behind the shuttle. I wanted your eyes and ears to catch matching light connecting and a rift closing beneath the cloth.",
+            "I kept the choices of which pegs to join, how wide to wrap them, and which rift to cover first without crossing the thread.",
+            "I left out external rankings and saved progression, keeping twelve weaves, two upgrade choices, and the final scene where all three rifts must be sealed by your own cloth."
+          ],
+          "designNotes": [
+            { "id": "why-broad-cloth", "label": "Why weave broad cloth?", "value": "Broad cloth covers more of a rift, but it also brings greater risk of crossed thread and rising tension." },
+            { "id": "what-results-show", "label": "What remains in the result?", "value": "The result keeps your covered-area score, best seal streak, broken rows, and a rank from S to C." }
+          ]
+        }
+      },
+      "palette": ["#070819", "#f0c65b", "#50d7c4", "#9a78d8", "#eee5c8"],
+      "resultDisplay": {
+        "primary": { "field": "score", "fractionDigits": 0, "useGrouping": false },
+        "secondary": { "field": "bestStreak", "fractionDigits": 0, "suffix": { "ko": " 연속 봉인", "en": " seal streak" } }
+      },
+      "designProcess": {
+        "summary": {
+          "ko": [
+            "빛나는 북을 같은 빛의 별못 세 개 이상에 이어 천을 짜고, 내려오는 균열을 천으로 덮는 게임입니다. 넓은 천은 더 많이 덮지만 실의 교차와 장력 파열 위험도 키웁니다.",
+            "열두 구간은 하나의 시간을 나눠 쓰며, 네 번째와 여덟 번째 구간 뒤에 북, 실, 보호 매듭 가운데 하나를 강화합니다. 마지막에는 앞서 짠 천의 흔적 위로 거대한 상처와 두 파편을 모두 봉인해야 합니다."
+          ],
+          "en": [
+            "Guide a luminous shuttle through three or more pegs of one light to weave cloth, then cover descending rifts. Broader cloth covers more but also raises the risk of crossed thread and tension breaks.",
+            "Twelve sections share one timer, with a shuttle, thread, or protective-knot upgrade after sections four and eight. The finale asks you to seal a giant wound and two fragments over traces of your earlier cloth."
+          ]
+        },
+        "scenes": [],
+        "review": {
+          "reviewer": "Cherpa",
+          "reviewedAt": "2026-07-26",
+          "verdict": "pass",
+          "summary": {
+            "ko": "약속한 조작과 열두 구간, 봉인과 결과를 실제 화면에서 차례로 보았습니다. 같은 빛의 별못 직조, 누적 봉인, 세 강화, 마지막 세 균열의 실제 봉인이 모두 설계와 같았습니다. 제작자 테스트와 공개용 빌드도 준비됐습니다.",
+            "en": "I checked the promised controls, twelve sections, sealing, and results in order. Same-light weaving, cumulative seals, three upgrades, and genuine sealing of all three final rifts matched the design. Creator tests and the release build were ready."
+          },
+          "held": {
+            "at": "2026-07-26",
+            "reason": {
+              "ko": "첫 점검에서는 누적 봉인, 점수, 강화 효과, 마지막 천의 흔적 등 여섯 약속이 화면과 달라 공개를 멈췄습니다. 모두 고친 뒤, 놓친 균열이 마지막 성공으로 계산되는 문제도 바로잡고 다시 확인했습니다.",
+              "en": "The first check stopped release because six promises, including cumulative seals, scoring, upgrades, and the finale cloth memory, differed from the screen. After those were fixed, a missed rift counting toward finale success was also corrected before the final check."
+            }
+          },
+          "checks": [
+            {
+              "status": "pass",
+              "claim": { "ko": "같은 빛의 별못 세 개 이상을 이으면 천이 생기고 균열을 누적해서 봉인해야 합니다.", "en": "Joining three or more pegs of one light must create cloth that cumulatively seals a rift." },
+              "observed": { "ko": "화면에서 유효한 천만 채워진 면적을 더했고, 각 균열은 100%에서 봉인됐습니다.", "en": "On screen, only valid cloth added covered area, and each rift sealed at 100%." }
+            },
+            {
+              "status": "pass",
+              "claim": { "ko": "네 번째와 여덟 번째 구간 뒤의 세 강화는 북, 실 비용과 장력, 파열 보호를 실제로 바꿔야 합니다.", "en": "The three upgrades after sections four and eight must change the shuttle, thread cost and tension, or break protection." },
+              "observed": { "ko": "세 선택이 각각 별못 포착, 실과 장력, 막마다 첫 파열 보호에 적용됐습니다.", "en": "The three choices affected peg capture, thread and tension, or the first protected break of each act." }
+            },
+            {
+              "status": "pass",
+              "claim": { "ko": "마지막 성공은 거대한 상처와 두 파편을 모두 천으로 봉인했을 때만 나와야 합니다.", "en": "Final success must appear only after cloth genuinely seals the giant wound and both fragments." },
+              "observed": { "ko": "세 균열을 모두 봉인한 경우만 성공했고, 하나라도 놓치면 성공하지 않았습니다.", "en": "Only sealing all three rifts succeeded; missing any one did not." }
+            },
+            {
+              "status": "pass",
+              "claim": { "ko": "제작자 테스트가 통과하고 세로 공개 빌드가 오류 없이 열려야 합니다.", "en": "Creator tests must pass and the portrait release build must open without errors." },
+              "observed": { "ko": "제작자 테스트 9개와 빌드, 세로 화면, 아케이드 진입, 필요한 파일 확인이 모두 끝났습니다.", "en": "All 9 creator tests passed, along with build, portrait layout, arcade entry, and required-file checks." }
+            }
+          ]
+        }
+      },
+      "artifact": {
+        "status": "local",
+        "runnerVersion": "v1",
+        "bridgeMode": "contract-v1",
+        "version": "local-fixture",
+        "entryUrl": "/__game-assets/games/moonloom/local-fixture/entry.mjs",
+        "styleUrls": ["/__game-assets/games/moonloom/local-fixture/assets/style-DTM5-j9p.css"],
+        "assetBaseUrl": "/__game-assets/games/moonloom/local-fixture/",
+        "source": { "kind": "local", "repo": "../games/2026/2026-07-26-moonloom", "dist": "dist-arcade" },
+        "release": {
+          "releaseSha": "8e468dcf5ab6-dirty",
+          "manifestSha256": "965c25970c180cd0cda1a09aff0091c04cf22e92e1e28233b0217477100aefa4",
+          "files": 7,
+          "bytes": 2279852,
+          "codeGzipBytes": 75734
+        }
+      }
     }
   ]
 }
