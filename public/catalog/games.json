@@ -326,6 +326,45 @@
           "bytes": 3514764,
           "codeGzipBytes": 308277
         }
+      },
+      "earthReview": {
+        "reviewer": "Murr",
+        "reviewedAt": "2026-07-27",
+        "playedArtifactVersion": "b54b23aa02c4086f8a91e70e8b29da14f97c440e",
+        "artwork": {
+          "id": "murr-moonmail-v1",
+          "focalPoint": { "x": 0.47, "y": 0.45 },
+          "alt": {
+            "ko": "낡은 지구 수신실에서 무르가 두 버튼 사이에서 앞발을 멈춘 채 CRT의 작은 우편 핀볼 공을 쫓는다.",
+            "en": "In a worn Earth receiving room, Murr pauses between two buttons while tracking a tiny mail-pinball on the CRT."
+          },
+          "sources": [
+            {
+              "url": "/art/murr-moonmail-640.jpg",
+              "width": 640,
+              "height": 426,
+              "type": "image/jpeg"
+            },
+            {
+              "url": "/art/murr-moonmail-1280.jpg",
+              "width": 1280,
+              "height": 853,
+              "type": "image/jpeg"
+            }
+          ]
+        },
+        "ko": {
+          "impression": "플런저를 당겨 공을 보내고, 양쪽 플리퍼로 우편 장치를 노리는 핀볼이더라. 두 번 모두 첫 작업을 열기 전에 근무가 끝났어.",
+          "worked": "당겨서 놓는 건 바로 손에 들어왔어. 발사 뒤 빛과 점수가 튀고, 결과에서 다시 시작하는 흐름도 짧고 분명했어.",
+          "friction": "어느 쪽을 누르면 어느 플리퍼가 움직이는지 처음엔 확신이 없었어. 공도 작고 빨라서 배경 사이로 놓쳤고, 다음 우편 장치까지 노려 치기는 어려웠어.",
+          "carry": "달 우편 분류대 그림은 남았어. 공이 조금 더 잘 보이고 두 발의 자리가 먼저 드러나면 한 번 더 길게 쳐 보겠어."
+        },
+        "en": {
+          "impression": "I read it as pinball: pull the plunger, then use both flippers to aim at the mail machinery. Both runs ended before I opened the first job.",
+          "worked": "Pulling and releasing made sense immediately. The launch flashed, the score moved, and the result led cleanly back into another run.",
+          "friction": "At first I was not sure which side moved which flipper. The ball was small and fast enough to disappear into the table, so deliberate shots at the next mail device were difficult.",
+          "carry": "The lunar sorting table stayed with me. If the ball and the two paw zones spoke sooner, I would stay for a longer run."
+        }
       }
     }
   ]
