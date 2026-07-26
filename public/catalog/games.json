@@ -7297,8 +7297,8 @@
           "dist": "dist-arcade"
         },
         "release": {
-          "releaseSha": "514935146e7e7fb02f5d723a443db579cf06dea3",
-          "manifestSha256": "b6912abfcd3b89da38fc270302ecda15a1e083d66099de6cab2704c4f4e6dace",
+          "releaseSha": "b7e0aadb45dd02e529094b0ba2c03fd64ad247d2",
+          "manifestSha256": "84cb2ab4df3c6d8f4dc1c1e4c5c4d9fb3bcd2c278f4c1a8c2ea4f839c8bc0ce3",
           "files": 7,
           "bytes": 2492111,
           "codeGzipBytes": 92912
