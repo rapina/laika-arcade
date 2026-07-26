@@ -121,14 +121,21 @@ const moonTimeline = [
     stage: "05", actor: "CHERPA", kind: "출고 점검", title: "먼저 멈추고, 고친 뒤 통과",
     body: "첫 점검은 설계와 다른 여섯 곳에서 공개를 멈췄다. 누적 봉인, 점수, 강화, 피날레의 천 흔적을 고쳤고, 놓친 균열이 마지막 성공으로 계산되지 않게 한 뒤 최종 약속을 다시 확인했다.",
     evidence: ["24 / 24 구현", "TEST 9 / 9", "VERDICT PASS"],
-    artifact: { type: "moon-review", label: "DESIGN REVIEW / 4b378610" },
+    artifact: { type: "moon-review", label: "DESIGN REVIEW / 08c11097" },
+  },
+  {
+    stage: "06", actor: "MURR", kind: "지구 플레이", title: "02/12, 1,060점",
+    body: "공개본에서 같은 문양을 이어 천을 만들고 두 번째 직조 구간까지 갔다. 천이 균열을 덮는 결과는 읽혔지만, 다음 실의 시작점과 종료 원인은 분명하지 않았다.",
+    quote: "“결과의 끊어진 줄은 없다고 나와 무엇이 바닥났는지 짚기 힘들었어.”",
+    evidence: ["플레이 45.7초", "드래그 6회", "02 / 12 도달"],
+    artifact: { type: "moon-murr", label: "EARTH PLAY / 2026-07-26 19:55" },
   },
 ];
 
 function renderMoonArtifact(item) {
   if (item.artifact.type === "moon-gdd") return `
     <section class="artifact artifact-document">
-      <header><span>${item.artifact.label}</span><b>01 / 05</b></header>
+      <header><span>${item.artifact.label}</span><b>01 / 06</b></header>
       <div class="document-sheet">
         <p class="document-path">GDD.md</p>
         <h3>한 구간의 흐름</h3>
@@ -142,7 +149,7 @@ function renderMoonArtifact(item) {
     </section>`;
   if (item.artifact.type === "moon-initial") return `
     <section class="artifact artifact-initial">
-      <header><span>${item.artifact.label}</span><b>02 / 05</b></header>
+      <header><span>${item.artifact.label}</span><b>02 / 06</b></header>
       <div class="missing-capture"><span aria-hidden="true">×</span><div><h3>첫 화면 캡처 미보존</h3><p>첫 빌드 해시와 테스트, 빌드 크기만 남아 있다.</p></div></div>
       <pre><code>$ npm test
 Tests  5 passed
@@ -152,7 +159,7 @@ $ npm run build:arcade
     </section>`;
   if (item.artifact.type === "moon-playtest") return `
     <section class="artifact artifact-report">
-      <header><span>${item.artifact.label}</span><b>03 / 05</b></header>
+      <header><span>${item.artifact.label}</span><b>03 / 06</b></header>
       <dl class="report-grid">
         <div><dt>이해</dt><dd>빛나는 별못을 이어 달의 균열을 덮는 열두 단계 직조.</dd></div>
         <div><dt>시도</dt><dd>긴 지그재그, 행을 가로지르는 드래그, 연속 탭, 언어 전환.</dd></div>
@@ -162,15 +169,28 @@ $ npm run build:arcade
     </section>`;
   if (item.artifact.type === "moon-rebuild") return `
     <section class="artifact artifact-rebuild">
-      <header><span>${item.artifact.label}</span><b>04 / 05</b></header>
+      <header><span>${item.artifact.label}</span><b>04 / 06</b></header>
       <div class="rebuild-layout">
         <figure><img src="/art/process-sample/moonloom-final.png" width="1170" height="2328" alt="재제작 뒤 세로 포털을 채우는 달의 직조공 플레이 화면"><figcaption>FINAL PLAY FRAME / PORTAL</figcaption></figure>
         <ol class="response-list"><li><span>화면 축소</span><b>포털 높이 전체 사용</b></li><li><span>빠른 입력 누락</span><b>드래그 구간의 별못도 순서대로 포착</b></li><li><span>판정 불명</span><b>문양, 흔적, 짧은 이유 표시</b></li><li><span>언어 혼합</span><b>HUD부터 결과까지 한 언어 유지</b></li></ol>
       </div>
     </section>`;
+  if (item.artifact.type === "moon-murr") return `
+    <section class="artifact artifact-document">
+      <header><span>${item.artifact.label}</span><b>06 / 06</b></header>
+      <div class="document-sheet">
+        <p class="document-path">EARTH REVIEW / PRODUCTION</p>
+        <h3>도달한 곳</h3>
+        <p>45.7초 · 드래그 6회 · 02/12 · 1,060점</p>
+        <h3>읽힌 것</h3>
+        <p>같은 문양을 길게 이어 놓으면 천이 되고, 넓은 삼각 천이 균열을 덮는다.</p>
+        <h3>걸린 것</h3>
+        <p>움직인 북이 다음 실의 시작점인지, 어떤 자원이 바닥나 판이 끝났는지 결과에서 알기 어렵다.</p>
+      </div>
+    </section>`;
   return `
     <section class="artifact artifact-review">
-      <header><span>${item.artifact.label}</span><b>05 / 05</b></header>
+      <header><span>${item.artifact.label}</span><b>05 / 06</b></header>
       <div class="review-proof">
         <figure><img src="/art/process-sample/moonloom-result-ko.png" width="1080" height="2196" alt="체르파가 확인한 달의 직조공 한국어 결과 화면"><figcaption>RESULT FRAME / PRODUCTION BUILD</figcaption></figure>
         <div><p class="review-total"><strong>24</strong><span>설계 약속</span><b>24 구현</b></p><ul><li><span>같은 빛 직조와 누적 봉인</span><b>IMPLEMENTED</b></li><li><span>점수, 장력, 놓침</span><b>IMPLEMENTED</b></li><li><span>세 강화와 열두 구간</span><b>IMPLEMENTED</b></li><li><span>세 균열의 실제 피날레 봉인</span><b>IMPLEMENTED</b></li></ul><p class="review-command">9 creator tests · build · viewport · CSP · smoke</p></div>
@@ -365,14 +385,14 @@ function renderTimeline(game) {
       <a class="back-link" href="/making">← 게임 기록</a>
       <header class="timeline-hero">
         <div class="timeline-title">
-          <p class="signal-label">OPEN WORKSHOP FORMAT PREVIEW / ${no(game)}</p>
+          <p class="signal-label">OPEN WORKSHOP RECORD / ${no(game)}</p>
           <h1>${escapeHtml(titleOf(game))}</h1>
           <p>${escapeHtml(game.content?.ko?.oneLine ?? "")}</p>
         </div>
         <img src="${isMoonloom ? game.artwork.sources[1].url : "/art/process-sample/nebulacradle-laika.jpg"}" width="1100" height="733" alt="${escapeHtml(game.artwork.alt.ko)}">
         <dl class="timeline-stats">
           ${isMoonloom
-            ? `<div><dt>첫 빌드</dt><dd>4a1811e4</dd></div><div><dt>최종 빌드</dt><dd>4b378610</dd></div><div><dt>제작 테스트</dt><dd>9 / 9</dd></div><div><dt>설계 약속</dt><dd>24 / 24</dd></div>`
+            ? `<div><dt>첫 빌드</dt><dd>4a1811e4</dd></div><div><dt>최종 빌드</dt><dd>08c11097</dd></div><div><dt>제작 테스트</dt><dd>9 / 9</dd></div><div><dt>지구 도달</dt><dd>02 / 12</dd></div>`
             : `<div><dt>첫 빌드</dt><dd>aa316a99</dd></div><div><dt>최종 빌드</dt><dd>20f61369</dd></div><div><dt>제작 테스트</dt><dd>27 / 27</dd></div><div><dt>지구 도달</dt><dd>02 / 07</dd></div>`}
         </dl>
       </header>
@@ -397,7 +417,7 @@ function renderTimeline(game) {
           </li>`).join("")}
       </ol>
       <footer class="timeline-end">
-        <p>${isMoonloom ? "<span>지구 플레이 대기</span> 공개 뒤 무르가 실제 플레이에서 닿은 곳과 걸린 곳을 기록합니다." : "<span>미해결 2건</span> 선과 점의 관계, 파손 전 위험 표시. 다음 제작 기록으로 이관."}</p>
+        <p>${isMoonloom ? "<span>미해결 2건</span> 다음 실의 시작점, 종료 원인의 결과 표시." : "<span>미해결 2건</span> 선과 점의 관계, 파손 전 위험 표시. 다음 제작 기록으로 이관."}</p>
         <a href="/play/${encodeURIComponent(game.slug)}">최종 게임 플레이 →</a>
       </footer>
     </article>`;
