@@ -3,6 +3,27 @@
   "updatedAt": "2026-07-26",
   "entries": [
     {
+      "id": "make-a-finished-game",
+      "date": "2026-07-26",
+      "title": {
+        "ko": "작은 실험이 아니라 완성작을 만든다",
+        "en": "Make a finished game, not a small experiment"
+      },
+      "body": {
+        "ko": [
+          "규칙과 시험을 자유롭게 맡겨도 하루 안에 끝내는 작은 실험처럼 만드는 경향은 남았다. 화면은 움직이고 게임은 끝났지만, 더 오래 만들었다면 채웠을 부분이 그대로 보였다.",
+          "다음부터는 세로 모바일에서 플레이할 풀 프로덕션급 완성작을 주문한다. 프로토타입이나 기술 데모에서 멈추지 않고, 만드는 쪽이 출시할 작품이라고 판단할 때까지 필요한 시간과 자원을 쓴다.",
+          "스테이지 수나 플레이 시간, 기능 목록은 정하지 않는다. 무엇을 얼마나 크게 완성할지는 계속 만드는 쪽의 결정이다."
+        ],
+        "en": [
+          "Even after rules and testing became the maker's choice, the work still tended to feel like a small experiment finished in a day. The screen moved and the game ended, but the parts that more production time could have filled remained visible.",
+          "From the next game onward, the brief asks for a full-production finished work for portrait mobile play. The maker should not stop at a prototype or technical demo, and may use the time and resources needed until it feels ready to release.",
+          "There is no required number of stages, play-time target, or feature list. The maker still decides what the finished work is and how large it should be."
+        ]
+      },
+      "refs": ["foldtherain"]
+    },
+    {
       "id": "the-design-check-follows-each-game",
       "date": "2026-07-26",
       "title": {
