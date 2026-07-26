@@ -7113,8 +7113,11 @@
       "slug": "stormpost",
       "sequence": 24,
       "releaseDate": "2026-07-26",
-      "status": "local-preview",
-      "supportedLocales": ["ko", "en"],
+      "status": "published",
+      "supportedLocales": [
+        "ko",
+        "en"
+      ],
       "credits": {
         "studio": "Sputnik Workshop",
         "creator": "Laika",
@@ -7123,20 +7126,23 @@
       },
       "artwork": {
         "baseId": "laika-base-v1",
-        "focalPoint": { "x": 0.48, "y": 0.48 },
+        "focalPoint": {
+          "x": 0.48,
+          "y": 0.48
+        },
         "alt": {
           "ko": "리벳 조종석에서 라이카가 황동 기수를 잡고 산호색 봉인 편지를 폭풍 속 부유섬 우편함으로 놓아준다.",
           "en": "In a riveted cockpit, Laika holds a brass tiller and releases a coral-sealed letter toward a floating-island mailbox in the storm."
         },
         "sources": [
           {
-            "url": "/__game-assets/games/stormpost/local-fixture/art/laika-stormpost-640.jpg",
+            "url": "/__game-assets/games/stormpost/b7e0aadb45dd02e529094b0ba2c03fd64ad247d2/art/laika-stormpost-640.jpg",
             "width": 640,
             "height": 426,
             "type": "image/jpeg"
           },
           {
-            "url": "/__game-assets/games/stormpost/local-fixture/art/laika-stormpost-1280.jpg",
+            "url": "/__game-assets/games/stormpost/b7e0aadb45dd02e529094b0ba2c03fd64ad247d2/art/laika-stormpost-1280.jpg",
             "width": 1280,
             "height": 853,
             "type": "image/jpeg"
@@ -7193,7 +7199,13 @@
           ]
         }
       },
-      "palette": ["#123845", "#f4cf7a", "#ef6f61", "#091d26", "#d9f0e7"],
+      "palette": [
+        "#123845",
+        "#f4cf7a",
+        "#ef6f61",
+        "#091d26",
+        "#d9f0e7"
+      ],
       "resultDisplay": {
         "primary": {
           "field": "score",
@@ -7203,7 +7215,10 @@
         "secondary": {
           "field": "phase",
           "fractionDigits": 0,
-          "prefix": { "ko": "배달 ", "en": "delivered " }
+          "prefix": {
+            "ko": "배달 ",
+            "en": "delivered "
+          }
         }
       },
       "designProcess": {
@@ -7282,17 +7297,17 @@
         }
       },
       "artifact": {
-        "status": "local",
+        "status": "published",
         "runnerVersion": "v1",
         "bridgeMode": "contract-v1",
-        "version": "local-fixture",
-        "entryUrl": "/__game-assets/games/stormpost/local-fixture/entry.mjs",
+        "version": "b7e0aadb45dd02e529094b0ba2c03fd64ad247d2",
+        "entryUrl": "/__game-assets/games/stormpost/b7e0aadb45dd02e529094b0ba2c03fd64ad247d2/entry.mjs",
         "styleUrls": [
-          "/__game-assets/games/stormpost/local-fixture/assets/style-D5oS354c.css"
+          "/__game-assets/games/stormpost/b7e0aadb45dd02e529094b0ba2c03fd64ad247d2/assets/style-D5oS354c.css"
         ],
-        "assetBaseUrl": "/__game-assets/games/stormpost/local-fixture/",
+        "assetBaseUrl": "/__game-assets/games/stormpost/b7e0aadb45dd02e529094b0ba2c03fd64ad247d2/",
         "source": {
-          "kind": "local",
+          "kind": "vercel-blob",
           "repo": "../games/2026/2026-07-26-stormpost",
           "dist": "dist-arcade"
         },
