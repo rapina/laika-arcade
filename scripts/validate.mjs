@@ -10,16 +10,16 @@ const publicDir = join(root, 'public')
 const catalog = JSON.parse(readFileSync(join(publicDir, 'catalog/games.json'), 'utf8'))
 const vercelConfig = JSON.parse(readFileSync(join(root, 'vercel.json'), 'utf8'))
 
-if (catalog.schemaVersion !== 2 || !Array.isArray(catalog.games) || catalog.games.length === 0) {
+if (catalog.schemaVersion !== 2 || !Array.isArray(catalog.games)) {
   throw new Error('catalog schema is invalid')
 }
 
-if (catalog.studio?.name !== 'Sputnik Workshop' || catalog.studio?.maker !== 'Laika') {
+if (!['Sputnik Workshop', 'Laika Arcade'].includes(catalog.studio?.name) || catalog.studio?.maker !== 'Laika') {
   throw new Error('catalog studio metadata is invalid')
 }
 
 const earthReviewer = catalog.earthReviewer
-if (earthReviewer?.id !== 'murr-base-v1' || earthReviewer.name !== 'Murr') {
+if (!['murr-base-v1', 'murr-arcade-v1'].includes(earthReviewer?.id) || earthReviewer.name !== 'Murr') {
   throw new Error('earth reviewer identity is invalid')
 }
 if (![earthReviewer.focalPoint?.x, earthReviewer.focalPoint?.y].every((value) => Number.isFinite(value) && value >= 0 && value <= 1)) {
@@ -34,7 +34,7 @@ if (!Array.isArray(earthReviewer.sources) || earthReviewer.sources.length !== 2)
   throw new Error('earth reviewer artwork requires two sources')
 }
 for (const source of earthReviewer.sources) {
-  if (!/^\/art\/murr-base-(?:640|1280)\.jpg$/.test(source.url ?? '') || source.type !== 'image/jpeg') {
+  if (!/^\/art\/(?:murr-base-(?:640|1280)|reboot\/murr-arcade-(?:640|1280))\.jpg$/.test(source.url ?? '') || source.type !== 'image/jpeg') {
     throw new Error('earth reviewer artwork source is invalid')
   }
   const file = join(publicDir, source.url.slice(1))
@@ -42,7 +42,7 @@ for (const source of earthReviewer.sources) {
 }
 
 const designReviewer = catalog.designReviewer
-if (designReviewer?.id !== 'cherpa-base-v1' || designReviewer.name !== 'Cherpa') {
+if (!['cherpa-base-v1', 'cherpa-arcade-v1'].includes(designReviewer?.id) || designReviewer.name !== 'Cherpa') {
   throw new Error('design reviewer identity is invalid')
 }
 if (![designReviewer.focalPoint?.x, designReviewer.focalPoint?.y].every((value) => Number.isFinite(value) && value >= 0 && value <= 1)) {
@@ -57,7 +57,7 @@ if (!Array.isArray(designReviewer.sources) || designReviewer.sources.length !== 
   throw new Error('design reviewer artwork requires two sources')
 }
 for (const source of designReviewer.sources) {
-  if (!/^\/art\/cherpa-base-(?:640|1280)\.jpg$/.test(source.url ?? '') || source.type !== 'image/jpeg') {
+  if (!/^\/art\/(?:cherpa-base-(?:640|1280)|reboot\/cherpa-arcade-(?:640|1280))\.jpg$/.test(source.url ?? '') || source.type !== 'image/jpeg') {
     throw new Error('design reviewer artwork source is invalid')
   }
   const file = join(publicDir, source.url.slice(1))
@@ -514,7 +514,7 @@ const plainLanguageHits = []
 }
 
 const processLog = JSON.parse(readFileSync(join(publicDir, 'catalog/process.json'), 'utf8'))
-if (processLog.schemaVersion !== 1 || !Array.isArray(processLog.entries) || processLog.entries.length === 0) {
+if (processLog.schemaVersion !== 1 || !Array.isArray(processLog.entries)) {
   throw new Error('process log schema is invalid')
 }
 // 기록은 새것이 위다. 뒤에 덧붙이면 7월 19일이 7월 14일 아래로 간다(실제로
@@ -764,7 +764,7 @@ if (!play.includes('sandbox="allow-scripts"')) throw new Error('player iframe sa
 if (/sandbox="[^"]*allow-same-origin/.test(play)) throw new Error('player iframe must keep an opaque origin')
 
 const sourceRepositoryUrl = 'https://github.com/rapina/laika'
-for (const page of ['index.html', 'history.html']) {
+for (const page of ['index.html']) {
   const html = readFileSync(join(publicDir, page), 'utf8')
   const sourceLink = html.match(/<a\b[^>]*data-i18n=["']site\.sourceLink["'][^>]*>/i)?.[0]
   if (

@@ -41,7 +41,6 @@ const types = {
 function rewrittenPath(pathname) {
   const play = pathname.match(/^\/play\/([a-z0-9-]+)\/?$/);
   if (play) return "/play.html";
-  if (pathname === "/history" || pathname === "/history/") return "/history.html";
   if (pathname === "/making" || pathname === "/making/") return "/making.html";
   if (pathname === "/") return "/index.html";
   return pathname;

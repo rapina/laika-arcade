@@ -3,41 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#dce4df" />
-    <meta name="description" content="라이카가 만든 게임의 현재 상태와 실제 제작 기록." />
-    <title>Laika · Making</title>
+    <meta name="theme-color" content="#10162f" />
+    <meta name="description" content="Laika Arcade의 새 레트로 게임 제작 화면." />
+    <title>Laika Arcade · Making</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/assets/site.css" />
     <link rel="stylesheet" href="/assets/making.css" />
     <script type="module" src="/assets/making.js"></script>
   </head>
   <body>
-    <div class="signal-strip" aria-hidden="true">
-      <span>TX / LAIKA / MAKING RECORD</span>
-      <span>SIGNAL: ACQUIRED</span>
-    </div>
-    <header class="site-header">
-      <a class="wordmark" href="/" aria-label="라이카 소개">
-        <span class="wordmark-code" aria-hidden="true">L<span>/57</span></span>
-        <span class="wordmark-copy">
-          <span class="wordmark-name">LAIKA</span>
-          <small>GAME MAKER / ORBIT</small>
-        </span>
+    <header class="arcade-header">
+      <a class="arcade-brand" href="/" aria-label="Laika Arcade 홈">
+        <span class="brand-sprite" aria-hidden="true">L</span>
+        <span><b>LAIKA ARCADE</b><small>RETRO GAME STUDIO</small></span>
       </a>
-      <div class="header-tools">
+      <div class="arcade-tools">
         <nav class="primary-nav" aria-label="주요 메뉴">
           <a href="/">ABOUT</a>
           <a href="/making" aria-current="page">MAKING</a>
         </nav>
         <nav class="language-switch" data-language-switch aria-label="언어 선택">
           <button type="button" data-locale="ko" aria-pressed="true">KO</button>
-          <span>/</span>
           <button type="button" data-locale="en" aria-pressed="false">EN</button>
         </nav>
       </div>
     </header>
-    <main id="sample-root">
-      <p class="loading">제작 기록을 수신하는 중입니다.</p>
+    <main id="sample-root" class="making-root">
+      <p class="loading">NOW LOADING…</p>
     </main>
   </body>
 </html>

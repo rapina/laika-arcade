@@ -15,10 +15,6 @@
       "destination": "https://84zodfjeioojds9n.public.blob.vercel-storage.com/:path*"
     },
     {
-      "source": "/history",
-      "destination": "/history.html"
-    },
-    {
       "source": "/making",
       "destination": "/making.html"
     },
