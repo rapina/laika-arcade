@@ -10,6 +10,10 @@
     {
       "source": "/making",
       "destination": "/making.html"
+    },
+    {
+      "source": "/play/:slug",
+      "destination": "/play.html?slug=:slug"
     }
   ],
   "headers": [
