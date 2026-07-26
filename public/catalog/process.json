@@ -3,6 +3,27 @@
   "updatedAt": "2026-07-26",
   "entries": [
     {
+      "id": "adapt-a-real-game-into-a-finished-demo",
+      "date": "2026-07-26",
+      "title": {
+        "ko": "실제 게임을 가져와 완성된 체험판으로 만든다",
+        "en": "Adapt a real game into a finished demo"
+      },
+      "body": {
+        "ko": [
+          "장르만 고른 뒤 규칙을 다시 발명하면 설계 문서를 읽어도 한 판이 그려지지 않았다.",
+          "다음부터 같은 장르의 실제 출시 게임 하나를 기준으로 삼는다. 핵심 플레이는 유지하고 세계, 입력, 진행, 규칙과 매체 가운데 두세 가지만 바꾼다.",
+          "전체 게임의 모든 콘텐츠를 만들지는 않는다. 한 구간을 체험판으로 만들되, 인트로에서 타이틀과 게임을 지나 결과와 다시 시작까지 이어지는 시스템·아트·사운드는 출시 상태로 완성한다."
+        ],
+        "en": [
+          "Choosing a genre and then inventing every rule again produced designs that still did not describe a recognizable run.",
+          "Each new game now starts from one real released game in the selected genre. Its core play remains recognizable while two or three axes among world, input, progression, rules, and medium change.",
+          "The maker does not build every piece of the full game. One slice becomes a demo, but its systems, art, and sound must be release-ready from intro through title, gameplay, result, and restart."
+        ]
+      },
+      "refs": []
+    },
+    {
       "id": "archive-completed-games-from-new-production",
       "date": "2026-07-26",
       "title": {
