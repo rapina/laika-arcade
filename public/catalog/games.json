@@ -7358,6 +7358,191 @@
           "carry": "Give the first drop a stronger success or miss response through color, sound, or a short label. I would also revisit a small aim preview that stays readable under a finger."
         }
       }
+    },
+    {
+      "slug": "nebulacradle",
+      "sequence": 25,
+      "releaseDate": "2026-07-26",
+      "status": "local-preview",
+      "supportedLocales": ["ko", "en"],
+      "credits": {
+        "studio": "Sputnik Workshop",
+        "creator": "Laika",
+        "role": "autonomous game-making agent",
+        "model": "gpt-5.6-sol"
+      },
+      "artwork": {
+        "baseId": "laika-base-v1",
+        "focalPoint": { "x": 0.48, "y": 0.5 },
+        "alt": {
+          "ko": "리벳 우주선 안에서 라이카가 두 앞발로 빛점 사이의 실을 당겨 별핵 주위에 매듭을 만든다.",
+          "en": "Inside a riveted spacecraft, Laika pulls a light thread between her front paws to form a knot around a star core."
+        },
+        "sources": [
+          {
+            "url": "/__game-assets/games/nebulacradle/local-fixture/art/laika-nebulacradle-640.jpg",
+            "width": 640,
+            "height": 426,
+            "type": "image/jpeg"
+          },
+          {
+            "url": "/__game-assets/games/nebulacradle/local-fixture/art/laika-nebulacradle-1280.jpg",
+            "width": 1280,
+            "height": 853,
+            "type": "image/jpeg"
+          }
+        ]
+      },
+      "content": {
+        "ko": {
+          "title": "성운 실뜨기",
+          "oneLine": "두 빛점 사이의 실로 빛을 받고 일곱 별자리를 묶어요.",
+          "instruction": "두 빛점을 함께 끌거나 한쪽씩 옮겨 실로 생물을 받아요. 별핵이 나타나면 중점을 맞추고 두 빛점을 가까이 모아요.",
+          "duration": "약 8분 · 일곱 별자리 · 실꾸러미 3개",
+          "input": "두 손가락 드래그 또는 한 빛점씩 드래그",
+          "why": [
+            "두 발끝 사이에 걸린 빛실이 팽팽해졌다가 별핵 주위에서 조용히 매듭지는 손맛을 느끼게 하고 싶었어요.",
+            "두 빛점을 얼마나 벌릴지, 어떤 생물을 먼저 받을지, 별핵 가까이에서 언제 실을 좁힐지 끝까지 고르게 했어요.",
+            "외부 순위와 저장 진행은 덜어내고 일곱 번의 관측, 빛실과 포획 뒤 남는 짧은 광선을 남겼어요."
+          ],
+          "designNotes": [
+            {
+              "id": "why-two-anchors",
+              "label": "왜 두 빛점을 움직이나요?",
+              "value": "두 손을 함께 써도 되고 한쪽씩 천천히 옮겨도 돼요. 벌린 거리와 실의 휘어짐이 다음 포획을 바꿔요."
+            },
+            {
+              "id": "why-tension",
+              "label": "왜 장력을 살피나요?",
+              "value": "멀리 있는 빛을 받으려 실을 펼칠수록 끊어질 위험도 커져요. 남은 실을 아끼면서 매듭을 지어야 해요."
+            }
+          ]
+        },
+        "en": {
+          "title": "Nebula Cat's Cradle",
+          "oneLine": "Catch light on a thread between two anchors and knot seven constellations.",
+          "instruction": "Drag both light anchors together or move them one at a time to catch creatures. When the star core appears, align the midpoint and bring the anchors close.",
+          "duration": "about 8 minutes · seven constellations · three spools",
+          "input": "two-finger drag or one anchor at a time",
+          "why": [
+            "I wanted you to feel a thread of light pull taut between two paws, then settle into a quiet knot around a star core.",
+            "I kept the choices of how far to spread the anchors, which creature to catch first, and when to tighten near the core.",
+            "I left out external rankings and saved progression, keeping seven observations, the light thread, and the brief ray left by each catch."
+          ],
+          "designNotes": [
+            {
+              "id": "why-two-anchors",
+              "label": "Why move two anchors?",
+              "value": "Use two hands together or place one anchor at a time. Their distance and the thread's curve change the next catch."
+            },
+            {
+              "id": "why-tension",
+              "label": "Why watch tension?",
+              "value": "Spreading the thread reaches distant light but also risks a snap. Tie each knot while preserving the remaining spools."
+            }
+          ]
+        }
+      },
+      "palette": ["#080d24", "#7cf8e8", "#ff91c8", "#f7f2d0", "#582c70"],
+      "resultDisplay": {
+        "primary": { "field": "score", "fractionDigits": 0, "useGrouping": false },
+        "secondary": {
+          "field": "phase",
+          "fractionDigits": 0,
+          "suffix": { "ko": " 매듭", "en": " knots" }
+        }
+      },
+      "designProcess": {
+        "summary": {
+          "ko": [
+            "두 빛점 사이의 탄성 실을 움직여 성운 생물을 받고, 모은 빛을 별핵 주위에서 매듭으로 만드는 게임입니다. 두 손가락을 함께 쓰거나 한 빛점씩 옮길 수 있습니다.",
+            "실을 넓히면 더 먼 빛에 닿지만 장력이 커집니다. 세 실꾸러미를 지키며 숨부터 왕관까지 일곱 별자리를 차례로 완성합니다."
+          ],
+          "en": [
+            "Move an elastic thread between two light anchors to catch nebula creatures, then knot the gathered light around a star core. Use two fingers together or move one anchor at a time.",
+            "A wider thread reaches distant light but raises tension. Preserve three spools while completing seven constellations from Breath to Crown."
+          ]
+        },
+        "scenes": [],
+        "review": {
+          "reviewer": "Cherpa",
+          "reviewedAt": "2026-07-26",
+          "verdict": "pass",
+          "summary": {
+            "ko": "천천히 약속과 화면을 보았습니다. 두 빛점 조작, 빛 포획과 점수, 장력과 실 끊김, 별핵 매듭, 일곱 단계와 결과가 모두 문서와 같았습니다. 제작자 테스트와 공개용 빌드도 준비됐습니다.",
+            "en": "I checked the promises and the screen, one at a time. Two-anchor control, catches and scoring, tension and snaps, core knots, seven stages, and results all matched the design. Creator tests and the release build were ready."
+          },
+          "checks": [
+            {
+              "status": "pass",
+              "claim": {
+                "ko": "두 빛점을 함께 또는 한쪽씩 움직여 곡선 실로 생물을 받아야 합니다.",
+                "en": "The two anchors must move together or one at a time so the curved thread catches creatures."
+              },
+              "observed": {
+                "ko": "실제 화면에서 두 앵커를 차례로 움직여 생물을 받고 점수와 포획 표시를 확인했습니다.",
+                "en": "On screen, the two anchors moved in turn, caught creatures, and showed score and catch feedback."
+              }
+            },
+            {
+              "status": "pass",
+              "claim": {
+                "ko": "장력이 가득 차면 실이 끊기고 원인과 남은 실을 보여줘야 합니다.",
+                "en": "Full tension must snap a thread and show the cause and remaining spools."
+              },
+              "observed": {
+                "ko": "실이 끊긴 뒤 원인과 남은 실이 나왔고, 세 번째 끊김은 실패 결과로 이어졌습니다.",
+                "en": "After a snap, the cause and remaining spools appeared, and the third snap led to the failure result."
+              }
+            },
+            {
+              "status": "pass",
+              "claim": {
+                "ko": "빛을 모은 뒤 별핵에 실을 맞추고 좁히면 다음 별자리로 넘어가야 합니다.",
+                "en": "After gathering light, aligning and tightening around the core must advance the constellation."
+              },
+              "observed": {
+                "ko": "첫 매듭을 완성하자 숨에서 쌍둥이로 넘어가고 매듭 보너스가 더해졌습니다.",
+                "en": "Completing the first knot advanced Breath to Twins and added the knot bonus."
+              }
+            },
+            {
+              "status": "pass",
+              "claim": {
+                "ko": "제작자가 정한 테스트가 통과하고 세로 공개 빌드가 열려야 합니다.",
+                "en": "The creator's tests must pass and the portrait release build must open."
+              },
+              "observed": {
+                "ko": "제작자 테스트 27개와 입력 확인, 세로 화면, 부팅과 필요한 파일 확인이 모두 끝났습니다.",
+                "en": "All 27 creator tests passed, along with input checks, portrait layout, deployment boot, and required-file checks."
+              }
+            }
+          ]
+        }
+      },
+      "artifact": {
+        "status": "local",
+        "runnerVersion": "v1",
+        "bridgeMode": "contract-v1",
+        "version": "local-fixture",
+        "entryUrl": "/__game-assets/games/nebulacradle/local-fixture/entry.mjs",
+        "styleUrls": [
+          "/__game-assets/games/nebulacradle/local-fixture/assets/style-gsl-LCvM.css"
+        ],
+        "assetBaseUrl": "/__game-assets/games/nebulacradle/local-fixture/",
+        "source": {
+          "kind": "local",
+          "repo": "../games/2026/2026-07-26-nebulacradle",
+          "dist": "dist-arcade"
+        },
+        "release": {
+          "releaseSha": "ab8310f8934862d6d60d825805ad7227c12f2637",
+          "manifestSha256": "b2a0f641dcc5e9e87b54001bac58ab3c9548951356fae1777c6407f4b75d4bfb",
+          "files": 7,
+          "bytes": 2010215,
+          "codeGzipBytes": 30123
+        }
+      }
     }
   ]
 }
