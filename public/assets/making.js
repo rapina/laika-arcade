@@ -132,6 +132,47 @@ const moonTimeline = [
   },
 ];
 
+const ashDocketTimeline = [
+  {
+    stage: "01", actor: "LAIKA", kind: "구상", title: "보이는 다음 주장과 자라는 사건부",
+    body: "매 턴 다섯 장과 집중 셋을 나눠 상대의 공개된 다음 주장을 막거나 논지를 깎는다. 여덟 심리의 보상과 두 휴정으로 사건부를 바꾼 뒤, 받아들이는 카드 계열이 회전하는 대법관을 상대한다.",
+    evidence: ["주 장르 덱빌딩", "여덟 분기 심리", "두 휴정과 최종 심리"],
+    artifact: { type: "ash-gdd", label: "GDD.md / 잠긴 설계" },
+  },
+  {
+    stage: "02", actor: "LAIKA", kind: "첫 빌드", title: "카드 변론 전체 흐름 구현",
+    body: "네 카드 계열, 상대별 규칙, 보상과 휴정, 최종 판결까지 구현했다. 제작자 테스트를 통과한 빌드를 설명 없이 새 플레이어에게 전달했다.",
+    evidence: ["BUILD 2d645695", "TEST 25 / 25", "390 × 844"],
+    artifact: { type: "ash-initial", label: "INITIAL BUILD / 2d645695" },
+  },
+  {
+    stage: "03", actor: "BLIND PLAYER", kind: "낯선 플레이", title: "두 번째 심리에서 멈춰 읽은 것",
+    body: "플레이어는 카드와 대상을 누르고 집중을 써 첫 심리를 이긴 뒤 보상 카드를 골랐다. 남은 집중, 이의 뒤 바뀐 공격, 서기의 보호막이 돌아오는 때는 바로 읽지 못했다.",
+    quote: "“이의 뒤에도 공격 예고가 그대로 보여 언제 약해지는지 모르겠다.”",
+    evidence: ["약 5분", "심리 2 / 8", "마찰 3묶음"],
+    artifact: { type: "ash-playtest", label: "BLIND PLAY REPORT / BUILD ONLY" },
+  },
+  {
+    stage: "04", actor: "LAIKA", kind: "재제작", title: "행동 전 정보와 상대의 얼굴을 다시 만듦",
+    body: "집중을 큰 숫자로 바꾸고 낼 수 없는 카드를 미리 가라앉혔다. 이의는 공격 예고를 즉시 바꾸고, 보호막 증가는 다음 행동으로 표시한다. 여덟 상대의 래스터 과슈·목탄 초상을 사건표와 모든 심리에 넣었다.",
+    evidence: ["SOURCE e6d04e3d", "TEST 29 / 29", "래스터 상대 8종"],
+    artifact: { type: "ash-rebuild", label: "FINAL PLAY FRAMES / 390 × 844" },
+  },
+  {
+    stage: "05", actor: "CHERPA", kind: "출고 점검", title: "덱빌딩 약속과 주 시각 매체 모두 통과",
+    body: "다섯 장과 집중의 턴 루프, 카드 계열과 성장, 상대별 적응, 행동 전 정보, 분기 진행과 대법관, 닫힌 결과를 실제 빌드와 대조했다. 사건표와 심리의 비SVG 래스터 초상도 별도로 확인했다.",
+    evidence: ["8 / 8 구현", "VERDICT PASS", "오류 0"],
+    artifact: { type: "ash-review", label: "DESIGN REVIEW / 4765155a" },
+  },
+  {
+    stage: "06", actor: "MURR", kind: "지구 플레이", title: "세 심리와 다음 보상까지",
+    body: "공개본에서 실제 탭만으로 세 상대를 이겼다. 공격 예고와 신뢰 변화는 선택의 결과를 또렷하게 만들었고, 첫 턴에는 카드 선택 뒤 대상을 다시 눌러야 한다는 점을 놓쳤다.",
+    quote: "“이번엔 합창을 골랐어. 다음엔 보호막을 되살리는 기록 포식자를 만나 보겠어.”",
+    evidence: ["플레이 5분 16초", "탭 78회", "심리 3 승리"],
+    artifact: { type: "ash-murr", label: "EARTH PLAY / 2026-07-26 22:26" },
+  },
+];
+
 function renderMoonArtifact(item) {
   if (item.artifact.type === "moon-gdd") return `
     <section class="artifact artifact-document">
@@ -194,6 +235,68 @@ $ npm run build:arcade
       <div class="review-proof">
         <figure><img src="/art/process-sample/moonloom-result-ko.png" width="1080" height="2196" alt="체르파가 확인한 달의 직조공 한국어 결과 화면"><figcaption>RESULT FRAME / PRODUCTION BUILD</figcaption></figure>
         <div><p class="review-total"><strong>24</strong><span>설계 약속</span><b>24 구현</b></p><ul><li><span>같은 빛 직조와 누적 봉인</span><b>IMPLEMENTED</b></li><li><span>점수, 장력, 놓침</span><b>IMPLEMENTED</b></li><li><span>세 강화와 열두 구간</span><b>IMPLEMENTED</b></li><li><span>세 균열의 실제 피날레 봉인</span><b>IMPLEMENTED</b></li></ul><p class="review-command">9 creator tests · build · viewport · CSP · smoke</p></div>
+      </div>
+    </section>`;
+}
+
+function renderAshDocketArtifact(item) {
+  if (item.artifact.type === "ash-gdd") return `
+    <section class="artifact artifact-document">
+      <header><span>${item.artifact.label}</span><b>01 / 06</b></header>
+      <div class="document-sheet">
+        <p class="document-path">GDD.md</p>
+        <h3>한 심리의 흐름</h3>
+        <ol>
+          <li>상대의 다음 행동과 특별 규칙을 먼저 읽는다.</li>
+          <li>다섯 장 가운데 카드를 고르고 집중 셋을 나눠 쓴다.</li>
+          <li>카드와 빛나는 대상을 눌러 공격, 증거, 이의, 회복을 해결한다.</li>
+          <li>승리 뒤 새 카드를 넣고 휴정에서 회복하거나 강화한다.</li>
+        </ol>
+      </div>
+    </section>`;
+  if (item.artifact.type === "ash-initial") return `
+    <section class="artifact artifact-initial">
+      <header><span>${item.artifact.label}</span><b>02 / 06</b></header>
+      <div class="missing-capture"><span aria-hidden="true">×</span><div><h3>첫 화면 캡처 미보존</h3><p>첫 빌드 해시와 테스트, 블라인드 플레이 기록만 남아 있다.</p></div></div>
+      <pre><code>$ npm test
+Tests  25 passed
+
+$ npm run build:arcade
+immutable release verified</code></pre>
+    </section>`;
+  if (item.artifact.type === "ash-playtest") return `
+    <section class="artifact artifact-report">
+      <header><span>${item.artifact.label}</span><b>03 / 06</b></header>
+      <dl class="report-grid">
+        <div><dt>이해</dt><dd>카드와 대상을 차례로 누르고 집중을 써 상대 논지를 줄인다.</dd></div>
+        <div><dt>시도</dt><dd>공격, 증거, 방어, 이의, 턴 종료, 보상과 다음 상대 선택.</dd></div>
+        <div><dt>도달</dt><dd>첫 심리 승리 뒤 봉인 서기 5턴, 심리 2/8.</dd></div>
+        <div class="report-friction"><dt>마찰</dt><dd><ul><li>남은 집중을 빠르게 읽기 어려움</li><li>이의 뒤 실효 공격 예고가 그대로임</li><li>보호막이 돌아오는 원인과 때가 불명</li></ul></dd></div>
+      </dl>
+    </section>`;
+  if (item.artifact.type === "ash-rebuild") return `
+    <section class="artifact artifact-rebuild">
+      <header><span>${item.artifact.label}</span><b>04 / 06</b></header>
+      <div class="rebuild-layout">
+        <figure><img src="/art/process-sample/ashdocket-hearing.png" width="390" height="844" alt="래스터 상대 초상과 공개된 공격 의도, 다섯 카드가 보이는 재의 사건부 최종 심리 화면"><figcaption>FINAL HEARING / SOURCE e6d04e3d</figcaption></figure>
+        <ol class="response-list"><li><span>집중 불명</span><b>현재 / 기본 숫자와 지불 불가 표시</b></li><li><span>이의 시점 불명</span><b>공격 예고를 즉시 실효값으로 갱신</b></li><li><span>보호막 원인 불명</span><b>다음 행동에 증가량 표시</b></li><li><span>기본 도형 전용 미술</span><b>게임플레이 래스터 초상 8종</b></li></ol>
+      </div>
+    </section>`;
+  if (item.artifact.type === "ash-review") return `
+    <section class="artifact artifact-review">
+      <header><span>${item.artifact.label}</span><b>05 / 06</b></header>
+      <div class="review-proof">
+        <figure><img src="/art/process-sample/ashdocket-docket.png" width="390" height="844" alt="체르파가 확인한 두 래스터 상대 초상이 있는 재의 사건부 사건표"><figcaption>DOCKET / POINTER REVIEW / 390 × 844</figcaption></figure>
+        <div><p class="review-total"><strong>8</strong><span>설계 대조</span><b>8 구현</b></p><ul><li><span>턴 루프와 네 카드 계열</span><b>IMPLEMENTED</b></li><li><span>상대 규칙과 사건부 성장</span><b>IMPLEMENTED</b></li><li><span>여덟 분기 심리와 대법관</span><b>IMPLEMENTED</b></li><li><span>게임플레이 래스터 주 매체</span><b>IMPLEMENTED</b></li></ul><p class="review-command">29 creator tests · build · viewport · CSP · smoke</p></div>
+      </div>
+    </section>`;
+  return `
+    <section class="artifact artifact-murr">
+      <header><span>${item.artifact.label}</span><b>06 / 06</b></header>
+      <figure><img src="/art/murr-ashdocket-1280.jpg" width="1280" height="853" alt="낡은 지구 수신실에서 무르가 한 버튼을 누른 채 들린 빈 사건 카드와 아직 닿지 않은 대상 인장을 번갈아 본다."><figcaption>MURR / PRODUCTION 4765155a / 390 × 844</figcaption></figure>
+      <div class="earth-session">
+        <dl><div><dt>도달</dt><dd>세 심리 승리 · 다음 보상</dd></div><div><dt>입력</dt><dd>포인터 탭 78회</dd></div><div><dt>언어</dt><dd>한국어 → 영어</dd></div></dl>
+        <blockquote>처음엔 카드를 누르면 끝인 줄 알았어. 대상을 한 번 더 눌러야 했고, 그걸 놓쳐 손패를 그냥 넘겼어.</blockquote>
       </div>
     </section>`;
 }
@@ -334,7 +437,7 @@ function renderOverview(games) {
       </header>
       <ol class="game-matrix">
         ${ordered.map((game) => {
-          const preview = game.slug === "nebulacradle" || game.slug === "moonloom";
+          const preview = game.slug === "nebulacradle" || game.slug === "moonloom" || game.slug === "ashdocket";
           const status = game.status === "published"
             ? "PUBLISHED"
             : game.status === "retired" ? "RETIRED" : "IN PROGRESS";
@@ -376,8 +479,9 @@ function renderLegacy(game) {
 
 function renderTimeline(game) {
   const isMoonloom = game.slug === "moonloom";
-  const timeline = isMoonloom ? moonTimeline : nebulaTimeline;
-  const renderStageArtifact = isMoonloom ? renderMoonArtifact : renderArtifact;
+  const isAshDocket = game.slug === "ashdocket";
+  const timeline = isAshDocket ? ashDocketTimeline : isMoonloom ? moonTimeline : nebulaTimeline;
+  const renderStageArtifact = isAshDocket ? renderAshDocketArtifact : isMoonloom ? renderMoonArtifact : renderArtifact;
   document.title = `${titleOf(game)} · Laika Making Record`;
   root.innerHTML = `
     <article class="timeline-page">
@@ -388,9 +492,11 @@ function renderTimeline(game) {
           <h1>${escapeHtml(titleOf(game))}</h1>
           <p>${escapeHtml(game.content?.ko?.oneLine ?? "")}</p>
         </div>
-        <img src="${isMoonloom ? game.artwork.sources[1].url : "/art/process-sample/nebulacradle-laika.jpg"}" width="1100" height="733" alt="${escapeHtml(game.artwork.alt.ko)}">
+        <img src="${isMoonloom || isAshDocket ? game.artwork.sources[1].url : "/art/process-sample/nebulacradle-laika.jpg"}" width="1100" height="733" alt="${escapeHtml(game.artwork.alt.ko)}">
         <dl class="timeline-stats">
-          ${isMoonloom
+          ${isAshDocket
+            ? `<div><dt>첫 빌드</dt><dd>2d645695</dd></div><div><dt>최종 빌드</dt><dd>e6d04e3d</dd></div><div><dt>제작 테스트</dt><dd>29 / 29</dd></div><div><dt>지구 도달</dt><dd>심리 3 승리</dd></div>`
+            : isMoonloom
             ? `<div><dt>첫 빌드</dt><dd>4a1811e4</dd></div><div><dt>최종 빌드</dt><dd>08c11097</dd></div><div><dt>제작 테스트</dt><dd>9 / 9</dd></div><div><dt>지구 도달</dt><dd>02 / 12</dd></div>`
             : `<div><dt>첫 빌드</dt><dd>aa316a99</dd></div><div><dt>최종 빌드</dt><dd>20f61369</dd></div><div><dt>제작 테스트</dt><dd>27 / 27</dd></div><div><dt>지구 도달</dt><dd>02 / 07</dd></div>`}
         </dl>
@@ -416,7 +522,7 @@ function renderTimeline(game) {
           </li>`).join("")}
       </ol>
       <footer class="timeline-end">
-        <p>${isMoonloom ? "<span>미해결 2건</span> 다음 실의 시작점, 종료 원인의 결과 표시." : "<span>미해결 2건</span> 선과 점의 관계, 파손 전 위험 표시. 다음 제작 기록으로 이관."}</p>
+        <p>${isAshDocket ? "<span>다음에 남긴 것</span> 카드 선택 뒤 대상 입력을 더 분명히 잇고, 손패 재배치가 다음 탭을 흔들지 않게 한다." : isMoonloom ? "<span>미해결 2건</span> 다음 실의 시작점, 종료 원인의 결과 표시." : "<span>미해결 2건</span> 선과 점의 관계, 파손 전 위험 표시. 다음 제작 기록으로 이관."}</p>
         <a href="/play/${encodeURIComponent(game.slug)}">최종 게임 플레이 →</a>
       </footer>
     </article>`;
@@ -429,7 +535,7 @@ try {
   else {
     const game = games.find((candidate) => candidate.slug === selectedSlug);
     if (!game) throw new Error("게임 기록을 찾지 못했습니다.");
-    if (game.slug === "nebulacradle" || game.slug === "moonloom") renderTimeline(game);
+    if (game.slug === "nebulacradle" || game.slug === "moonloom" || game.slug === "ashdocket") renderTimeline(game);
     else renderLegacy(game);
   }
 } catch (error) {
