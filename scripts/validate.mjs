@@ -291,6 +291,7 @@ const designProcessRequiredFromSequence = 9
 // 썼는지 기록이 없어 소급해 적을 수 없다. 거짓으로 채우는 대신 비워 둔다.
 const earthReviewBindingFromSequence = 16
 const promiseStatuses = new Set(['met', 'gap'])
+const usesCreatorOwnedReview = (game) => catalog.edition === 'retro-reboot' || game.sequence >= 22
 
 function localizedBlock(value, label, maxLength) {
   if (!value || typeof value !== 'object') throw new Error(`${label} is invalid`)
@@ -311,7 +312,7 @@ function localizedBlock(value, label, maxLength) {
 function validateDesignProcess(game) {
   const process = game.designProcess
   if (!process) {
-    if (game.sequence >= designProcessRequiredFromSequence && game.sequence < 22) {
+    if (!usesCreatorOwnedReview(game) && game.sequence >= designProcessRequiredFromSequence) {
       throw new Error(`${game.slug}: designProcess is required from sequence ${designProcessRequiredFromSequence}`)
     }
     return
@@ -323,7 +324,7 @@ function validateDesignProcess(game) {
       throw new Error(`${game.slug}: designProcess ${locale} summary is invalid`)
     }
   }
-  if (!Array.isArray(process.scenes) || (game.sequence < 22 && process.scenes.length < 3)) {
+  if (!Array.isArray(process.scenes) || (!usesCreatorOwnedReview(game) && process.scenes.length < 3)) {
     throw new Error(`${game.slug}: designProcess requires first-play, verb, and game-over scenes`)
   }
   const sceneIds = new Set()
@@ -374,7 +375,7 @@ function validateDesignProcess(game) {
     throw new Error(`${game.slug}: designProcess review checks are required`)
   }
   for (const [index, check] of review.checks.entries()) {
-    const allowed = game.sequence >= 22 ? new Set(['pass']) : promiseStatuses
+    const allowed = usesCreatorOwnedReview(game) ? new Set(['pass']) : promiseStatuses
     if (!allowed.has(check.status)) {
       throw new Error(`${game.slug}: designProcess check ${index} status is invalid for a published game`)
     }
@@ -449,7 +450,7 @@ function verifyLocalRelease(game, prefix, artwork) {
     if (content.byteLength !== asset.bytes || sha256(content) !== asset.sha256) {
       throw new Error(`${game.slug}: release asset integrity mismatch for ${asset.path}`)
     }
-    if (game.sequence < 22 && asset.bytes > 4 * 1024 * 1024) throw new Error(`${game.slug}: release asset exceeds 4 MB`)
+    if (!usesCreatorOwnedReview(game) && asset.bytes > 4 * 1024 * 1024) throw new Error(`${game.slug}: release asset exceeds 4 MB`)
     if (/\.(?:m?js)$/.test(asset.path)) codeGzipBytes += gzipSync(content).byteLength
     totalBytes += content.byteLength
   }
@@ -461,8 +462,8 @@ function verifyLocalRelease(game, prefix, artwork) {
   if (actualPaths.length !== listedPaths.size || actualPaths.some((path) => !listedPaths.has(path))) {
     throw new Error(`${game.slug}: fixture files differ from release assets`)
   }
-  if (totalBytes !== release.bytes || (game.sequence < 22 && totalBytes > 8 * 1024 * 1024)) throw new Error(`${game.slug}: release byte total mismatch`)
-  if (codeGzipBytes !== release.codeGzipBytes || (game.sequence < 22 && codeGzipBytes > 520 * 1024)) {
+  if (totalBytes !== release.bytes || (!usesCreatorOwnedReview(game) && totalBytes > 8 * 1024 * 1024)) throw new Error(`${game.slug}: release byte total mismatch`)
+  if (codeGzipBytes !== release.codeGzipBytes || (!usesCreatorOwnedReview(game) && codeGzipBytes > 520 * 1024)) {
     throw new Error(`${game.slug}: release code gzip mismatch`)
   }
 
@@ -584,7 +585,7 @@ for (const game of catalog.games) {
   if (
     !Array.isArray(game.supportedLocales) ||
     game.supportedLocales.length === 0 ||
-    (game.sequence < 22 && !requiredLocales.every((locale) => game.supportedLocales.includes(locale)))
+    (!usesCreatorOwnedReview(game) && !requiredLocales.every((locale) => game.supportedLocales.includes(locale)))
   ) {
     throw new Error(`${game.slug}: ko/en support is required`)
   }
@@ -602,7 +603,7 @@ for (const game of catalog.games) {
   }
   const designIds = requiredLocales.map((locale) => game.content[locale].designNotes.map((note) => note.id).join(','))
   if (new Set(designIds).size !== 1) throw new Error(`${game.slug}: design note ids differ by locale`)
-  if (game.sequence < 22 || game.resultDisplay !== undefined) validateResultDisplay(game)
+  if (!usesCreatorOwnedReview(game) || game.resultDisplay !== undefined) validateResultDisplay(game)
   if (!validateEarthReview(game)) gamesAwaitingEarthReview.push(game)
   validateDesignProcess(game)
   crewSpeechFindings.push(...validateCrewSpeech(game).map((finding) => `${game.slug}: ${finding}`))
@@ -671,8 +672,8 @@ for (const game of catalog.games) {
     }
     if (
       !Number.isSafeInteger(release.files) || release.files < 1 ||
-      !Number.isSafeInteger(release.bytes) || release.bytes < 1 || (game.sequence < 22 && release.bytes > 8 * 1024 * 1024) ||
-      !Number.isSafeInteger(release.codeGzipBytes) || release.codeGzipBytes < 1 || (game.sequence < 22 && release.codeGzipBytes > 520 * 1024)
+      !Number.isSafeInteger(release.bytes) || release.bytes < 1 || (!usesCreatorOwnedReview(game) && release.bytes > 8 * 1024 * 1024) ||
+      !Number.isSafeInteger(release.codeGzipBytes) || release.codeGzipBytes < 1 || (!usesCreatorOwnedReview(game) && release.codeGzipBytes > 520 * 1024)
     ) {
       throw new Error(`${game.slug}: published release budgets are invalid`)
     }
