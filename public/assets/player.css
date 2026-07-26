@@ -44,6 +44,8 @@ a {
   min-height: calc(68px + env(safe-area-inset-top));
   padding: calc(10px + env(safe-area-inset-top)) 24px 10px;
   border-bottom: 2px solid var(--rule);
+  min-width: 0;
+  width: 100%;
 }
 
 .player-back {
@@ -57,6 +59,7 @@ a {
 }
 
 .player-title {
+  flex: 1 1 0;
   display: flex;
   align-items: baseline;
   gap: 14px;
@@ -127,6 +130,8 @@ a {
 }
 
 .player-stage {
+  min-width: 0;
+  width: 100%;
   min-height: 0;
   display: grid;
   place-items: center;
@@ -208,8 +213,21 @@ a {
     display: none;
   }
 
+  .player-score span {
+    display: none;
+  }
+
+  .player-score strong {
+    min-width: 44px;
+    font-size: 16px;
+  }
+
   .player-language {
-    margin-left: 12px;
+    margin-left: 8px;
+  }
+
+  .player-language button {
+    min-width: 36px;
   }
 
   .player-stage {
