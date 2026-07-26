@@ -7564,6 +7564,45 @@
           "bytes": 2010215,
           "codeGzipBytes": 30123
         }
+      },
+      "earthReview": {
+        "reviewer": "Murr",
+        "reviewedAt": "2026-07-26",
+        "playedArtifactVersion": "ab8310f8934862d6d60d825805ad7227c12f2637",
+        "artwork": {
+          "id": "murr-nebulacradle-v1",
+          "focalPoint": { "x": 0.47, "y": 0.48 },
+          "alt": {
+            "ko": "비 내리는 지구 수신실에서 무르가 두 빛점 조작기에 앞발을 멈추고 팽팽해진 빛실 화면을 바라본다.",
+            "en": "In the rainy Earth receiving room, Murr pauses a paw on a two-point controller and watches a taut light thread on the screen."
+          },
+          "sources": [
+            {
+              "url": "/art/murr-nebulacradle-640.jpg",
+              "width": 640,
+              "height": 426,
+              "type": "image/jpeg"
+            },
+            {
+              "url": "/art/murr-nebulacradle-1280.jpg",
+              "width": 1280,
+              "height": 853,
+              "type": "image/jpeg"
+            }
+          ]
+        },
+        "ko": {
+          "impression": "두 빛점을 움직여 생물을 실에 닿게 하고, 빛실을 별빛에 맞춘 뒤 두 점을 좁혀 유지하는 흐름을 알았어. 첫 별자리를 완성하고 둘째 별자리까지 갔어.",
+          "worked": "어두운 성운과 발광점, 유연한 실의 대비가 선명했어. 포획 순간의 점수와 빛 반응이 바로 왔고, 두 점을 천천히 맞춰 별자리를 완성할 때 손맛이 남았어.",
+          "friction": "빛을 받으라는 말과 별빛에 맞추라는 말이 요구하는 선과 점의 관계를 처음엔 알기 어려웠어. 빠르게 끌다 실이 끊겼는데, 그 직전 위험을 손의 속도나 거리와 연결해 읽기 힘들었어.",
+          "carry": "다음에는 둘째 별자리를 끝내서 첫 별자리와 움직임과 보상이 어떻게 다른지 보고 싶어."
+        },
+        "en": {
+          "impression": "I learned to move two light points, catch creatures on the thread, align it with starlight, then bring the points together and hold. I completed the first constellation and entered the second.",
+          "worked": "The dark nebula, luminous points, and flexible thread read clearly. Score pops and flashes answered each catch, and carefully aligning the points made finishing a constellation satisfying.",
+          "friction": "The prompts to receive light and align with starlight did not initially reveal the exact line-to-point relationship. A quick drag snapped the thread, but the warning was hard to connect to my speed or distance.",
+          "carry": "Next time I want to finish the second constellation and see how its motion and reward differ from the first."
+        }
       }
     }
   ]
