@@ -7890,13 +7890,13 @@
         },
         "sources": [
           {
-            "url": "/__game-assets/games/ashdocket/9e36056ebae0cb602db5ea724afa3c655bef5d0a/art/laika-ashdocket-640.jpg",
+            "url": "/__game-assets/games/ashdocket/4765155ac6f60396fe51e79240b0c7cc56fb051f/art/laika-ashdocket-640.jpg",
             "width": 640,
             "height": 426,
             "type": "image/jpeg"
           },
           {
-            "url": "/__game-assets/games/ashdocket/9e36056ebae0cb602db5ea724afa3c655bef5d0a/art/laika-ashdocket-1280.jpg",
+            "url": "/__game-assets/games/ashdocket/4765155ac6f60396fe51e79240b0c7cc56fb051f/art/laika-ashdocket-1280.jpg",
             "width": 1280,
             "height": 853,
             "type": "image/jpeg"
@@ -8049,23 +8049,23 @@
         "status": "published",
         "runnerVersion": "v1",
         "bridgeMode": "contract-v1",
-        "version": "9e36056ebae0cb602db5ea724afa3c655bef5d0a",
-        "entryUrl": "/__game-assets/games/ashdocket/9e36056ebae0cb602db5ea724afa3c655bef5d0a/entry.mjs",
+        "version": "4765155ac6f60396fe51e79240b0c7cc56fb051f",
+        "entryUrl": "/__game-assets/games/ashdocket/4765155ac6f60396fe51e79240b0c7cc56fb051f/entry.mjs",
         "styleUrls": [
-          "/__game-assets/games/ashdocket/9e36056ebae0cb602db5ea724afa3c655bef5d0a/assets/style-BwA3Q51h.css"
+          "/__game-assets/games/ashdocket/4765155ac6f60396fe51e79240b0c7cc56fb051f/assets/style-BwA3Q51h.css"
         ],
-        "assetBaseUrl": "/__game-assets/games/ashdocket/9e36056ebae0cb602db5ea724afa3c655bef5d0a/",
+        "assetBaseUrl": "/__game-assets/games/ashdocket/4765155ac6f60396fe51e79240b0c7cc56fb051f/",
         "source": {
           "kind": "vercel-blob",
           "repo": "../games/2026/2026-07-26-ashdocket",
           "dist": "dist-arcade"
         },
         "release": {
-          "releaseSha": "9e36056ebae0cb602db5ea724afa3c655bef5d0a",
-          "manifestSha256": "b81453218ce81b4acfc00168cc8e254bcca6dc45011c4306a9f9a06baf3f1e8d",
-          "files": 17,
-          "bytes": 3146532,
-          "codeGzipBytes": 289041
+          "releaseSha": "4765155ac6f60396fe51e79240b0c7cc56fb051f",
+          "manifestSha256": "02a1b507b03279842e9c2490a63372fb66917086d928be37eaf2a2f82d31764b",
+          "files": 19,
+          "bytes": 5414862,
+          "codeGzipBytes": 311485
         }
       }
     }
