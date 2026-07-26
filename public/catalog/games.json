@@ -7867,7 +7867,7 @@
       "slug": "ashdocket",
       "sequence": 27,
       "releaseDate": "2026-07-26",
-      "status": "local-preview",
+      "status": "published",
       "supportedLocales": [
         "ko",
         "en"
@@ -7890,13 +7890,13 @@
         },
         "sources": [
           {
-            "url": "/__game-assets/games/ashdocket/local-fixture/art/laika-ashdocket-640.jpg",
+            "url": "/__game-assets/games/ashdocket/9e36056ebae0cb602db5ea724afa3c655bef5d0a/art/laika-ashdocket-640.jpg",
             "width": 640,
             "height": 426,
             "type": "image/jpeg"
           },
           {
-            "url": "/__game-assets/games/ashdocket/local-fixture/art/laika-ashdocket-1280.jpg",
+            "url": "/__game-assets/games/ashdocket/9e36056ebae0cb602db5ea724afa3c655bef5d0a/art/laika-ashdocket-1280.jpg",
             "width": 1280,
             "height": 853,
             "type": "image/jpeg"
@@ -8046,17 +8046,17 @@
         }
       },
       "artifact": {
-        "status": "local",
+        "status": "published",
         "runnerVersion": "v1",
         "bridgeMode": "contract-v1",
-        "version": "local-fixture",
-        "entryUrl": "/__game-assets/games/ashdocket/local-fixture/entry.mjs",
+        "version": "9e36056ebae0cb602db5ea724afa3c655bef5d0a",
+        "entryUrl": "/__game-assets/games/ashdocket/9e36056ebae0cb602db5ea724afa3c655bef5d0a/entry.mjs",
         "styleUrls": [
-          "/__game-assets/games/ashdocket/local-fixture/assets/style-BwA3Q51h.css"
+          "/__game-assets/games/ashdocket/9e36056ebae0cb602db5ea724afa3c655bef5d0a/assets/style-BwA3Q51h.css"
         ],
-        "assetBaseUrl": "/__game-assets/games/ashdocket/local-fixture/",
+        "assetBaseUrl": "/__game-assets/games/ashdocket/9e36056ebae0cb602db5ea724afa3c655bef5d0a/",
         "source": {
-          "kind": "local",
+          "kind": "vercel-blob",
           "repo": "../games/2026/2026-07-26-ashdocket",
           "dist": "dist-arcade"
         },
