@@ -7325,7 +7325,10 @@
         "playedArtifactVersion": "b7e0aadb45dd02e529094b0ba2c03fd64ad247d2",
         "artwork": {
           "id": "murr-stormpost-v1",
-          "focalPoint": { "x": 0.46, "y": 0.48 },
+          "focalPoint": {
+            "x": 0.46,
+            "y": 0.48
+          },
           "alt": {
             "ko": "비 내리는 지구 수신실에서 무르가 조작기에서 앞발을 떼고, 봉인 편지가 부유섬 우편함을 빗나가는 화면을 바라본다.",
             "en": "In the rainy Earth receiving room, Murr lifts a paw from the controller and watches a sealed letter miss a floating-island mailbox."
@@ -7363,8 +7366,11 @@
       "slug": "nebulacradle",
       "sequence": 25,
       "releaseDate": "2026-07-26",
-      "status": "local-preview",
-      "supportedLocales": ["ko", "en"],
+      "status": "published",
+      "supportedLocales": [
+        "ko",
+        "en"
+      ],
       "credits": {
         "studio": "Sputnik Workshop",
         "creator": "Laika",
@@ -7373,20 +7379,23 @@
       },
       "artwork": {
         "baseId": "laika-base-v1",
-        "focalPoint": { "x": 0.48, "y": 0.5 },
+        "focalPoint": {
+          "x": 0.48,
+          "y": 0.5
+        },
         "alt": {
           "ko": "리벳 우주선 안에서 라이카가 두 앞발로 빛점 사이의 실을 당겨 별핵 주위에 매듭을 만든다.",
           "en": "Inside a riveted spacecraft, Laika pulls a light thread between her front paws to form a knot around a star core."
         },
         "sources": [
           {
-            "url": "/__game-assets/games/nebulacradle/local-fixture/art/laika-nebulacradle-640.jpg",
+            "url": "/__game-assets/games/nebulacradle/ab8310f8934862d6d60d825805ad7227c12f2637/art/laika-nebulacradle-640.jpg",
             "width": 640,
             "height": 426,
             "type": "image/jpeg"
           },
           {
-            "url": "/__game-assets/games/nebulacradle/local-fixture/art/laika-nebulacradle-1280.jpg",
+            "url": "/__game-assets/games/nebulacradle/ab8310f8934862d6d60d825805ad7227c12f2637/art/laika-nebulacradle-1280.jpg",
             "width": 1280,
             "height": 853,
             "type": "image/jpeg"
@@ -7443,13 +7452,26 @@
           ]
         }
       },
-      "palette": ["#080d24", "#7cf8e8", "#ff91c8", "#f7f2d0", "#582c70"],
+      "palette": [
+        "#080d24",
+        "#7cf8e8",
+        "#ff91c8",
+        "#f7f2d0",
+        "#582c70"
+      ],
       "resultDisplay": {
-        "primary": { "field": "score", "fractionDigits": 0, "useGrouping": false },
+        "primary": {
+          "field": "score",
+          "fractionDigits": 0,
+          "useGrouping": false
+        },
         "secondary": {
           "field": "phase",
           "fractionDigits": 0,
-          "suffix": { "ko": " 매듭", "en": " knots" }
+          "suffix": {
+            "ko": " 매듭",
+            "en": " knots"
+          }
         }
       },
       "designProcess": {
@@ -7521,17 +7543,17 @@
         }
       },
       "artifact": {
-        "status": "local",
+        "status": "published",
         "runnerVersion": "v1",
         "bridgeMode": "contract-v1",
-        "version": "local-fixture",
-        "entryUrl": "/__game-assets/games/nebulacradle/local-fixture/entry.mjs",
+        "version": "ab8310f8934862d6d60d825805ad7227c12f2637",
+        "entryUrl": "/__game-assets/games/nebulacradle/ab8310f8934862d6d60d825805ad7227c12f2637/entry.mjs",
         "styleUrls": [
-          "/__game-assets/games/nebulacradle/local-fixture/assets/style-gsl-LCvM.css"
+          "/__game-assets/games/nebulacradle/ab8310f8934862d6d60d825805ad7227c12f2637/assets/style-gsl-LCvM.css"
         ],
-        "assetBaseUrl": "/__game-assets/games/nebulacradle/local-fixture/",
+        "assetBaseUrl": "/__game-assets/games/nebulacradle/ab8310f8934862d6d60d825805ad7227c12f2637/",
         "source": {
-          "kind": "local",
+          "kind": "vercel-blob",
           "repo": "../games/2026/2026-07-26-nebulacradle",
           "dist": "dist-arcade"
         },
