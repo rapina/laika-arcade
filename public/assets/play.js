@@ -220,7 +220,7 @@ try {
   if (!sourceGame) throw new Error(t("detail.notFound"));
 
   const game = localizeGame(sourceGame);
-  document.querySelector("#detail-link").href = `/games/${encodeURIComponent(game.slug)}`;
+  document.querySelector("#detail-link").href = `/making?game=${encodeURIComponent(game.slug)}`;
   renderGameChrome();
 
   if (!isPlayableArtifact(game)) {

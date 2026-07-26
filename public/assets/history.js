@@ -24,7 +24,7 @@ function renderEntry(entry) {
   const refs = (entry.refs ?? [])
     .map((slug) => [slug, gameTitle(slug)])
     .filter(([, title]) => title)
-    .map(([slug, title]) => `<a href="/games/${encodeURIComponent(slug)}">${escapeHtml(title)}</a>`);
+    .map(([slug, title]) => `<a href="/making?game=${encodeURIComponent(slug)}">${escapeHtml(title)}</a>`);
   const adr = (entry.adr ?? []).map((number) => `<span>ADR ${escapeHtml(number)}</span>`);
   return `
     <li class="history-entry">

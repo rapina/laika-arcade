@@ -2,6 +2,13 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "outputDirectory": "public",
   "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/games/:slug",
+      "destination": "/making?game=:slug",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/__game-assets/:path*",
@@ -14,10 +21,6 @@
     {
       "source": "/making",
       "destination": "/making.html"
-    },
-    {
-      "source": "/games/:slug",
-      "destination": "/game.html?slug=:slug"
     },
     {
       "source": "/play/:slug",

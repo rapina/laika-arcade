@@ -764,7 +764,7 @@ if (!play.includes('sandbox="allow-scripts"')) throw new Error('player iframe sa
 if (/sandbox="[^"]*allow-same-origin/.test(play)) throw new Error('player iframe must keep an opaque origin')
 
 const sourceRepositoryUrl = 'https://github.com/rapina/laika'
-for (const page of ['index.html', 'history.html', 'game.html']) {
+for (const page of ['index.html', 'history.html']) {
   const html = readFileSync(join(publicDir, page), 'utf8')
   const sourceLink = html.match(/<a\b[^>]*data-i18n=["']site\.sourceLink["'][^>]*>/i)?.[0]
   if (

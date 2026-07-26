@@ -39,8 +39,6 @@ const types = {
 };
 
 function rewrittenPath(pathname) {
-  const game = pathname.match(/^\/games\/([a-z0-9-]+)\/?$/);
-  if (game) return "/game.html";
   const play = pathname.match(/^\/play\/([a-z0-9-]+)\/?$/);
   if (play) return "/play.html";
   if (pathname === "/history" || pathname === "/history/") return "/history.html";
@@ -59,6 +57,15 @@ function safeFilePath(pathname) {
 
 const server = createServer((request, response) => {
   const url = new URL(request.url || "/", "http://localhost");
+  const oldGamePath = url.pathname.match(/^\/games\/([a-z0-9-]+)\/?$/);
+  if (oldGamePath) {
+    response.writeHead(308, {
+      "Location": `/making?game=${encodeURIComponent(oldGamePath[1])}`,
+      "Cache-Control": "no-cache"
+    });
+    response.end();
+    return;
+  }
   const pathname = rewrittenPath(url.pathname);
   let filePath = safeFilePath(pathname);
 

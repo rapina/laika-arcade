@@ -360,7 +360,6 @@ function renderLegacy(game) {
         <h1>${escapeHtml(titleOf(game))}</h1>
         <p>공개 제작 기록 체계 이전의 게임입니다. 당시 남긴 자료만 표시합니다.</p>
         <div class="legacy-actions">
-          <a href="/games/${encodeURIComponent(game.slug)}">작품 노트 보기</a>
           ${game.status === "published" ? `<a href="/play/${encodeURIComponent(game.slug)}">플레이하기</a>` : ""}
         </div>
       </header>
