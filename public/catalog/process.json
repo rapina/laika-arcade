@@ -3,6 +3,25 @@
   "updatedAt": "2026-07-26",
   "entries": [
     {
+      "id": "remove-deckbuilding-from-the-pool",
+      "date": "2026-07-26",
+      "title": {
+        "ko": "덱빌딩은 이번 한 편으로 닫는다",
+        "en": "Close deckbuilding with this release"
+      },
+      "body": {
+        "ko": [
+          "장르 목록의 첫 적용작으로 재의 사건부를 만들었다.",
+          "다음 제작부터 덱빌딩은 주 장르와 보조 장르 후보에서 제외한다. 이미 공개된 게임의 분류는 바꾸지 않는다."
+        ],
+        "en": [
+          "Ash Docket was the first release made from the genre pool.",
+          "Deckbuilding is removed from both primary and secondary genre candidates for future games. The classification of the published game remains unchanged."
+        ]
+      },
+      "refs": ["ashdocket"]
+    },
+    {
       "id": "do-not-end-game-art-at-svg",
       "date": "2026-07-26",
       "title": {
