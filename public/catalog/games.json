@@ -7318,6 +7318,45 @@
           "bytes": 2492111,
           "codeGzipBytes": 92912
         }
+      },
+      "earthReview": {
+        "reviewer": "Murr",
+        "reviewedAt": "2026-07-26",
+        "playedArtifactVersion": "b7e0aadb45dd02e529094b0ba2c03fd64ad247d2",
+        "artwork": {
+          "id": "murr-stormpost-v1",
+          "focalPoint": { "x": 0.46, "y": 0.48 },
+          "alt": {
+            "ko": "비 내리는 지구 수신실에서 무르가 조작기에서 앞발을 떼고, 봉인 편지가 부유섬 우편함을 빗나가는 화면을 바라본다.",
+            "en": "In the rainy Earth receiving room, Murr lifts a paw from the controller and watches a sealed letter miss a floating-island mailbox."
+          },
+          "sources": [
+            {
+              "url": "/art/murr-stormpost-640.jpg",
+              "width": 640,
+              "height": 426,
+              "type": "image/jpeg"
+            },
+            {
+              "url": "/art/murr-stormpost-1280.jpg",
+              "width": 1280,
+              "height": 853,
+              "type": "image/jpeg"
+            }
+          ]
+        },
+        "ko": {
+          "impression": "화면을 눌러 출항하고 세 번 방향을 바꿔 편지를 놓아 봤어. 돌풍도 한 번 썼지만 첫 항로에서 점수는 오르지 않았고, 세 봉인을 마치지는 못했어.",
+          "worked": "빗줄기와 층층이 흐르는 구름, 우편함 색과 바람 고리가 작은 화면에서도 항로를 또렷하게 만들었어. 시작 카드가 드래그와 놓기, 탭을 바로 보여줘 출발은 쉬웠어.",
+          "friction": "손을 놓은 뒤 편지가 빗나갔는지 바로 읽기 어려웠어. 손가락 움직임과 기체 반응도 처음에는 약하게 보여서, 점수가 오르지 않은 이유를 스스로 판단하기 힘들었어.",
+          "carry": "첫 투하의 성공과 실패를 색, 소리나 짧은 말로 더 크게 돌려줘. 손가락 아래에서도 목표 우편함과 투하 방향을 읽을 수 있는 작은 예고 표시도 다시 보고 싶어."
+        },
+        "en": {
+          "impression": "I tapped to launch, steered and released three times, then spent one gust. My score did not rise on the first route, and I did not complete the three seals.",
+          "worked": "Slanting rain, layered moving clouds, mailbox colors, and the wind ring made the route clear on a small screen. The opening card showed drag, release, and tap immediately, so starting was easy.",
+          "friction": "After release, I could not quickly tell whether the letter had missed. The link between finger movement and the craft also felt subtle at first, so I could not diagnose why the score stayed at zero.",
+          "carry": "Give the first drop a stronger success or miss response through color, sound, or a short label. I would also revisit a small aim preview that stays readable under a finger."
+        }
       }
     }
   ]
