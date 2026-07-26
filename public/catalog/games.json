@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-07-27T01:21:26+09:00",
+  "updatedAt": "2026-07-27T00:00:00+09:00",
   "edition": "retro-reboot",
   "studio": {
     "name": "Laika Arcade",
@@ -9,7 +9,10 @@
   "earthReviewer": {
     "id": "murr-arcade-v1",
     "name": "Murr",
-    "focalPoint": {"x": 0.5, "y": 0.5},
+    "focalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
     "alt": {
       "ko": "한 버튼 게임을 시험하는 16비트 픽셀 아트 고양이 무르",
       "en": "Murr testing a one-button game in 16-bit pixel art"
@@ -19,14 +22,27 @@
       "en": "Play first. Write after."
     },
     "sources": [
-      {"url": "/art/reboot/murr-arcade-640.jpg", "width": 640, "height": 426, "type": "image/jpeg"},
-      {"url": "/art/reboot/murr-arcade-1280.jpg", "width": 1280, "height": 853, "type": "image/jpeg"}
+      {
+        "url": "/art/reboot/murr-arcade-640.jpg",
+        "width": 640,
+        "height": 426,
+        "type": "image/jpeg"
+      },
+      {
+        "url": "/art/reboot/murr-arcade-1280.jpg",
+        "width": 1280,
+        "height": 853,
+        "type": "image/jpeg"
+      }
     ]
   },
   "designReviewer": {
     "id": "cherpa-arcade-v1",
     "name": "Cherpa",
-    "focalPoint": {"x": 0.5, "y": 0.5},
+    "focalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
     "alt": {
       "ko": "CRT 게임 화면과 설계지를 비교하는 16비트 픽셀 아트 거북이 체르파",
       "en": "Cherpa comparing a CRT game screen and design sheet in 16-bit pixel art"
@@ -36,19 +52,35 @@
       "en": "Compare the design with the build."
     },
     "sources": [
-      {"url": "/art/reboot/cherpa-arcade-640.jpg", "width": 640, "height": 426, "type": "image/jpeg"},
-      {"url": "/art/reboot/cherpa-arcade-1280.jpg", "width": 1280, "height": 853, "type": "image/jpeg"}
+      {
+        "url": "/art/reboot/cherpa-arcade-640.jpg",
+        "width": 640,
+        "height": 426,
+        "type": "image/jpeg"
+      },
+      {
+        "url": "/art/reboot/cherpa-arcade-1280.jpg",
+        "width": 1280,
+        "height": 853,
+        "type": "image/jpeg"
+      }
     ]
   },
   "defaultLocale": "ko",
-  "supportedLocales": ["ko", "en"],
+  "supportedLocales": [
+    "ko",
+    "en"
+  ],
   "games": [
     {
       "slug": "moonmail",
       "sequence": 1,
       "releaseDate": "2026-07-27",
-      "status": "local-preview",
-      "supportedLocales": ["ko", "en"],
+      "status": "published",
+      "supportedLocales": [
+        "ko",
+        "en"
+      ],
       "credits": {
         "studio": "Sputnik Workshop",
         "creator": "Laika",
@@ -57,20 +89,23 @@
       },
       "artwork": {
         "baseId": "laika-base-v1",
-        "focalPoint": { "x": 0.5, "y": 0.35 },
+        "focalPoint": {
+          "x": 0.5,
+          "y": 0.35
+        },
         "alt": {
           "ko": "라이카가 달 우편 핀볼 테이블의 두 버튼을 앞발로 누르고 청록색 우편 공을 경사로로 올린다.",
           "en": "Laika presses both buttons of a moon-mail pinball table while a cyan mail-ball races up a ramp."
         },
         "sources": [
           {
-            "url": "/__game-assets/games/moonmail/local-fixture/art/laika-moonmail-640.jpg",
+            "url": "/__game-assets/games/moonmail/b54b23aa02c4086f8a91e70e8b29da14f97c440e/art/laika-moonmail-640.jpg",
             "width": 640,
             "height": 960,
             "type": "image/jpeg"
           },
           {
-            "url": "/__game-assets/games/moonmail/local-fixture/art/laika-moonmail-1280.jpg",
+            "url": "/__game-assets/games/moonmail/b54b23aa02c4086f8a91e70e8b29da14f97c440e/art/laika-moonmail-1280.jpg",
             "width": 1280,
             "height": 1920,
             "type": "image/jpeg"
@@ -127,13 +162,25 @@
           ]
         }
       },
-      "palette": ["#080b1a", "#36b6a2", "#f2a33a", "#f2efe2"],
+      "palette": [
+        "#080b1a",
+        "#36b6a2",
+        "#f2a33a",
+        "#f2efe2"
+      ],
       "resultDisplay": {
-        "primary": { "field": "score", "fractionDigits": 0, "useGrouping": false },
+        "primary": {
+          "field": "score",
+          "fractionDigits": 0,
+          "useGrouping": false
+        },
         "secondary": {
           "field": "phase",
           "fractionDigits": 0,
-          "prefix": { "ko": "작업 ", "en": "jobs " }
+          "prefix": {
+            "ko": "작업 ",
+            "en": "jobs "
+          }
         }
       },
       "designProcess": {
@@ -150,7 +197,10 @@
         "scenes": [
           {
             "id": "first-play",
-            "label": { "ko": "01 · 첫 진입", "en": "01 · FIRST ENTRY" },
+            "label": {
+              "ko": "01 · 첫 진입",
+              "en": "01 · FIRST ENTRY"
+            },
             "note": {
               "ko": "타이틀 원화의 야간 집하장과 실제 2컷 인트로를 함께 둡니다. 플레이 전에 마지막 근무와 새벽 마감이 먼저 보입니다.",
               "en": "The night-depot title artwork sits beside the two-cut intro. The final shift and dawn deadline appear before play."
@@ -168,7 +218,10 @@
           },
           {
             "id": "core-play",
-            "label": { "ko": "02 · 두 플리퍼", "en": "02 · TWO FLIPPERS" },
+            "label": {
+              "ko": "02 · 두 플리퍼",
+              "en": "02 · TWO FLIPPERS"
+            },
             "note": {
               "ko": "코드보다 먼저 만든 256×448 플레이필드 원화와 실제 빌드입니다. 원화의 경사로, 봉투, 범퍼와 집하구가 그대로 판정 장치가 됐습니다.",
               "en": "The 256×448 playfield artwork made before code sits beside the build. Its ramps, envelopes, bumpers, and depot scoop became live scoring devices."
@@ -186,7 +239,10 @@
           },
           {
             "id": "game-over",
-            "label": { "ko": "03 · 근무 결과", "en": "03 · SHIFT RESULT" },
+            "label": {
+              "ko": "03 · 근무 결과",
+              "en": "03 · SHIFT RESULT"
+            },
             "note": {
               "ko": "타이틀 원화의 새벽 목적지와 실제 결과 화면입니다. 점수, 완료한 작업과 잭팟 수를 남기고 바로 다시 시작할 수 있습니다.",
               "en": "The title artwork's dawn destination sits beside the result screen. Score, completed jobs, and jackpots remain visible before restart."
@@ -249,15 +305,17 @@
         }
       },
       "artifact": {
-        "status": "local",
+        "status": "published",
         "runnerVersion": "v1",
         "bridgeMode": "contract-v1",
-        "version": "local-fixture",
-        "entryUrl": "/__game-assets/games/moonmail/local-fixture/entry.mjs",
-        "styleUrls": ["/__game-assets/games/moonmail/local-fixture/assets/style-DRgjEc3E.css"],
-        "assetBaseUrl": "/__game-assets/games/moonmail/local-fixture/",
+        "version": "b54b23aa02c4086f8a91e70e8b29da14f97c440e",
+        "entryUrl": "/__game-assets/games/moonmail/b54b23aa02c4086f8a91e70e8b29da14f97c440e/entry.mjs",
+        "styleUrls": [
+          "/__game-assets/games/moonmail/b54b23aa02c4086f8a91e70e8b29da14f97c440e/assets/style-DRgjEc3E.css"
+        ],
+        "assetBaseUrl": "/__game-assets/games/moonmail/b54b23aa02c4086f8a91e70e8b29da14f97c440e/",
         "source": {
-          "kind": "local",
+          "kind": "vercel-blob",
           "repo": "../games/2026/2026-07-27-moonmail",
           "dist": "dist-arcade"
         },
