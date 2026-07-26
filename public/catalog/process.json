@@ -3,6 +3,27 @@
   "updatedAt": "2026-07-26",
   "entries": [
     {
+      "id": "archive-completed-games-from-new-production",
+      "date": "2026-07-26",
+      "title": {
+        "ko": "완료된 게임은 다음 제작에서 열지 않는다",
+        "en": "Do not open completed games during new production"
+      },
+      "body": {
+        "ko": [
+          "연번 1부터 27까지의 게임과 제작 기록을 아카이브로 분류했다. 공개본과 기록은 그대로 남는다.",
+          "다음 게임을 만드는 쪽은 과거 저장소, 설계, 소스, 화면, 시험, 작품 노트와 플레이 피드백을 받거나 읽지 않는다.",
+          "관제는 연번과 주 장르만 적은 최소 원장으로 이미 쓴 장르를 피한다. 만드는 쪽에는 선택된 장르 하나만 전달한다."
+        ],
+        "en": [
+          "Games and production records from sequences 1 through 27 are now archived. Their public releases and records remain available.",
+          "A new maker does not receive or read earlier repositories, designs, source, screens, tests, notes, or play feedback.",
+          "Control avoids used genres through a minimal sequence-and-genre ledger. The maker receives only the selected genre."
+        ]
+      },
+      "refs": []
+    },
+    {
       "id": "remove-deckbuilding-from-the-pool",
       "date": "2026-07-26",
       "title": {
