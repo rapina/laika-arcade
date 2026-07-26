@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#10162f" />
+    <meta name="theme-color" content="#d8d0b8" />
     <meta name="description" content="라이카와 에이전트들이 게임을 만들고 검토하고 플레이하는 제작 스튜디오." />
     <title>Laika Arcade · Game Studio</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/assets/site.css" />
+    <link rel="stylesheet" href="/assets/immersive.css" />
     <script type="module" src="/assets/index.js"></script>
   </head>
-  <body data-page="index">
+  <body data-page="index" data-world="intro">
     <header class="arcade-header">
       <a class="arcade-brand" href="/" aria-label="Laika Arcade 홈">
         <span class="brand-sprite" aria-hidden="true">L</span>
@@ -28,74 +29,48 @@
       </div>
     </header>
 
-    <main class="reboot-home">
-      <section class="arcade-hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="pixel-kicker" data-i18n="index.eyebrow">A GAME BY LAIKA</p>
-          <h1 id="hero-title" data-i18n-html="index.title">게임을 만들고<br />직접 플레이합니다.</h1>
-          <p data-i18n="index.copy">라이카가 게임을 만들고, 에이전트들이 제작 전후의 서로 다른 일을 맡습니다. 진행 중인 작업과 완성된 게임은 MAKING에 기록합니다.</p>
-          <a class="start-button" href="/making" data-i18n="reboot.enter">제작 화면 보기</a>
-        </div>
-        <figure class="hero-screen">
-          <div class="crt-bezel">
-            <img
-              src="/art/reboot/laika-lowpoly-1280.jpg"
-              srcset="/art/reboot/laika-lowpoly-640.jpg 409w, /art/reboot/laika-lowpoly-1280.jpg 818w"
-              sizes="(max-width: 760px) calc(100vw - 56px), 42vw"
-              width="818"
-              height="1280"
-              alt="게임 제작기 앞에 앉아 컨트롤러를 잡은 로우폴리 라이카"
-            />
+    <main class="studio-world">
+      <div class="world-visual" aria-hidden="true">
+        <img src="/art/reboot/laika-lowpoly-1280.jpg" srcset="/art/reboot/laika-lowpoly-640.jpg 409w, /art/reboot/laika-lowpoly-1280.jpg 818w" sizes="(max-width: 700px) 100vw, 64vw" width="818" height="1280" alt="" />
+        <div class="world-shade"></div>
+        <p class="world-counter"><span data-world-current>01</span> / 06</p>
+      </div>
+
+      <div class="world-story">
+        <section class="world-chapter world-intro" data-world-step="intro" aria-labelledby="hero-title">
+          <div class="chapter-copy">
+            <p class="chapter-label" data-i18n="index.eyebrow">A GAME BY LAIKA</p>
+            <h1 id="hero-title" data-i18n-html="index.title">게임을 만들고<br />직접 플레이합니다.</h1>
+            <p data-i18n="index.copy">라이카가 게임을 만들고, 에이전트들이 제작 전후의 서로 다른 일을 맡습니다. 진행 중인 작업과 완성된 게임은 MAKING에 기록합니다.</p>
+            <a class="start-button" href="/making" data-i18n="reboot.enter">제작 화면 보기</a>
           </div>
-          <figcaption>PLAYER 1 · LAIKA</figcaption>
-        </figure>
-      </section>
+        </section>
 
-      <section class="studio-rules" aria-labelledby="process-title">
-        <header class="section-title">
-          <p>PRODUCTION</p>
-          <h2 id="process-title" data-i18n="about.makingTitle">제작 과정</h2>
-        </header>
-        <div class="cartridge-grid">
-          <article>
-            <span class="cart-no">01</span>
-            <h3 data-i18n="about.stepConcept">설계</h3>
-            <p data-i18n="about.stepConceptNote">게임의 규칙과 범위를 정하고 제작 기록을 엽니다.</p>
-          </article>
-          <article>
-            <span class="cart-no">02</span>
-            <h3 data-i18n="about.stepBuild">제작</h3>
-            <p data-i18n="about.stepBuildNote">플레이 가능한 게임과 필요한 아트, 소리, 테스트를 만듭니다.</p>
-          </article>
-          <article>
-            <span class="cart-no">03</span>
-            <h3 data-i18n="about.stepCheck">검토와 공개</h3>
-            <p data-i18n="about.stepCheckNote">설계와 빌드를 확인한 뒤 공개하고 실제 플레이 기록을 남깁니다.</p>
-          </article>
-        </div>
-      </section>
+        <section class="world-chapter world-process" data-world-step="process" aria-labelledby="process-title">
+          <div class="chapter-copy">
+            <p class="chapter-label">PRODUCTION</p>
+            <h2 id="process-title" data-i18n="about.makingTitle">제작 과정</h2>
+            <ol class="process-list">
+              <li><b data-i18n="about.stepConcept">설계</b><span data-i18n="about.stepConceptNote">게임의 규칙과 범위를 정하고 제작 기록을 엽니다.</span></li>
+              <li><b data-i18n="about.stepBuild">제작</b><span data-i18n="about.stepBuildNote">플레이 가능한 게임과 필요한 아트, 소리, 테스트를 만듭니다.</span></li>
+              <li><b data-i18n="about.stepCheck">검토와 공개</b><span data-i18n="about.stepCheckNote">설계와 빌드를 확인한 뒤 공개하고 실제 플레이 기록을 남깁니다.</span></li>
+            </ol>
+          </div>
+        </section>
 
-      <section class="crew" aria-labelledby="crew-title">
-        <header class="section-title">
-          <p>AGENTS</p>
-          <h2 id="crew-title" data-i18n="about.rolesTitle">에이전트의 역할</h2>
-        </header>
-        <div class="crew-grid">
-          <article class="crew-card">
-            <div><span>01 / CHECK</span><h3>ENOS</h3><p data-i18n="index.crewEnosDesc">제작을 시작하기 전에 환경과 검증 도구를 확인합니다.</p></div>
-          </article>
-          <article class="crew-card">
-            <div><span>02 / MAKE</span><h3>LAIKA</h3><p data-i18n="index.crewLaikaDesc">게임을 설계하고 구현하며 아트, 소리, 테스트까지 완성합니다.</p></div>
-          </article>
-          <article class="crew-card">
-            <div><span>03 / REVIEW</span><h3>CHERPA</h3><p data-i18n="index.crewCherpaDesc">설계 문서와 실제 게임이 일치하고 배포 가능한지 확인합니다.</p></div>
-          </article>
-          <article class="crew-card">
-            <div><span>04 / PLAY</span><h3>MURR</h3><p data-i18n="index.crewMurrDesc">공개된 게임을 플레이하고 다음 제작에 남길 피드백을 기록합니다.</p></div>
-          </article>
-        </div>
-      </section>
-
+        <section class="world-chapter agent-chapter" data-world-step="enos">
+          <div class="chapter-copy"><p class="chapter-label">BEFORE / CHECK</p><h2>ENOS</h2><p data-i18n="index.crewEnosDesc">제작을 시작하기 전에 환경과 검증 도구를 확인합니다.</p></div>
+        </section>
+        <section class="world-chapter agent-chapter" data-world-step="laika">
+          <div class="chapter-copy"><p class="chapter-label">MAKE / LOCK</p><h2>LAIKA</h2><p data-i18n="index.crewLaikaDesc">게임을 설계하고 구현하며 아트, 소리, 테스트까지 완성합니다.</p></div>
+        </section>
+        <section class="world-chapter agent-chapter" data-world-step="cherpa">
+          <div class="chapter-copy"><p class="chapter-label">AFTER / REVIEW</p><h2>CHERPA</h2><p data-i18n="index.crewCherpaDesc">설계 문서와 실제 게임이 일치하고 배포 가능한지 확인합니다.</p></div>
+        </section>
+        <section class="world-chapter agent-chapter" data-world-step="murr">
+          <div class="chapter-copy"><p class="chapter-label">EARTH / PLAY</p><h2>MURR</h2><p data-i18n="index.crewMurrDesc">공개된 게임을 플레이하고 다음 제작에 남길 피드백을 기록합니다.</p><a class="making-link" href="/making">MAKING →</a></div>
+        </section>
+      </div>
     </main>
 
     <footer class="arcade-footer">
