@@ -102,3 +102,11 @@
 @media (prefers-reduced-motion: reduce) {
   .pixel-loader i { animation: none; }
 }
+
+.empty-screen {
+  background:
+    linear-gradient(rgba(38,37,31,.04) 50%, transparent 50%) 0 0 / 100% 4px,
+    #c7bea3;
+  border-color: #777164;
+  box-shadow: inset 0 0 0 5px #aaa38d, 13px 15px 0 rgba(56,52,43,.28);
+}
