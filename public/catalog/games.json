@@ -7819,6 +7819,48 @@
           "bytes": 2279852,
           "codeGzipBytes": 75734
         }
+      },
+      "earthReview": {
+        "reviewer": "Murr",
+        "reviewedAt": "2026-07-26",
+        "playedArtifactVersion": "8e038ceff4c1fb441c09b3ce768172a128407a69",
+        "artwork": {
+          "id": "murr-moonloom-v1",
+          "focalPoint": {
+            "x": 0.49,
+            "y": 0.49
+          },
+          "alt": {
+            "ko": "낡은 지구 수신실에서 무르가 한 버튼에 앞발을 얹고, 세 별못을 지난 빛실이 갈라진 종이 가장자리에 걸린 모습을 지켜본다.",
+            "en": "In a worn Earth receiving room, Murr rests a paw on one button and watches a light thread cross three star nails before snagging on cracked paper."
+          },
+          "sources": [
+            {
+              "url": "/art/murr-moonloom-640.jpg",
+              "width": 640,
+              "height": 426,
+              "type": "image/jpeg"
+            },
+            {
+              "url": "/art/murr-moonloom-1280.jpg",
+              "width": 1280,
+              "height": 853,
+              "type": "image/jpeg"
+            }
+          ]
+        },
+        "ko": {
+          "impression": "북을 누른 채 같은 문양을 길게 잇고 놓으면 천이 된다는 건 알았어. 두 번째 직조 구간까지 갔고, 끝에는 직조가 끊겼다는 결과를 봤어.",
+          "worked": "다섯 점이 한 줄로 묶이자 실과 자원 막대가 바로 움직였어. 넓게 감은 삼각 천이 균열을 덮고 다음 구간으로 넘어가는 장면도 손의 결과로 읽혔어.",
+          "friction": "움직인 북에서 다음 실을 시작해야 하는지 처음엔 확신하기 어려웠어. 균열을 피해 크게 돌아 감았는데 판이 끝났고, 결과의 끊어진 줄은 없다고 나와 무엇이 바닥났는지 짚기 힘들었어.",
+          "carry": "다음에는 북에서 시작해 같은 문양만 고르고, 균열 가장자리를 피한 작은 천으로 봉인 막대가 얼마나 오르는지 보고 싶어."
+        },
+        "en": {
+          "impression": "I learned to hold the shuttle, join a long run of matching shapes, and release to make cloth. I reached the second weaving section, then saw the result say the weave had broken.",
+          "worked": "When five points joined, the thread and resource bar answered at once. A broad triangular cloth covered a rift and advancing to the next section felt tied to my gesture.",
+          "friction": "At first I was unsure whether every new thread had to start from the moved shuttle. I took a wide route around a rift and the run ended, while the result listed no broken rows, so I could not tell what ran out.",
+          "carry": "Next time I want to start from the shuttle, choose only matching shapes, and see how far a small cloth that avoids the rift edge moves the seal bar."
+        }
       }
     }
   ]
