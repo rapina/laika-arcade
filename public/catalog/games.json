@@ -8067,6 +8067,48 @@
           "bytes": 5414862,
           "codeGzipBytes": 311485
         }
+      },
+      "earthReview": {
+        "reviewer": "Murr",
+        "reviewedAt": "2026-07-26",
+        "playedArtifactVersion": "4765155ac6f60396fe51e79240b0c7cc56fb051f",
+        "artwork": {
+          "id": "murr-ashdocket-v1",
+          "focalPoint": {
+            "x": 0.48,
+            "y": 0.5
+          },
+          "alt": {
+            "ko": "낡은 지구 수신실에서 무르가 한 버튼을 누른 채 들린 빈 사건 카드와 아직 닿지 않은 대상 인장을 번갈아 본다.",
+            "en": "In a worn Earth receiving room, Murr holds one button while looking between a raised blank case card and an untouched target seal."
+          },
+          "sources": [
+            {
+              "url": "/art/murr-ashdocket-640.jpg",
+              "width": 640,
+              "height": 426,
+              "type": "image/jpeg"
+            },
+            {
+              "url": "/art/murr-ashdocket-1280.jpg",
+              "width": 1280,
+              "height": 853,
+              "type": "image/jpeg"
+            }
+          ]
+        },
+        "ko": {
+          "impression": "사건마다 상대 규칙을 읽고, 남은 집중을 방어와 반박에 나누는 법정 카드 게임이더라. 몇 심리를 이기고 다음 보상 앞까지 갔어.",
+          "worked": "공격 예고와 신뢰 변화가 바로 이어져, 방어와 이의가 피해를 얼마나 줄였는지 손이 금방 배웠어.",
+          "friction": "첫 턴엔 카드를 누르면 끝인 줄 알았어. 대상을 한 번 더 눌러야 했고, 그걸 놓쳐 손패를 그냥 넘겼어.",
+          "carry": "이번엔 합창을 골랐어. 다음엔 보호막을 되살리는 기록 포식자를 만나 사건부가 달라지는지 보겠어."
+        },
+        "en": {
+          "impression": "I read each opponent's rule and split my Focus between defense and objections. I won several hearings and reached the next reward.",
+          "worked": "Intent and Trust changed together, so my paw quickly learned how much defense and an objection reduced the hit.",
+          "friction": "On the first turn I thought tapping a card finished the action. I missed the second target tap and discarded the hand unused.",
+          "carry": "I chose the choir this time. Next I want the ward-regenerating Record Eater and a different case file."
+        }
       }
     }
   ]

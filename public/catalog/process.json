@@ -3,6 +3,27 @@
   "updatedAt": "2026-07-26",
   "entries": [
     {
+      "id": "do-not-end-game-art-at-svg",
+      "date": "2026-07-26",
+      "title": {
+        "ko": "게임 아트를 SVG에서 끝내지 않는다",
+        "en": "Do not end game art at SVG"
+      },
+      "body": {
+        "ko": [
+          "재의 사건부의 첫 공개본은 덱빌딩 규칙을 갖췄지만, 실제 게임 아트는 SVG 키 이미지와 Pixi 기본 도형만으로 법정을 그렸다. 잠금 뒤 라이카 그림은 래스터였어도 플레이 중에는 보이지 않았다.",
+          "SVG와 절차 도형은 계속 쓸 수 있다. 다만 실제 플레이를 정의하는 주 시각 매체 하나 이상은 래스터, 페인팅, 텍스처 3D, 영상, 셰이더 재질이나 비트맵으로 만든다.",
+          "첫 공개 직후 지구 평가를 멈추고 여덟 상대의 래스터 초상을 사건표와 심리에 넣었다. 새 잠금과 새 출고 검사를 통과한 불변 릴리스로 교체한 뒤 평가를 다시 시작했다."
+        ],
+        "en": [
+          "The first published Ash Docket build had a complete deckbuilding structure, but its playable art drew the courtroom only with an SVG key image and Pixi primitives. The post-lock Laika painting was raster, yet never appeared during play.",
+          "SVG and procedural shapes remain available. At least one primary visual medium that defines actual play must now be raster, painted, textured 3D, video, shader material, or bitmap.",
+          "We stopped the Earth review just after the first publication, put eight raster opponent portraits into the docket and hearings, then replaced the immutable release after a new lock and a fresh release review."
+        ]
+      },
+      "refs": ["ashdocket"]
+    },
+    {
       "id": "choose-a-genre-before-a-world",
       "date": "2026-07-26",
       "title": {
